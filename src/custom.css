@@ -1,0 +1,25 @@
+/* Custom overrides for React/Vite version of Modern Business */
+
+/* Offset content for fixed-top navbar */
+body { padding-top: 60px; }
+@media (min-width: 992px) {
+	body { padding-top: 76px; }
+}
+
+/* Hero section: ensure it adapts to viewport height and centers content */
+header.hero {
+	min-height: 60vh;
+	display: flex;
+	align-items: center;
+}
+
+/* Fluid headline sizing in hero */
+header.hero .display-5 {
+	font-size: clamp(2rem, 4vw + 1rem, 3rem);
+}
+
+/* Ensure hero image doesn’t overflow */
+header.hero img {
+	max-width: 100%;
+	height: auto;
+} 
