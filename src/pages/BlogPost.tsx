@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function BlogPost() {
   return (
     <section className="py-5">
