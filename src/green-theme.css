@@ -1,0 +1,323 @@
+/* 优雅的蓝绿到白色主题色彩定义 */
+:root {
+  --primary-teal: #2D6975;
+  --secondary-teal: #6AB4A3;
+  --light-mint: #CEDFCC;
+  --pale-mint: #DFEBDF;
+  --pure-white: #FFFFFF;
+  --text-primary: #2D6975;
+  --text-secondary: #6AB4A3;
+  --border-color: #CEDFCC;
+  --light-gray: #F8F9FA;
+  --accent-color: #4A9B8A;
+}
+
+/* 主要按钮样式 - 使用优雅的蓝绿色 */
+.btn-primary {
+  background-color: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-teal) !important;
+  border-color: var(--secondary-teal) !important;
+}
+
+.btn-primary:focus {
+  background-color: var(--secondary-teal) !important;
+  border-color: var(--secondary-teal) !important;
+  box-shadow: 0 0 0 0.2rem rgba(45, 105, 117, 0.25) !important;
+}
+
+/* 次要按钮样式 */
+.btn-outline-primary {
+  color: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+  color: white !important;
+}
+
+/* 成功按钮样式 - 使用优雅的蓝绿色 */
+.btn-success {
+  background-color: var(--secondary-teal) !important;
+  border-color: var(--secondary-teal) !important;
+}
+
+.btn-success:hover {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* 警告按钮样式 */
+.btn-warning {
+  background-color: #F39C12 !important;
+  border-color: #F39C12 !important;
+}
+
+.btn-outline-warning {
+  color: #F39C12 !important;
+  border-color: #F39C12 !important;
+}
+
+.btn-outline-warning:hover {
+  background-color: #F39C12 !important;
+  color: white !important;
+}
+
+/* 链接颜色 - 使用优雅的蓝绿色 */
+a {
+  color: var(--primary-teal);
+}
+
+a:hover {
+  color: var(--secondary-teal);
+}
+
+/* 导航栏样式 - 白色专业风格 */
+.navbar-light {
+  background-color: var(--pure-white) !important;
+  border-bottom: 2px solid var(--light-mint) !important;
+  box-shadow: 0 2px 10px rgba(45, 105, 117, 0.1) !important;
+}
+
+.navbar-brand {
+  color: var(--primary-teal) !important;
+  font-weight: 700 !important;
+}
+
+.navbar-brand:hover {
+  color: var(--secondary-teal) !important;
+}
+
+.nav-link {
+  color: var(--text-primary) !important;
+  font-weight: 500 !important;
+}
+
+.nav-link:hover {
+  color: var(--primary-teal) !important;
+  background-color: var(--pale-mint) !important;
+  border-radius: 6px;
+}
+
+/* 主要标题颜色 - 使用深色更专业 */
+.text-primary {
+  color: var(--primary-teal) !important;
+}
+
+/* 背景色 - 使用优雅的蓝绿色 */
+.bg-primary {
+  background-color: var(--primary-teal) !important;
+}
+
+.bg-success {
+  background-color: var(--secondary-teal) !important;
+}
+
+.bg-warning {
+  background-color: #F39C12 !important;
+}
+
+/* 渐变背景 - 使用优雅的蓝绿色渐变 */
+.bg-primary.bg-gradient {
+  background: linear-gradient(135deg, var(--primary-teal), var(--secondary-teal)) !important;
+}
+
+.bg-success.bg-gradient {
+  background: linear-gradient(135deg, var(--secondary-teal), var(--accent-color)) !important;
+}
+
+.bg-warning.bg-gradient {
+  background: linear-gradient(135deg, #F39C12, #E67E22) !important;
+}
+
+/* 卡片头部样式 */
+.card-header.bg-primary {
+  background-color: var(--primary-teal) !important;
+}
+
+.card-header.bg-success {
+  background-color: var(--secondary-teal) !important;
+}
+
+.card-header.bg-warning {
+  background-color: #F39C12 !important;
+}
+
+/* 徽章样式 */
+.badge.bg-primary {
+  background-color: var(--primary-teal) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--secondary-teal) !important;
+}
+
+.badge.bg-warning {
+  background-color: #F39C12 !important;
+}
+
+/* 特色图标背景 */
+.feature.bg-primary {
+  background-color: var(--primary-teal) !important;
+}
+
+.feature.bg-success {
+  background-color: var(--secondary-teal) !important;
+}
+
+.feature.bg-warning {
+  background-color: #F39C12 !important;
+}
+
+/* 页脚样式 - 浅蓝绿色专业风格 */
+.bg-light {
+  background-color: var(--pale-mint) !important;
+}
+
+/* 按钮组样式 */
+.btn-group .btn-primary {
+  background-color: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+/* 表单控件焦点样式 */
+.form-control:focus {
+  border-color: var(--primary-teal) !important;
+  box-shadow: 0 0 0 0.2rem rgba(45, 105, 117, 0.25) !important;
+}
+
+/* 进度条样式 */
+.progress-bar {
+  background-color: var(--primary-teal) !important;
+}
+
+/* 列表组样式 */
+.list-group-item.active {
+  background-color: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+/* 分页样式 */
+.page-link {
+  color: var(--primary-teal) !important;
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+/* 警告框样式 - 使用优雅的蓝绿色 */
+.alert-primary {
+  color: var(--text-primary) !important;
+  background-color: var(--pale-mint) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+.alert-success {
+  color: var(--text-primary) !important;
+  background-color: var(--pale-mint) !important;
+  border-color: var(--secondary-teal) !important;
+}
+
+/* 表格样式 */
+.table-primary {
+  background-color: var(--pale-mint) !important;
+}
+
+.table-success {
+  background-color: var(--pale-mint) !important;
+}
+
+/* 下拉菜单样式 */
+.dropdown-item:hover {
+  background-color: var(--pale-mint) !important;
+}
+
+/* 模态框样式 */
+.modal-header {
+  background-color: var(--primary-teal) !important;
+  color: white !important;
+}
+
+/* 工具提示样式 */
+.tooltip-inner {
+  background-color: var(--primary-teal) !important;
+}
+
+/* 弹出框样式 */
+.popover-header {
+  background-color: var(--primary-teal) !important;
+  color: white !important;
+}
+
+/* 自定义滚动条 - 使用优雅的蓝绿色 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-teal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-teal);
+}
+
+/* 悬停效果 - 使用优雅的蓝绿色阴影 */
+.card:hover {
+  box-shadow: 0 4px 20px rgba(45, 105, 117, 0.15) !important;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+/* 渐变文字效果 - 移除动画，使用普通颜色 */
+.gradient-text {
+  color: var(--text-primary);
+}
+
+/* 优雅的蓝绿色阴影效果 */
+.elegant-shadow {
+  box-shadow: 0 6px 25px rgba(45, 105, 117, 0.2) !important;
+}
+
+/* 优雅的蓝绿色边框效果 */
+.elegant-border {
+  border: 2px solid var(--primary-teal) !important;
+}
+
+/* 优雅的蓝绿色背景渐变 */
+.elegant-gradient-bg {
+  background: linear-gradient(135deg, 
+    var(--pale-mint), 
+    rgba(206, 223, 204, 0.4)
+  ) !important;
+}
+
+/* 淡蓝绿色背景 */
+.light-teal-bg {
+  background-color: var(--pale-mint) !important;
+}
+
+/* 浅蓝绿色背景 */
+.medium-teal-bg {
+  background-color: var(--light-mint) !important;
+}
+
+/* 白色卡片样式 */
+.white-card {
+  background-color: var(--pure-white) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 2px 15px rgba(45, 105, 117, 0.08) !important;
+}
