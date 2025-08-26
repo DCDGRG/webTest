@@ -31,9 +31,7 @@ function Navbar() {
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item"><Link className="nav-link text-dark" to="/">首页</Link></li>
             <li className="nav-item"><Link className="nav-link text-dark" to="/about">关于我们</Link></li>
-            <li className="nav-item"><Link className="nav-link text-dark" to="/contact">联系我们</Link></li>
             <li className="nav-item"><Link className="nav-link text-dark" to="/pricing">产品服务</Link></li>
-            <li className="nav-item"><Link className="nav-link text-dark" to="/faq">常见问题</Link></li>
                           <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle text-dark" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">技术资讯</a>
                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">

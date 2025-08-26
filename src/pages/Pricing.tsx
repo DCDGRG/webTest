@@ -1,3 +1,5 @@
+
+
 export default function Pricing() {
   return (
     <>
@@ -17,6 +19,7 @@ export default function Pricing() {
         </div>
       </header>
 
+      {/* 核心服务项目 */}
       <section className="py-5 light-teal-bg">
         <div className="container px-5 my-5">
           <div className="text-center mb-5">
@@ -25,11 +28,11 @@ export default function Pricing() {
           </div>
           <div className="row gx-5 justify-content-center">
             {/* 模具设计与制造 */}
-                          <div className="col-lg-6 col-xl-4 mb-4">
-                <div className="card h-100 shadow border-0 elegant-shadow">
-                  <div className="card-header bg-success bg-gradient text-white text-center py-4">
-                    <h4 className="text-uppercase m-0">模具设计与制造</h4>
-                  </div>
+            <div className="col-lg-6 col-xl-4 mb-4">
+              <div className="card h-100 shadow border-0 elegant-shadow">
+                <div className="card-header bg-success bg-gradient text-white text-center py-4">
+                  <h4 className="text-uppercase m-0">模具设计与制造</h4>
+                </div>
                 <div className="card-body p-4">
                   <div className="text-center mb-4">
                     <div className="display-4 fw-bold text-success">¥15,000</div>
@@ -107,6 +110,172 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* 产品应用领域展示 */}
+      <section className="py-5">
+        <div className="container px-5 my-5">
+          <div className="text-center mb-5">
+            <h2 className="fw-bolder gradient-text">🏭 产品应用领域</h2>
+            <p className="lead fw-normal text-muted mb-0">我们为多个行业提供高性能塑料零部件解决方案</p>
+          </div>
+          <div className="row gx-5">
+            {/* 汽车零部件 */}
+            <div className="col-lg-6 mb-5">
+              <div className="card h-100 elegant-shadow">
+                <div className="card-body p-4">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="feature bg-primary bg-gradient text-white rounded-3 me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                      <i className="bi bi-car-front-fill fs-4"></i>
+                    </div>
+                    <h4 className="mb-0">汽车零部件</h4>
+                  </div>
+                  <p className="text-muted mb-3">专业制造汽车用高性能塑料零部件，包括内饰件、外饰件、功能件等</p>
+                  <div className="row g-2 mb-3">
+                    <div className="col-6">
+                      <span className="badge bg-light text-dark me-1 mb-1">PBT-GF30</span>
+                      <span className="badge bg-light text-dark me-1 mb-1">PPSU</span>
+                    </div>
+                    <div className="col-6">
+                      <span className="badge bg-light text-dark me-1 mb-1">PFA</span>
+                      <span className="badge bg-light text-dark me-1 mb-1">PA66</span>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <small className="text-muted">轻量化 · 高强度 · 耐腐蚀</small>
+                    <a href="#" className="btn btn-sm btn-outline-primary">了解更多</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 医疗器械 */}
+            <div className="col-lg-6 mb-5">
+              <div className="card h-100 elegant-shadow">
+                <div className="card-body p-4">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="feature bg-success bg-gradient text-white rounded-3 me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                      <i className="bi bi-heart-pulse-fill fs-4"></i>
+                    </div>
+                    <h4 className="mb-0">医疗器械</h4>
+                  </div>
+                  <p className="text-muted mb-3">医疗级塑料制品，满足无菌要求和生物相容性标准</p>
+                  <div className="row g-2 mb-3">
+                    <div className="col-6">
+                      <span className="badge bg-light text-dark me-1 mb-1">骨科器械</span>
+                      <span className="badge bg-light text-dark me-1 mb-1">内窥镜</span>
+                    </div>
+                    <div className="col-6">
+                      <span className="badge bg-light text-dark me-1 mb-1">医疗耗材</span>
+                      <span className="badge bg-light text-dark me-1 mb-1">诊断设备</span>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <small className="text-muted">无菌要求 · 生物相容性 · 精密制造</small>
+                    <a href="#" className="btn btn-sm btn-outline-success">了解更多</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 电子电器 */}
+            <div className="col-lg-6 mb-5">
+              <div className="card h-100 elegant-shadow">
+                <div className="card-body p-4">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="feature bg-warning bg-gradient text-white rounded-3 me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                      <i className="bi bi-lightning-charge-fill fs-4"></i>
+                    </div>
+                    <h4 className="mb-0">电子电器</h4>
+                  </div>
+                  <p className="text-muted mb-3">高精度电子电器塑料零部件，具备优异的绝缘性能和尺寸稳定性</p>
+                  <div className="row g-2 mb-3">
+                    <div className="col-6">
+                      <span className="badge bg-light text-dark me-1 mb-1">PEI</span>
+                      <span className="badge bg-light text-dark me-1 mb-1">PPS</span>
+                    </div>
+                    <div className="col-6">
+                      <span className="badge bg-light text-dark me-1 mb-1">PA66</span>
+                      <span className="badge bg-light text-dark me-1 mb-1">PC/ABS</span>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <small className="text-muted">绝缘性能 · 耐高温 · 尺寸稳定</small>
+                    <a href="#" className="btn btn-sm btn-outline-warning">了解更多</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 工程塑料制品 */}
+            <div className="col-lg-6 mb-5">
+              <div className="card h-100 elegant-shadow">
+                <div className="card-body p-4">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="feature bg-info bg-gradient text-white rounded-3 me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                      <i className="bi bi-gear-fill fs-4"></i>
+                    </div>
+                    <h4 className="mb-0">工程塑料制品</h4>
+                  </div>
+                  <p className="text-muted mb-3">特种工程塑料制品，满足耐高温、耐腐蚀等特殊要求</p>
+                  <div className="row g-2 mb-3">
+                    <div className="col-6">
+                      <span className="badge bg-light text-dark me-1 mb-1">耐高温</span>
+                      <span className="badge bg-light text-dark me-1 mb-1">耐腐蚀</span>
+                    </div>
+                    <div className="col-6">
+                      <span className="badge bg-light text-dark me-1 mb-1">透明功能</span>
+                      <span className="badge bg-light text-dark me-1 mb-1">特种材料</span>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <small className="text-muted">特种材料 · 定制加工 · 品质保证</small>
+                    <a href="#" className="btn btn-sm btn-outline-info">了解更多</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 特种材料展示 */}
+      <section className="py-5 light-teal-bg">
+        <div className="container px-5 my-5">
+          <div className="text-center mb-5">
+            <h2 className="fw-bolder gradient-text">🔬 特种材料专长</h2>
+            <p className="lead fw-normal text-muted mb-0">我们专注于高性能特种塑料的加工与应用</p>
+          </div>
+          <div className="row gx-5 justify-content-center">
+            {[
+              { name: 'PEEK', description: '聚醚醚酮，耐高温、高强度、化学稳定性优异', features: ['耐温260°C', '高强度', '化学稳定'], color: 'primary' },
+              { name: 'PEI', description: '聚醚酰亚胺，高温下保持优异机械性能', features: ['耐温180°C', '尺寸稳定', '电绝缘'], color: 'success' },
+              { name: 'PPSU', description: '聚苯砜，透明、耐高温、生物相容性好', features: ['透明', '耐温180°C', '生物相容'], color: 'warning' },
+              { name: 'PPS', description: '聚苯硫醚，耐化学腐蚀、尺寸稳定性好', features: ['耐腐蚀', '尺寸稳定', '阻燃'], color: 'info' },
+              { name: 'PFA', description: '全氟烷氧基树脂，超强耐化学腐蚀性', features: ['超耐腐蚀', '低摩擦', '高纯度'], color: 'danger' },
+              { name: 'TPE', description: '热塑性弹性体，柔软、弹性好、可回收', features: ['柔软', '弹性好', '可回收'], color: 'secondary' }
+            ].map((material, idx) => (
+              <div key={idx} className="col-lg-4 col-md-6 mb-4">
+                <div className="card h-100 elegant-shadow">
+                  <div className="card-body text-center p-4">
+                    <div className={`feature bg-${material.color} bg-gradient text-white rounded-3 mb-3 mx-auto`} style={{width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                      <h3 className="mb-0 fw-bold">{material.name}</h3>
+                    </div>
+                    <h5 className="card-title mb-3">{material.name}</h5>
+                    <p className="card-text text-muted mb-3">{material.description}</p>
+                    <div className="mb-3">
+                      {material.features.map((feature, fIdx) => (
+                        <span key={fIdx} className={`badge bg-${material.color} bg-opacity-10 text-${material.color} me-1 mb-1`}>{feature}</span>
+                      ))}
+                    </div>
+                    <a href="#" className={`btn btn-outline-${material.color}`}>了解详情</a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 价格说明 */}
       <section className="py-5">
         <div className="container px-5 my-5">
           <div className="text-center mb-5">
@@ -122,40 +291,41 @@ export default function Pricing() {
               </div>
               <div className="mb-3">
                 <h6 className="fw-bold">产品复杂度：</h6>
-                <p className="text-muted">结构复杂、精度要求高的产品需要更精密的模具和工艺</p>
+                <p className="text-muted">结构复杂、精度要求高的产品，加工难度大，价格相应提高</p>
               </div>
               <div className="mb-3">
                 <h6 className="fw-bold">生产数量：</h6>
-                <p className="text-muted">大批量生产可享受规模效应，单位成本降低</p>
+                <p className="text-muted">批量生产可降低单位成本，数量越大价格越优惠</p>
               </div>
               <div className="mb-3">
                 <h6 className="fw-bold">质量要求：</h6>
-                <p className="text-muted">医疗级、汽车级等高标准要求需要更严格的质量控制</p>
+                <p className="text-muted">医疗级、汽车级等高标准要求，需要更严格的工艺控制</p>
               </div>
             </div>
             <div className="col-lg-6">
               <h3 className="fw-bolder mb-4">我们的优势</h3>
               <div className="mb-3">
-                <h6 className="fw-bold">一站式服务：</h6>
-                <p className="text-muted">从设计到交付，减少中间环节，降低成本</p>
+                <h6 className="fw-bold">技术优势：</h6>
+                <p className="text-muted">拥有先进的加工设备和专业的技术团队，确保产品质量</p>
               </div>
               <div className="mb-3">
-                <h6 className="fw-bold">技术实力：</h6>
-                <p className="text-muted">专业团队，先进设备，确保产品质量</p>
+                <h6 className="fw-bold">成本控制：</h6>
+                <p className="text-muted">规模化生产、供应链优化，为客户提供最具竞争力的价格</p>
               </div>
               <div className="mb-3">
-                <h6 className="fw-bold">质量保证：</h6>
-                <p className="text-muted">ISO9001、IATF16949、ISO13485等质量认证</p>
+                <h6 className="fw-bold">服务保障：</h6>
+                <p className="text-muted">从设计到交付的一站式服务，减少客户沟通成本</p>
               </div>
               <div className="mb-3">
-                <h6 className="fw-bold">快速响应：</h6>
-                <p className="text-muted">专业客服团队，快速响应客户需求</p>
+                <h6 className="fw-bold">质量承诺：</h6>
+                <p className="text-muted">严格的质量管理体系，确保产品稳定性和可靠性</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* 获取详细报价 */}
       <section className="py-5 light-teal-bg">
         <div className="container px-5 my-5">
           <div className="text-center">
