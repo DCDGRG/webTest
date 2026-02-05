@@ -1,0 +1,134 @@
+[
+  {
+    "id": "mock-ind-market-2025",
+    "title": "2025年中国注塑机行业市场规模与发展趋势报告",
+    "summary": "最新数据显示，随着新能源汽车和医疗器械行业的快速发展，中国精密注塑机市场需求持续增长，国产高端机型占比稳步提升。...",
+    "url": "https://example.com/news/market-2025",
+    "published_at": "2026-01-15T11:02:48.238Z",
+    "source_name": "行业动态 (Mock)",
+    "category": "industry",
+    "image_url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-tech-cooling-opt",
+    "title": "基于数值模拟的注塑模具冷却系统优化设计",
+    "summary": "摘要：本文利用Moldflow软件对某汽车内饰件注塑模具的冷却系统进行了数值模拟分析，提出了随形冷却水道的优化方案，有效缩短了成型周期。...",
+    "url": "https://example.com/paper/opt-cooling",
+    "published_at": "2026-01-15T11:02:48.237Z",
+    "source_name": "技术前沿 (Mock)",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-ind-chinaplas",
+    "title": "CHINAPLAS 2026 国际橡塑展定档上海，聚焦“绿色、智能、先进”",
+    "summary": "作为亚洲最大的塑料橡胶工业展览会，CHINAPLAS 2026将重点展示生物塑料、回收再生技术以及数字化智能制造解决方案。...",
+    "url": "https://example.com/news/chinaplas-2026",
+    "published_at": "2026-01-14T11:02:48.238Z",
+    "source_name": "行业动态 (Mock)",
+    "category": "industry",
+    "image_url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80",
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-tech-mucell-pp",
+    "title": "微孔发泡注塑成型工艺对PP材料力学性能的影响",
+    "summary": "摘要：研究了微孔发泡注塑工艺参数（注射速度、熔体温度、气体由于量）对聚丙烯（PP）材料拉伸强度和冲击强度的影响规律。...",
+    "url": "https://example.com/paper/mucell-pp",
+    "published_at": "2026-01-14T11:02:48.238Z",
+    "source_name": "技术前沿 (Mock)",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-ind-car-lightweight",
+    "title": "某知名车企发布一体化压铸/注塑新技术，引领轻量化变革",
+    "summary": "该技术结合了大型一体化压铸与高强度工程塑料注塑，在保证车身结构强度的同时，显著降低了整车重量和制造成本。...",
+    "url": "https://example.com/news/car-lightweight",
+    "published_at": "2026-01-13T11:02:48.238Z",
+    "source_name": "行业动态 (Mock)",
+    "category": "industry",
+    "image_url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80",
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-tech-zero-defect",
+    "title": "精密注塑模具的零缺陷制造技术探讨",
+    "summary": "摘要：针对精密电子连接器模具，探讨了从模具设计、加工加工到组装调试全过程的精度控制策略，旨在实现零缺陷制造。...",
+    "url": "https://example.com/paper/zero-defect",
+    "published_at": "2026-01-13T11:02:48.238Z",
+    "source_name": "技术前沿 (Mock)",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-ind-eu-reg",
+    "title": "欧盟通过新塑料包装法规，再生塑料使用比例要求提高",
+    "summary": "欧盟最新法规要求，到2030年，所有进入欧盟市场的塑料包装必须包含至少30%的再生塑料成分，这对出口型注塑企业提出了新挑战。...",
+    "url": "https://example.com/news/eu-regulation",
+    "published_at": "2026-01-12T11:02:48.238Z",
+    "source_name": "行业动态 (Mock)",
+    "category": "industry",
+    "image_url": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=600&q=80",
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-tech-pla",
+    "title": "生物可降解材料PLA的注塑成型工艺特性研究",
+    "summary": "摘要：分析了聚乳酸（PLA）在注塑加工中的流变行为和结晶特性，优化了其成型工艺窗口，改善了制品的耐热性能。...",
+    "url": "https://example.com/paper/pla-injection",
+    "published_at": "2026-01-12T11:02:48.238Z",
+    "source_name": "技术前沿 (Mock)",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-ind-material",
+    "title": "新型耐高温特种工程塑料研发成功，可替代部分金属部件",
+    "summary": "国内某材料研究院成功开发出耐热温度超过300℃的新型聚酰亚胺材料，在航空航天和高端电子领域具有广阔的应用前景。...",
+    "url": "https://example.com/news/new-material",
+    "published_at": "2026-01-11T11:02:48.238Z",
+    "source_name": "行业动态 (Mock)",
+    "category": "industry",
+    "image_url": "https://images.unsplash.com/photo-1580983218765-f663bec07b37?auto=format&fit=crop&w=600&q=80",
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-tech-mim",
+    "title": "金属粉末注射成型（MIM）常见缺陷与对策",
+    "summary": "摘要：总结了MIM工艺中常见的凹陷、变形、黑斑等缺陷产生的原因，并从喂料制备、注射、脱脂燒結等方面提出了解决方案。...",
+    "url": "https://example.com/paper/mim-defects",
+    "published_at": "2026-01-11T11:02:48.238Z",
+    "source_name": "技术前沿 (Mock)",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-ind-medical",
+    "title": "医疗耗材集中采购推动自动化注塑生产线升级",
+    "summary": "面对集采带来的成本压力，各大医疗耗材生产商纷纷引进全电动注塑机和自动化包装线，以提高生产效率和产品一致性。...",
+    "url": "https://example.com/news/medical-automation",
+    "published_at": "2026-01-10T11:02:48.238Z",
+    "source_name": "行业动态 (Mock)",
+    "category": "industry",
+    "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+    "created_at": "2026-01-15T11:02:48.238Z"
+  },
+  {
+    "id": "mock-tech-ai",
+    "title": "人工智能在注塑生产过程质量监控中的应用",
+    "summary": "摘要：构建了基于机器学习的注塑过程质量预测模型，通过实时采集注塑机传感器数据，实现了对制品重量和尺寸精度的在线监控。...",
+    "url": "https://example.com/paper/ai-monitoring",
+    "published_at": "2026-01-10T11:02:48.238Z",
+    "source_name": "技术前沿 (Mock)",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-01-15T11:02:48.238Z"
+  }
+]

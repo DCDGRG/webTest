@@ -10,6 +10,10 @@
   --border-color: #CEDFCC;
   --light-gray: #F8F9FA;
   --accent-color: #4A9B8A;
+  --accent-amber: #F59E0B;
+  /* Amber 500 */
+  --accent-amber-hover: #D97706;
+  /* Amber 600 */
 }
 
 /* 主要按钮样式 - 使用优雅的蓝绿色 */
@@ -27,7 +31,16 @@
 .btn-primary:focus {
   background-color: var(--secondary-teal) !important;
   border-color: var(--secondary-teal) !important;
-  box-shadow: 0 0 0 0.2rem rgba(45, 105, 117, 0.25) !important;
+  box-shadow: none !important;
+  /* Remove blue outline */
+}
+
+/* 移除导航栏点击时的蓝色聚焦框 */
+.nav-link:focus,
+.dropdown-item:focus,
+.btn:focus {
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 /* 次要按钮样式 */
@@ -67,6 +80,22 @@
 .btn-outline-warning:hover {
   background-color: #F39C12 !important;
   color: white !important;
+}
+
+/* CTA 按钮样式 - 使用醒目的琥珀色 */
+.btn-cta {
+  background-color: var(--accent-amber) !important;
+  border-color: var(--accent-amber) !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.btn-cta:hover {
+  background-color: var(--accent-amber-hover) !important;
+  border-color: var(--accent-amber-hover) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
 /* 链接颜色 - 使用优雅的蓝绿色 */
@@ -299,10 +328,9 @@ a:hover {
 
 /* 优雅的蓝绿色背景渐变 */
 .elegant-gradient-bg {
-  background: linear-gradient(135deg, 
-    var(--pale-mint), 
-    rgba(206, 223, 204, 0.4)
-  ) !important;
+  background: linear-gradient(135deg,
+      var(--pale-mint),
+      rgba(206, 223, 204, 0.4)) !important;
 }
 
 /* 淡蓝绿色背景 */
