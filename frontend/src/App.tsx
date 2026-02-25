@@ -78,20 +78,21 @@ function Navbar() {
               </ul>
             </li>
           </ul>
-          <div className="d-flex align-items-center ms-3 gap-2">
+          <div className="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0 navbar-controls">
             <ThemeLanguageSwitcher />
+            <div className="vr d-none d-lg-block"></div>
             {isAuthenticated ? (
-              <>
-                <Link to="/admin" className="btn btn-outline-primary btn-sm">
+              <div className="btn-group btn-group-sm">
+                <Link to="/admin" className="btn btn-outline-primary">
                   <i className="bi bi-speedometer2 me-1"></i>{admin?.username}
                 </Link>
-                <button className="btn btn-outline-secondary btn-sm" onClick={logout}>
-                  {t('common.logout')}
+                <button className="btn btn-outline-primary" onClick={logout} title={t('common.logout')}>
+                  <i className="bi bi-box-arrow-right"></i>
                 </button>
-              </>
+              </div>
             ) : (
               <Link to="/admin/login" className="btn btn-primary btn-sm">
-                <i className="bi bi-person me-1"></i>{t('common.login')}
+                <i className="bi bi-person-fill me-1"></i>{t('common.login')}
               </Link>
             )}
           </div>

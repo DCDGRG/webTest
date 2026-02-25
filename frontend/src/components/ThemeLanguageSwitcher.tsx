@@ -13,17 +13,17 @@ export default function ThemeLanguageSwitcher() {
     const isZh = i18n.language === 'zh-CN' || i18n.language === 'zh';
 
     return (
-        <div className="d-flex align-items-center gap-2">
+        <div className="btn-group btn-group-sm" role="group">
             <button
-                className="btn btn-sm btn-outline-secondary"
+                className="btn btn-outline-secondary"
                 onClick={toggleLanguage}
                 title={isZh ? 'Switch to English' : '切换到中文'}
-                style={{ minWidth: '42px' }}
             >
-                {isZh ? 'EN' : '中'}
+                <i className="bi bi-globe2 me-1"></i>
+                <span className="fw-medium">{isZh ? 'EN' : '中'}</span>
             </button>
             <button
-                className="btn btn-sm btn-outline-secondary"
+                className="btn btn-outline-secondary"
                 onClick={toggleTheme}
                 title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
             >

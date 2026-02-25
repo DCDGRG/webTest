@@ -216,3 +216,22 @@
 [data-bs-theme="dark"] ::-webkit-scrollbar-thumb:hover {
     background: #606060;
 }
+
+/* Dark mode navbar button hover effects */
+[data-bs-theme="dark"] .navbar .btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-bs-theme="dark"] .navbar .btn-group .btn:hover {
+    background-color: #404040;
+    border-color: #505050;
+    color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .navbar .nav-link::after {
+    background: linear-gradient(90deg, #20c997, #17a2b8);
+}
+
+[data-bs-theme="dark"] .navbar .vr {
+    background-color: #505050;
+}

@@ -18,8 +18,149 @@ header.hero .display-5 {
 	font-size: clamp(2rem, 4vw + 1rem, 3rem);
 }
 
-/* Ensure hero image doesn’t overflow */
+/* Ensure hero image doesn't overflow */
 header.hero img {
 	max-width: 100%;
 	height: auto;
+}
+
+/* ===== Navbar Button Animations ===== */
+
+/* Smooth transitions for all navbar buttons */
+.navbar .btn {
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scale and shadow on hover */
+.navbar .btn:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .btn:active {
+	transform: translateY(0) scale(0.98);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme/Language switcher button group */
+.navbar .btn-group .btn {
+	transition: all 0.2s ease;
+}
+
+.navbar .btn-group .btn:hover {
+	transform: none;
+	box-shadow: none;
+	background-color: var(--bs-secondary);
+	color: white;
+}
+
+/* Icon spin animation for theme toggle */
+.navbar .btn .bi-sun-fill,
+.navbar .btn .bi-moon-fill {
+	transition: transform 0.3s ease;
+}
+
+.navbar .btn:hover .bi-sun-fill {
+	transform: rotate(180deg);
+}
+
+.navbar .btn:hover .bi-moon-fill {
+	transform: rotate(-20deg) scale(1.1);
+}
+
+/* Globe icon animation for language toggle */
+.navbar .btn .bi-globe2 {
+	transition: transform 0.3s ease;
+}
+
+.navbar .btn:hover .bi-globe2 {
+	transform: rotate(20deg);
+}
+
+/* Login button pulse effect */
+.navbar .btn-primary {
+	position: relative;
+	overflow: hidden;
+}
+
+.navbar .btn-primary::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	transition: width 0.4s ease, height 0.4s ease;
+}
+
+.navbar .btn-primary:hover::after {
+	width: 200px;
+	height: 200px;
+}
+
+/* Nav link hover underline animation */
+.navbar .nav-link {
+	position: relative;
+	transition: color 0.2s ease;
+}
+
+.navbar .nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(90deg, var(--bs-primary), var(--bs-success));
+	transition: width 0.3s ease, left 0.3s ease;
+	border-radius: 1px;
+}
+
+.navbar .nav-link:hover::after {
+	width: 80%;
+	left: 10%;
+}
+
+/* Dropdown menu animation */
+.navbar .dropdown-menu {
+	opacity: 0;
+	transform: translateY(-10px);
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	display: block;
+	pointer-events: none;
+}
+
+.navbar .dropdown.show .dropdown-menu {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+.navbar .dropdown-item {
+	transition: background-color 0.15s ease, padding-left 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+	padding-left: 1.5rem;
+}
+
+/* Navbar controls container spacing */
+.navbar-controls {
+	gap: 0.75rem;
+}
+
+@media (min-width: 992px) {
+	.navbar-controls {
+		gap: 1rem;
+	}
+}
+
+/* Vertical divider styling */
+.navbar .vr {
+	opacity: 0.3;
+	height: 24px;
+	align-self: center;
 } 
