@@ -1,0 +1,304 @@
+{
+  "common": {
+    "login": "Login",
+    "logout": "Logout",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "readMore": "Read More",
+    "viewProject": "View Project",
+    "inquire": "Inquire",
+    "inquireNow": "Inquire Now"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products & Services",
+    "contact": "Contact",
+    "techNews": "Tech News",
+    "techArticles": "Tech Articles",
+    "industryNews": "Industry News",
+    "portfolio": "Portfolio",
+    "portfolioOverview": "Overview",
+    "portfolioItem": "Details",
+    "brand": "Shanghai Kuixing"
+  },
+  "hero": {
+    "title": "Professional Precision Mold Manufacturing & Specialty Plastics Processing",
+    "subtitle": "Shanghai Kuixing Electronics Technology Co., Ltd. specializes in custom processing of high-performance specialty plastics including PEEK, PEI, PPSU, providing one-stop solutions for medical devices, automotive parts, and electronics industries.",
+    "learnServices": "Our Services",
+    "aboutUs": "About Us"
+  },
+  "features": {
+    "title": "Professional Precision Manufacturing Services",
+    "moldMaking": {
+      "title": "Precision Mold Making",
+      "description": "Professional CNC machining center, precision mold design and manufacturing, ensuring product accuracy and quality"
+    },
+    "injection": {
+      "title": "Injection Molding",
+      "description": "31 injection machines, 50T-800T specifications, supporting two-color, vertical, thin-wall high-speed injection"
+    },
+    "surface": {
+      "title": "Surface Treatment",
+      "description": "Class 100,000 clean spray booth, automatic painting and UV assembly line, silk screen, pad printing, hot stamping"
+    },
+    "assembly": {
+      "title": "Assembly & Testing",
+      "description": "Ultrasonic welding, assembly equipment, coordinate measuring machine, colorimeter and other precision testing equipment"
+    }
+  },
+  "testimonial": {
+    "quote": "Shanghai Kuixing Electronics Technology has provided us with high-quality medical device plastic components with stable quality and timely delivery. They are a trusted partner!",
+    "name": "Engineer Zhang",
+    "title": "Technical Director, Medical Device Company"
+  },
+  "footer": {
+    "copyright": "Copyright © Shanghai Kuixing Electronics Technology Co., Ltd.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "about": {
+    "pageTitle": "Shanghai Kuixing Electronics Technology Co., Ltd.",
+    "pageSubtitle": "Located in Baoshan District, Shanghai, specializing in precision mold design and manufacturing, injection molding, painting, printing, pad printing, hot stamping, assembly and other integrated services. Focused on custom processing of high-performance specialty plastic products, widely used in analytical instruments, medical devices, automotive parts, sensors, smart home and other fields.",
+    "philosophy": "Corporate Philosophy",
+    "policy": "Policy:",
+    "policyContent": "100% Service, Zero Defects in Quality",
+    "spirit": "Spirit:",
+    "spiritContent": "Professional · Integrity · Pioneering · Innovation",
+    "purpose": "Purpose:",
+    "purposeContent": "Everyone for Quality, Process Control, Stable Quality, Customer Satisfaction",
+    "goal": "Goal:",
+    "goalContent": "Continuously improve competitiveness, cohesion and innovation to create greater value for customers and society",
+    "equipment": "Equipment & Workshops",
+    "equipmentSubtitle": "The company has advanced production and testing equipment to ensure product accuracy and quality.",
+    "moldDept": "Mold Department:",
+    "moldDeptContent": "CNC machining centers, Sodick EDM machines, grinders, drilling machines, 20+ units",
+    "injectionDept": "Injection Department:",
+    "injectionDeptContent": "31 injection machines (50T-800T, including two-color, vertical, thin-wall high-speed)",
+    "paintDept": "Paint Department:",
+    "paintDeptContent": "Class 100,000 clean spray booth, automatic painting and UV assembly line",
+    "assemblyShop": "Assembly Workshop:",
+    "assemblyShopContent": "Silk screen, pad printing, hot stamping, ultrasonic welding equipment",
+    "testEquipment": "Testing Equipment:",
+    "testEquipmentContent": "Coordinate measuring machine, 2D image measuring instrument, colorimeter, friction tester, etc.",
+    "medicalShop": "Medical Parts Workshop:",
+    "medicalShopContent": "Class 100,000 clean medical parts injection workshop, meeting high-end medical product requirements",
+    "productsAndApplications": "Products & Applications",
+    "productsSubtitle": "We provide high-performance plastic parts for multiple industries",
+    "automotive": {
+      "title": "Automotive Parts",
+      "description": "PBT-GF30, PPSU, PFA, PA66 material products",
+      "features": ["High Strength", "Corrosion Resistant", "Lightweight"]
+    },
+    "medical": {
+      "title": "Medical Devices",
+      "description": "Orthopedic instruments, endoscope handles, medical consumables",
+      "features": ["Biocompatible", "Sterile Requirements", "Precision Manufacturing"]
+    },
+    "electronics": {
+      "title": "Electronics",
+      "description": "PEI, PPS, PA66 high-strength, corrosion-resistant components",
+      "features": ["Insulation", "Heat Resistant", "Dimensionally Stable"]
+    },
+    "engineering": {
+      "title": "Engineering Plastics",
+      "description": "Heat-resistant, corrosion-resistant, transparent functional material products",
+      "features": ["Specialty Materials", "Custom Processing", "Quality Assured"]
+    },
+    "qualityTitle": "Quality & Certifications",
+    "qualitySubtitle": "The company has established a complete quality system and standardized process",
+    "certification": "Certifications:",
+    "certificationContent": "ISO9001, IATF16949:2016, ISO13485",
+    "qualification": "Qualifications:",
+    "qualificationContent": "Class 100,000 clean injection workshop",
+    "moldProcess": "Mold Analysis Process:",
+    "moldProcessContent": "3D Data Confirmation → Mold Flow & Structural Analysis → Improvement Suggestions → Customer Confirmation → Mold Manufacturing → Product Delivery",
+    "customersTitle": "Customers & Markets",
+    "customersSubtitle": "Serving global customers, building long-term partnerships",
+    "serviceRegion": "Service Regions:",
+    "serviceRegionContent": "China, USA, Europe, Asia and other regions",
+    "serviceIndustry": "Service Industries:",
+    "serviceIndustryContent": "Healthcare, Automotive, Electronics, Smart Home, Analytical Instruments",
+    "materialExpertise": "Material Expertise:",
+    "materialExpertiseContent": "PEEK, PEI, PPSU, PPS, PFA, TPE, PC/ABS, PA12, PC and other high-performance specialty plastics",
+    "commitment": "Our Commitment",
+    "commitmentContent": "We will continue to uphold the spirit of 'Professional, Integrity, Pioneering, Innovation', continuously optimize technology and management, and work hand in hand with global customers to create win-win outcomes with high-quality products and excellent service.",
+    "moldEquipment": "Mold Equipment",
+    "injectionMachines": "Injection Machines",
+    "cleanRoom": "Clean Room"
+  },
+  "contact": {
+    "pageTitle": "Contact Us",
+    "pageSubtitle": "We look forward to hearing from you and are ready to answer your questions",
+    "name": "Name",
+    "namePlaceholder": "Enter your name...",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "messagePlaceholder": "Enter your message...",
+    "submitting": "Submitting...",
+    "submitMessage": "Submit Message",
+    "successMessage": "We have received your message and will contact you soon!",
+    "errorMessage": "Failed to send. Please try again later or contact us by phone.",
+    "onlineChat": "Online Chat",
+    "onlineChatDesc": "Chat with our support experts in real-time for instant help.",
+    "joinCommunity": "Join Community",
+    "joinCommunityDesc": "Explore our community forums and exchange ideas with other users.",
+    "helpCenter": "Help Center",
+    "helpCenterDesc": "Browse FAQs and support articles to find solutions.",
+    "callUs": "Call Us",
+    "callUsDesc": "Call our service hotline during business hours at (021) 1234-5678."
+  },
+  "pricing": {
+    "pageTitle": "Products & Pricing",
+    "pageSubtitle": "We provide one-stop services from mold design to finished product delivery, customizing optimal solutions according to your specific needs",
+    "coreServices": "Core Services",
+    "coreServicesSubtitle": "Professional technical team, advanced equipment, providing high-quality products and services",
+    "moldDesign": "Mold Design & Manufacturing",
+    "moldDesignPrice": "¥15,000",
+    "moldDesignUnit": "starting / set",
+    "moldDesignFeatures": [
+      "3D data confirmation and mold flow analysis",
+      "Precision mold design and manufacturing",
+      "CNC machining center precision processing",
+      "Sodick EDM precision processing",
+      "Mold trial and debugging",
+      "Quality inspection and acceptance"
+    ],
+    "injectionMolding": "Injection Molding",
+    "injectionMoldingPrice": "¥0.8",
+    "injectionMoldingUnit": "starting / piece",
+    "injectionMoldingFeatures": [
+      "50T-800T injection machines",
+      "Two-color and vertical injection",
+      "Thin-wall high-speed injection process",
+      "PEEK/PEI/PPSU specialty materials",
+      "Medical-grade clean injection workshop",
+      "Mass production and quality control"
+    ],
+    "surfaceTreatment": "Surface Treatment",
+    "surfaceTreatmentPrice": "¥2.5",
+    "surfaceTreatmentUnit": "starting / piece",
+    "surfaceTreatmentFeatures": [
+      "Class 100,000 clean spray booth",
+      "Automatic painting and UV line",
+      "Silk screen, pad printing, hot stamping",
+      "Surface texture treatment",
+      "Color difference detection and QC",
+      "Eco-friendly materials and processes"
+    ],
+    "applicationAreas": "Application Areas",
+    "applicationAreasSubtitle": "We provide high-performance plastic parts solutions for multiple industries",
+    "automotive": {
+      "title": "Automotive Parts",
+      "description": "Professional manufacturing of high-performance plastic parts for automobiles, including interior, exterior, and functional parts",
+      "features": "Lightweight · High Strength · Corrosion Resistant"
+    },
+    "medical": {
+      "title": "Medical Devices",
+      "description": "Medical-grade plastic products meeting sterile requirements and biocompatibility standards",
+      "badges": ["Orthopedics", "Endoscopes", "Medical Consumables", "Diagnostics"],
+      "features": "Sterile · Biocompatible · Precision"
+    },
+    "electronics": {
+      "title": "Electronics",
+      "description": "High-precision electronic plastic parts with excellent insulation and dimensional stability",
+      "features": "Insulation · Heat Resistant · Dimensionally Stable"
+    },
+    "engineeringPlastics": {
+      "title": "Engineering Plastics",
+      "description": "Specialty engineering plastic products meeting heat and corrosion resistance requirements",
+      "badges": ["Heat Resistant", "Corrosion Resistant", "Transparent", "Specialty"],
+      "features": "Specialty Materials · Custom Processing · Quality Assured"
+    },
+    "specialtyMaterials": "Specialty Materials Expertise",
+    "specialtyMaterialsSubtitle": "We specialize in processing and application of high-performance specialty plastics",
+    "materials": {
+      "PEEK": {
+        "description": "Polyetheretherketone, excellent heat resistance, high strength, chemical stability",
+        "features": ["260°C Heat Resistant", "High Strength", "Chemically Stable"]
+      },
+      "PEI": {
+        "description": "Polyetherimide, maintains excellent mechanical properties at high temperatures",
+        "features": ["180°C Heat Resistant", "Dimensionally Stable", "Electrically Insulating"]
+      },
+      "PPSU": {
+        "description": "Polyphenylsulfone, transparent, heat resistant, good biocompatibility",
+        "features": ["Transparent", "180°C Heat Resistant", "Biocompatible"]
+      },
+      "PPS": {
+        "description": "Polyphenylene sulfide, chemical corrosion resistant, good dimensional stability",
+        "features": ["Corrosion Resistant", "Dimensionally Stable", "Flame Retardant"]
+      },
+      "PFA": {
+        "description": "Perfluoroalkoxy resin, superior chemical corrosion resistance",
+        "features": ["Super Corrosion Resistant", "Low Friction", "High Purity"]
+      },
+      "TPE": {
+        "description": "Thermoplastic elastomer, soft, elastic, recyclable",
+        "features": ["Soft", "Elastic", "Recyclable"]
+      }
+    },
+    "viewDetails": "View Details",
+    "pricingExplanation": "Pricing Explanation",
+    "pricingExplanationSubtitle": "Prices vary based on product complexity, material requirements, quantity, and other factors",
+    "pricingFactors": "Factors Affecting Price",
+    "materialSelection": "Material Selection:",
+    "materialSelectionContent": "Specialty materials like PEEK, PEI have higher costs; standard engineering plastics are relatively lower",
+    "productComplexity": "Product Complexity:",
+    "productComplexityContent": "Products with complex structures and high precision requirements have higher processing difficulty and prices",
+    "productionQuantity": "Production Quantity:",
+    "productionQuantityContent": "Mass production reduces unit costs; larger quantities mean better prices",
+    "qualityRequirements": "Quality Requirements:",
+    "qualityRequirementsContent": "Medical-grade, automotive-grade and other high standards require stricter process control",
+    "ourAdvantages": "Our Advantages",
+    "technicalAdvantage": "Technical Advantage:",
+    "technicalAdvantageContent": "Advanced processing equipment and professional technical team ensure product quality",
+    "costControl": "Cost Control:",
+    "costControlContent": "Scale production and supply chain optimization provide competitive pricing",
+    "serviceGuarantee": "Service Guarantee:",
+    "serviceGuaranteeContent": "One-stop service from design to delivery reduces customer communication costs",
+    "qualityCommitment": "Quality Commitment:",
+    "qualityCommitmentContent": "Strict quality management system ensures product stability and reliability",
+    "getQuote": "Get a Quote",
+    "getQuoteSubtitle": "Contact our professional team for personalized solutions and accurate quotes",
+    "responseTime": "24 Hours",
+    "responseTimeLabel": "Response Time",
+    "freeConsultation": "Free",
+    "freeConsultationLabel": "Technical Consultation",
+    "customizedSolution": "Customized",
+    "customizedSolutionLabel": "Solutions"
+  },
+  "faq": {
+    "pageTitle": "Frequently Asked Questions",
+    "pageSubtitle": "How can we help you?",
+    "accountBilling": "Account & Billing",
+    "websiteIssues": "Website Issues",
+    "accordionItem1": "Question #1",
+    "accordionItem1Answer": "This is the answer to the first question.",
+    "accordionItem2": "Question #2",
+    "accordionItem2Answer": "This is the answer to the second question.",
+    "accordionItem3": "Question #3",
+    "accordionItem3Answer": "This is the answer to the third question.",
+    "moreQuestions": "Have more questions?",
+    "contactAt": "Contact us at",
+    "followUs": "Follow us"
+  },
+  "blog": {
+    "techArticles": "Tech Articles",
+    "industryNews": "Industry News",
+    "newsSubtitle": "Latest industry trends, technical insights, and exhibition information",
+    "noNews": "No news available. Please try again later."
+  },
+  "portfolio": {
+    "ourWork": "Our Work",
+    "companyPortfolio": "Company Portfolio",
+    "projectName": "Project Name",
+    "projectTitle": "Project Title",
+    "projectDescription": "Project description details...",
+    "buildTogether": "Let's build something together",
+    "viewProject": "View Project"
+  }
+}

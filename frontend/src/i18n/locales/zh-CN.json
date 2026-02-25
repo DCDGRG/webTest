@@ -1,0 +1,304 @@
+{
+  "common": {
+    "login": "登录",
+    "logout": "退出",
+    "submit": "提交",
+    "loading": "加载中...",
+    "learnMore": "了解更多",
+    "contactUs": "联系我们",
+    "readMore": "阅读原文",
+    "viewProject": "查看项目",
+    "inquire": "咨询详情",
+    "inquireNow": "立即咨询"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品服务",
+    "contact": "联系我们",
+    "techNews": "技术资讯",
+    "techArticles": "技术文章",
+    "industryNews": "行业动态",
+    "portfolio": "产品展示",
+    "portfolioOverview": "产品总览",
+    "portfolioItem": "产品详情",
+    "brand": "上海奎星"
+  },
+  "hero": {
+    "title": "专业精密模具制造与特种塑料加工",
+    "subtitle": "上海奎星电子科技有限公司专注于PEEK、PEI、PPSU等高性能特种塑料制品的定制加工，为医疗器械、汽车零部件、电子电器等行业提供一站式解决方案。",
+    "learnServices": "了解服务",
+    "aboutUs": "关于我们"
+  },
+  "features": {
+    "title": "专业的精密制造服务",
+    "moldMaking": {
+      "title": "精密模具制造",
+      "description": "专业CNC加工中心，精密模具设计与制造，确保产品精度与品质"
+    },
+    "injection": {
+      "title": "注塑成型",
+      "description": "31台注塑机，50T-800T规格齐全，支持双色、立式、薄壁高速注塑"
+    },
+    "surface": {
+      "title": "表面处理",
+      "description": "10万级无尘喷漆车间，自动喷漆与UV流水线，丝印、移印、烫金工艺"
+    },
+    "assembly": {
+      "title": "组装检测",
+      "description": "超声波焊接、组装设备，三坐标测量仪、色差仪等精密检测设备"
+    }
+  },
+  "testimonial": {
+    "quote": "上海奎星电子科技为我们提供了高质量的医疗器械塑料零部件，产品质量稳定，交货及时，是我们值得信赖的合作伙伴！",
+    "name": "张工程师",
+    "title": "技术总监, 医疗器械公司"
+  },
+  "footer": {
+    "copyright": "Copyright © 上海奎星电子科技有限公司",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "about": {
+    "pageTitle": "上海奎星电子科技有限公司",
+    "pageSubtitle": "位于上海宝山区，专业从事精密模具设计制造、注塑成型及喷涂、印刷、移印、烫金、组装等一条龙服务。专注于高性能特种塑料制品的定制加工，广泛应用于分析仪器、医疗器械、汽车零部件、传感器、智能家居等领域。",
+    "philosophy": "企业理念",
+    "policy": "方针：",
+    "policyContent": "服务百分百，质量零缺陷",
+    "spirit": "精神：",
+    "spiritContent": "专业 · 诚信 · 开拓 · 创新",
+    "purpose": "宗旨：",
+    "purposeContent": "人人品管、过程受控、质量稳定、客户满意",
+    "goal": "目标：",
+    "goalContent": "不断提升竞争力、凝聚力与创新力，为客户与社会创造更大价值",
+    "equipment": "设备与车间",
+    "equipmentSubtitle": "公司拥有先进的生产与检测设备，确保产品精度与品质。",
+    "moldDept": "模具部：",
+    "moldDeptContent": "CNC 加工中心、沙迪克火花机、磨床、钻床等 20+ 台",
+    "injectionDept": "注塑部：",
+    "injectionDeptContent": "31 台注塑机（50T–800T，包括双色、立式、薄壁高速机）",
+    "paintDept": "喷漆部：",
+    "paintDeptContent": "10 万级无尘喷漆车间，自动喷漆与 UV 流水线",
+    "assemblyShop": "组装车间：",
+    "assemblyShopContent": "丝印、移印、烫金、超声波焊接等设备",
+    "testEquipment": "检测设备：",
+    "testEquipmentContent": "三坐标测量仪、二次元影像仪、色差仪、摩擦测试仪等",
+    "medicalShop": "医疗配件车间：",
+    "medicalShopContent": "10万级无尘医疗配件注塑车间，满足高端医疗产品要求",
+    "productsAndApplications": "产品与应用领域",
+    "productsSubtitle": "我们为多个行业提供高性能塑料零部件",
+    "automotive": {
+      "title": "汽车零部件",
+      "description": "PBT-GF30、PPSU、PFA、PA66 等材料产品",
+      "features": ["高强度", "耐腐蚀", "轻量化"]
+    },
+    "medical": {
+      "title": "医疗器械",
+      "description": "骨科器械、内窥镜手柄、医疗耗材",
+      "features": ["生物相容性", "无菌要求", "精密制造"]
+    },
+    "electronics": {
+      "title": "电子电器",
+      "description": "PEI、PPS、PA66 等高强度、耐腐蚀零部件",
+      "features": ["绝缘性能", "耐高温", "尺寸稳定"]
+    },
+    "engineering": {
+      "title": "工程塑料",
+      "description": "耐高温、耐腐蚀、透明功能材料产品",
+      "features": ["特种材料", "定制加工", "品质保证"]
+    },
+    "qualityTitle": "质量与资质",
+    "qualitySubtitle": "公司建立了完善的质量体系和标准化流程",
+    "certification": "质量认证：",
+    "certificationContent": "ISO9001、IATF16949:2016、ISO13485",
+    "qualification": "专业资质：",
+    "qualificationContent": "10万级无尘注塑车间",
+    "moldProcess": "模具分析流程：",
+    "moldProcessContent": "3D 数据确认 → 模流与结构分析 → 改进建议 → 客户确认 → 模具制造 → 产品交付",
+    "customersTitle": "客户与市场",
+    "customersSubtitle": "服务全球客户，建立长期合作关系",
+    "serviceRegion": "服务地区：",
+    "serviceRegionContent": "中国、美国、欧洲、亚洲等地区",
+    "serviceIndustry": "服务行业：",
+    "serviceIndustryContent": "医疗健康、汽车、电子电器、智能家居、分析仪器等",
+    "materialExpertise": "材料专长：",
+    "materialExpertiseContent": "PEEK、PEI、PPSU、PPS、PFA、TPE、PC/ABS、PA12、PC 等高性能特种塑料",
+    "commitment": "我们的承诺",
+    "commitmentContent": "我们将继续秉持「专业、诚信、开拓、创新」的精神，不断优化技术与管理，以高质量的产品和优质的服务，与全球客户携手合作，共创双赢。",
+    "moldEquipment": "模具设备",
+    "injectionMachines": "注塑机台",
+    "cleanRoom": "无尘车间"
+  },
+  "contact": {
+    "pageTitle": "联系我们",
+    "pageSubtitle": "我们期待您的来信，随时为您解答疑问",
+    "name": "姓名",
+    "namePlaceholder": "请输入您的姓名...",
+    "email": "电子邮箱",
+    "phone": "联系电话",
+    "message": "留言内容",
+    "messagePlaceholder": "请输入您的留言内容...",
+    "submitting": "正在提交...",
+    "submitMessage": "提交留言",
+    "successMessage": "我们已收到您的留言，会尽快联系您！",
+    "errorMessage": "发送失败，请稍后重试或直接通过电话联系我们。",
+    "onlineChat": "在线咨询",
+    "onlineChatDesc": "与我们的支持专家实时交流，获取即时帮助。",
+    "joinCommunity": "加入社区",
+    "joinCommunityDesc": "探索我们的社区论坛，与其他用户交流心得。",
+    "helpCenter": "帮助中心",
+    "helpCenterDesc": "浏览常见问题解答(FAQ)和支持文章，寻找解决方案。",
+    "callUs": "致电我们",
+    "callUsDesc": "请在工作时间拨打我们的服务热线 (021) 1234-5678。"
+  },
+  "pricing": {
+    "pageTitle": "产品服务与价格",
+    "pageSubtitle": "我们提供从模具设计到成品交付的一站式服务，根据您的具体需求定制最优解决方案",
+    "coreServices": "核心服务项目",
+    "coreServicesSubtitle": "专业的技术团队，先进的设备设施，为您提供高品质的产品和服务",
+    "moldDesign": "模具设计与制造",
+    "moldDesignPrice": "¥15,000",
+    "moldDesignUnit": "起 / 套",
+    "moldDesignFeatures": [
+      "3D数据确认与模流分析",
+      "精密模具设计与制造",
+      "CNC加工中心精密加工",
+      "沙迪克火花机精加工",
+      "模具试模与调试",
+      "质量检测与验收"
+    ],
+    "injectionMolding": "注塑成型",
+    "injectionMoldingPrice": "¥0.8",
+    "injectionMoldingUnit": "起 / 件",
+    "injectionMoldingFeatures": [
+      "50T-800T注塑机台",
+      "双色注塑与立式注塑",
+      "薄壁高速注塑工艺",
+      "PEEK/PEI/PPSU等特种材料",
+      "医疗级无尘注塑车间",
+      "批量生产与质量控制"
+    ],
+    "surfaceTreatment": "表面处理",
+    "surfaceTreatmentPrice": "¥2.5",
+    "surfaceTreatmentUnit": "起 / 件",
+    "surfaceTreatmentFeatures": [
+      "10万级无尘喷漆车间",
+      "自动喷漆与UV流水线",
+      "丝印、移印、烫金工艺",
+      "表面纹理与质感处理",
+      "色差检测与质量控制",
+      "环保材料与工艺"
+    ],
+    "applicationAreas": "产品应用领域",
+    "applicationAreasSubtitle": "我们为多个行业提供高性能塑料零部件解决方案",
+    "automotive": {
+      "title": "汽车零部件",
+      "description": "专业制造汽车用高性能塑料零部件，包括内饰件、外饰件、功能件等",
+      "features": "轻量化 · 高强度 · 耐腐蚀"
+    },
+    "medical": {
+      "title": "医疗器械",
+      "description": "医疗级塑料制品，满足无菌要求和生物相容性标准",
+      "badges": ["骨科器械", "内窥镜", "医疗耗材", "诊断设备"],
+      "features": "无菌要求 · 生物相容性 · 精密制造"
+    },
+    "electronics": {
+      "title": "电子电器",
+      "description": "高精度电子电器塑料零部件，具备优异的绝缘性能和尺寸稳定性",
+      "features": "绝缘性能 · 耐高温 · 尺寸稳定"
+    },
+    "engineeringPlastics": {
+      "title": "工程塑料制品",
+      "description": "特种工程塑料制品，满足耐高温、耐腐蚀等特殊要求",
+      "badges": ["耐高温", "耐腐蚀", "透明功能", "特种材料"],
+      "features": "特种材料 · 定制加工 · 品质保证"
+    },
+    "specialtyMaterials": "特种材料专长",
+    "specialtyMaterialsSubtitle": "我们专注于高性能特种塑料的加工与应用",
+    "materials": {
+      "PEEK": {
+        "description": "聚醚醚酮，耐高温、高强度、化学稳定性优异",
+        "features": ["耐温260°C", "高强度", "化学稳定"]
+      },
+      "PEI": {
+        "description": "聚醚酰亚胺，高温下保持优异机械性能",
+        "features": ["耐温180°C", "尺寸稳定", "电绝缘"]
+      },
+      "PPSU": {
+        "description": "聚苯砜，透明、耐高温、生物相容性好",
+        "features": ["透明", "耐温180°C", "生物相容"]
+      },
+      "PPS": {
+        "description": "聚苯硫醚，耐化学腐蚀、尺寸稳定性好",
+        "features": ["耐腐蚀", "尺寸稳定", "阻燃"]
+      },
+      "PFA": {
+        "description": "全氟烷氧基树脂，超强耐化学腐蚀性",
+        "features": ["超耐腐蚀", "低摩擦", "高纯度"]
+      },
+      "TPE": {
+        "description": "热塑性弹性体，柔软、弹性好、可回收",
+        "features": ["柔软", "弹性好", "可回收"]
+      }
+    },
+    "viewDetails": "了解详情",
+    "pricingExplanation": "价格说明",
+    "pricingExplanationSubtitle": "价格根据产品复杂度、材料要求、数量等因素进行调整",
+    "pricingFactors": "影响价格的因素",
+    "materialSelection": "材料选择：",
+    "materialSelectionContent": "PEEK、PEI等特种材料成本较高，普通工程塑料价格相对较低",
+    "productComplexity": "产品复杂度：",
+    "productComplexityContent": "结构复杂、精度要求高的产品，加工难度大，价格相应提高",
+    "productionQuantity": "生产数量：",
+    "productionQuantityContent": "批量生产可降低单位成本，数量越大价格越优惠",
+    "qualityRequirements": "质量要求：",
+    "qualityRequirementsContent": "医疗级、汽车级等高标准要求，需要更严格的工艺控制",
+    "ourAdvantages": "我们的优势",
+    "technicalAdvantage": "技术优势：",
+    "technicalAdvantageContent": "拥有先进的加工设备和专业的技术团队，确保产品质量",
+    "costControl": "成本控制：",
+    "costControlContent": "规模化生产、供应链优化，为客户提供最具竞争力的价格",
+    "serviceGuarantee": "服务保障：",
+    "serviceGuaranteeContent": "从设计到交付的一站式服务，减少客户沟通成本",
+    "qualityCommitment": "质量承诺：",
+    "qualityCommitmentContent": "严格的质量管理体系，确保产品稳定性和可靠性",
+    "getQuote": "获取详细报价",
+    "getQuoteSubtitle": "请联系我们的专业团队，为您提供个性化的解决方案和准确报价",
+    "responseTime": "24小时",
+    "responseTimeLabel": "响应时间",
+    "freeConsultation": "免费",
+    "freeConsultationLabel": "技术咨询",
+    "customizedSolution": "定制化",
+    "customizedSolutionLabel": "解决方案"
+  },
+  "faq": {
+    "pageTitle": "常见问题",
+    "pageSubtitle": "我们如何帮助您？",
+    "accountBilling": "账户与计费",
+    "websiteIssues": "网站问题",
+    "accordionItem1": "问题 #1",
+    "accordionItem1Answer": "这是第一个问题的答案。",
+    "accordionItem2": "问题 #2",
+    "accordionItem2Answer": "这是第二个问题的答案。",
+    "accordionItem3": "问题 #3",
+    "accordionItem3Answer": "这是第三个问题的答案。",
+    "moreQuestions": "还有更多问题？",
+    "contactAt": "联系我们",
+    "followUs": "关注我们"
+  },
+  "blog": {
+    "techArticles": "技术文章",
+    "industryNews": "行业动态",
+    "newsSubtitle": "汇聚注塑行业最新动态、技术干货与展会信息",
+    "noNews": "暂无最新资讯，请稍后再试。"
+  },
+  "portfolio": {
+    "ourWork": "我们的作品",
+    "companyPortfolio": "公司产品展示",
+    "projectName": "项目名称",
+    "projectTitle": "项目标题",
+    "projectDescription": "项目描述详情内容...",
+    "buildTogether": "让我们一起创造",
+    "viewProject": "查看项目"
+  }
+}

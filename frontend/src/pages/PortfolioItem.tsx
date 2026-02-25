@@ -1,12 +1,16 @@
+import { useTranslation } from 'react-i18next'
+
 export default function PortfolioItem() {
+  const { t } = useTranslation()
+
   return (
     <section className="py-5">
       <div className="container px-5 my-5">
         <div className="row gx-5 justify-content-center">
           <div className="col-lg-6">
             <div className="text-center mb-5">
-              <h1 className="fw-bolder">Project Title</h1>
-              <p className="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab similique, ducimus ut alias sit accusamus illum, asperiores deserunt dolorum quaerat qui! Ab, quisquam explicabo magni dolores unde beatae quam a.</p>
+              <h1 className="fw-bolder">{t('portfolio.projectTitle')}</h1>
+              <p className="lead fw-normal text-muted mb-0">{t('portfolio.projectDescription')}</p>
             </div>
           </div>
         </div>
@@ -18,9 +22,9 @@ export default function PortfolioItem() {
         <div className="row gx-5 justify-content-center">
           <div className="col-lg-6">
             <div className="text-center mb-5">
-              <p className="lead fw-normal text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt architecto enim eos accusantium fugit recusandae illo iste dignissimos possimus facere ducimus odit voluptatibus exercitationem, ex laudantium illum voluptatum corporis.</p>
+              <p className="lead fw-normal text-muted">{t('portfolio.projectDescription')}</p>
               <a className="text-decoration-none" href="#">
-                View project
+                {t('portfolio.viewProject')}
                 <i className="bi-arrow-right"></i>
               </a>
             </div>
@@ -29,4 +33,4 @@ export default function PortfolioItem() {
       </div>
     </section>
   )
-} 
+}

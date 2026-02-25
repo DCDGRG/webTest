@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
+import { useTranslation } from 'react-i18next'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
+import { ThemeProvider } from './contexts/ThemeContext'
 import ProtectedRoute from './components/ProtectedRoute'
+import ThemeLanguageSwitcher from './components/ThemeLanguageSwitcher'
 
 // Lazy load pages for code splitting
 const About = lazy(() => import('./pages/About'))
@@ -22,10 +25,11 @@ const AdminSettings = lazy(() => import('./pages/admin/Settings'))
 
 // Loading fallback component
 function PageLoader() {
+  const { t } = useTranslation()
   return (
     <div className="d-flex justify-content-center align-items-center py-5" style={{ minHeight: '50vh' }}>
       <div className="spinner-border text-primary" role="status">
-        <span className="visually-hidden">Loading...</span>
+        <span className="visually-hidden">{t('common.loading')}</span>
       </div>
     </div>
   )
@@ -33,13 +37,14 @@ function PageLoader() {
 
 function Navbar() {
   const { isAuthenticated, admin, logout } = useAuth()
+  const { t } = useTranslation()
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
       <div className="container px-5">
         <Link className="navbar-brand text-dark fw-bold d-flex align-items-center" to="/">
-          <img src="/logo.svg" alt="奎星" className="me-2" style={{ height: '32px', width: 'auto' }} />
-          上海奎星
+          <img src="/logo.svg" alt={t('nav.brand')} className="me-2" style={{ height: '32px', width: 'auto' }} />
+          {t('nav.brand')}
         </Link>
         <button
           className="navbar-toggler"
@@ -54,39 +59,42 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item"><Link className="nav-link text-dark" to="/">首页</Link></li>
-            <li className="nav-item"><Link className="nav-link text-dark" to="/about">关于我们</Link></li>
-            <li className="nav-item"><Link className="nav-link text-dark" to="/pricing">产品服务</Link></li>
-            <li className="nav-item"><Link className="nav-link text-dark" to="/contact">联系我们</Link></li>
+            <li className="nav-item"><Link className="nav-link text-dark" to="/">{t('nav.home')}</Link></li>
+            <li className="nav-item"><Link className="nav-link text-dark" to="/about">{t('nav.about')}</Link></li>
+            <li className="nav-item"><Link className="nav-link text-dark" to="/pricing">{t('nav.products')}</Link></li>
+            <li className="nav-item"><Link className="nav-link text-dark" to="/contact">{t('nav.contact')}</Link></li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle text-dark" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">技术资讯</a>
+              <a className="nav-link dropdown-toggle text-dark" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('nav.techNews')}</a>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                <li><Link className="dropdown-item" to="/blog-home">技术文章</Link></li>
-                <li><Link className="dropdown-item" to="/blog-post">行业动态</Link></li>
+                <li><Link className="dropdown-item" to="/blog-home">{t('nav.techArticles')}</Link></li>
+                <li><Link className="dropdown-item" to="/blog-post">{t('nav.industryNews')}</Link></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle text-dark" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">产品展示</a>
+              <a className="nav-link dropdown-toggle text-dark" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('nav.portfolio')}</a>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                <li><Link className="dropdown-item" to="/portfolio-overview">产品总览</Link></li>
-                <li><Link className="dropdown-item" to="/portfolio-item">产品详情</Link></li>
+                <li><Link className="dropdown-item" to="/portfolio-overview">{t('nav.portfolioOverview')}</Link></li>
+                <li><Link className="dropdown-item" to="/portfolio-item">{t('nav.portfolioItem')}</Link></li>
               </ul>
             </li>
           </ul>
-          {isAuthenticated ? (
-            <div className="d-flex align-items-center ms-3">
-              <Link to="/admin" className="btn btn-outline-primary btn-sm me-2">
-                <i className="bi bi-speedometer2 me-1"></i>{admin?.username}
+          <div className="d-flex align-items-center ms-3 gap-2">
+            <ThemeLanguageSwitcher />
+            {isAuthenticated ? (
+              <>
+                <Link to="/admin" className="btn btn-outline-primary btn-sm">
+                  <i className="bi bi-speedometer2 me-1"></i>{admin?.username}
+                </Link>
+                <button className="btn btn-outline-secondary btn-sm" onClick={logout}>
+                  {t('common.logout')}
+                </button>
+              </>
+            ) : (
+              <Link to="/admin/login" className="btn btn-primary btn-sm">
+                <i className="bi bi-person me-1"></i>{t('common.login')}
               </Link>
-              <button className="btn btn-outline-secondary btn-sm" onClick={logout}>
-                退出
-              </button>
-            </div>
-          ) : (
-            <Link to="/admin/login" className="btn btn-primary btn-sm ms-3">
-              <i className="bi bi-person me-1"></i>登录
-            </Link>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </nav>
@@ -94,20 +102,21 @@ function Navbar() {
 }
 
 function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="light-teal-bg py-4 mt-auto border-top">
       <div className="container px-5">
         <div className="row align-items-center justify-content-between flex-column flex-sm-row">
           <div className="col-auto d-flex align-items-center">
-            <img src="/logo.svg" alt="奎星电子科技" className="me-2" style={{ height: '24px', width: 'auto' }} />
-            <div className="small m-0 text-dark">Copyright &copy; 上海奎星电子科技有限公司 {new Date().getFullYear()} <span className="text-danger">❤️</span></div>
+            <img src="/logo.svg" alt={t('nav.brand')} className="me-2" style={{ height: '24px', width: 'auto' }} />
+            <div className="small m-0 text-dark">{t('footer.copyright')} {new Date().getFullYear()} <span className="text-danger">❤️</span></div>
           </div>
           <div className="col-auto">
-            <a className="text-dark small text-decoration-none" href="#">隐私政策</a>
+            <a className="text-dark small text-decoration-none" href="#">{t('footer.privacy')}</a>
             <span className="text-dark mx-1">&middot;</span>
-            <a className="text-dark small text-decoration-none" href="#">服务条款</a>
+            <a className="text-dark small text-decoration-none" href="#">{t('footer.terms')}</a>
             <span className="text-dark mx-1">&middot;</span>
-            <a className="text-dark small text-decoration-none" href="#">联系我们</a>
+            <a className="text-dark small text-decoration-none" href="#">{t('nav.contact')}</a>
           </div>
         </div>
       </div>
@@ -118,6 +127,15 @@ function Footer() {
 
 
 function HomePage() {
+  const { t } = useTranslation()
+
+  const features = [
+    { icon: 'bi-gear-fill', title: t('features.moldMaking.title'), description: t('features.moldMaking.description') },
+    { icon: 'bi-droplet-fill', title: t('features.injection.title'), description: t('features.injection.description') },
+    { icon: 'bi-palette-fill', title: t('features.surface.title'), description: t('features.surface.description') },
+    { icon: 'bi-tools', title: t('features.assembly.title'), description: t('features.assembly.description') }
+  ]
+
   return (
     <>
       <header className="bg-primary py-5 hero">
@@ -125,19 +143,18 @@ function HomePage() {
           <div className="row gx-5 align-items-center justify-content-center">
             <div className="col-lg-8 col-xl-7 col-xxl-6">
               <div className="my-5 text-center text-xl-start">
-                <h1 className="display-5 fw-bolder text-white mb-2">专业精密模具制造与特种塑料加工</h1>
-                <p className="lead fw-normal text-white mb-4">上海奎星电子科技有限公司专注于PEEK、PEI、PPSU等高性能特种塑料制品的定制加工，为医疗器械、汽车零部件、电子电器等行业提供一站式解决方案。</p>
+                <h1 className="display-5 fw-bolder text-white mb-2">{t('hero.title')}</h1>
+                <p className="lead fw-normal text-white mb-4">{t('hero.subtitle')}</p>
                 <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                  <a className="btn btn-cta btn-lg px-4 me-sm-3" href="#features">✨ 了解服务</a>
-                  <a className="btn btn-outline-light btn-lg px-4" href="/about">关于我们</a>
+                  <a className="btn btn-cta btn-lg px-4 me-sm-3" href="#features">✨ {t('hero.learnServices')}</a>
+                  <a className="btn btn-outline-light btn-lg px-4" href="/about">{t('hero.aboutUs')}</a>
                 </div>
               </div>
             </div>
             <div className="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
               <div className="d-flex flex-column align-items-center">
-                <img src="/logo.svg" alt="奎星电子科技" className="mb-4" style={{ height: '120px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
-                {/* 使用更专业的工业/科技类占位图 */}
-                <img className="img-fluid rounded-3 my-3" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="精密制造工厂" />
+                <img src="/logo.svg" alt={t('nav.brand')} className="mb-4" style={{ height: '120px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
+                <img className="img-fluid rounded-3 my-3" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt={t('hero.title')} />
               </div>
             </div>
           </div>
@@ -147,15 +164,10 @@ function HomePage() {
       <section className="py-5 bg-light" id="features">
         <div className="container px-5 my-5">
           <div className="row gx-5">
-            <div className="col-lg-4 mb-5 mb-lg-0"><h2 className="fw-bolder mb-0 gradient-text">专业的精密制造服务</h2></div>
+            <div className="col-lg-4 mb-5 mb-lg-0"><h2 className="fw-bolder mb-0 gradient-text">{t('features.title')}</h2></div>
             <div className="col-lg-8">
               <div className="row gx-5 row-cols-1 row-cols-md-2">
-                {[
-                  { icon: 'bi-gear-fill', title: '精密模具制造', description: '专业CNC加工中心，精密模具设计与制造，确保产品精度与品质' },
-                  { icon: 'bi-droplet-fill', title: '注塑成型', description: '31台注塑机，50T-800T规格齐全，支持双色、立式、薄壁高速注塑' },
-                  { icon: 'bi-palette-fill', title: '表面处理', description: '10万级无尘喷漆车间，自动喷漆与UV流水线，丝印、移印、烫金工艺' },
-                  { icon: 'bi-tools', title: '组装检测', description: '超声波焊接、组装设备，三坐标测量仪、色差仪等精密检测设备' }
-                ].map((feature, i) => (
+                {features.map((feature, i) => (
                   <div key={i} className="col mb-5 h-100">
                     <div className="feature bg-success bg-gradient text-white rounded-3 mb-3 elegant-shadow"><i className={`bi ${feature.icon}`}></i></div>
                     <h2 className="h5">{feature.title}</h2>
@@ -173,13 +185,13 @@ function HomePage() {
           <div className="row gx-5 justify-content-center">
             <div className="col-lg-10 col-xl-7">
               <div className="text-center">
-                <div className="fs-4 mb-4 fst-italic">"上海奎星电子科技为我们提供了高质量的医疗器械塑料零部件，产品质量稳定，交货及时，是我们值得信赖的合作伙伴！"</div>
+                <div className="fs-4 mb-4 fst-italic">"{t('testimonial.quote')}"</div>
                 <div className="d-flex align-items-center justify-content-center">
                   <img className="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="" />
                   <div className="fw-bold">
-                    张工程师
+                    {t('testimonial.name')}
                     <span className="fw-bold text-primary mx-1">/</span>
-                    技术总监, 医疗器械公司
+                    {t('testimonial.title')}
                   </div>
                 </div>
               </div>
@@ -232,9 +244,11 @@ function AppLayout() {
 export default function App() {
   return (
     <BrowserRouter>
-      <AuthProvider>
-        <AppLayout />
-      </AuthProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <AppLayout />
+        </AuthProvider>
+      </ThemeProvider>
     </BrowserRouter>
   )
 }

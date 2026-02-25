@@ -1,16 +1,22 @@
-import type { NewsItem } from '../types/News';
+import { useTranslation } from 'react-i18next'
+import type { NewsItem } from '../types/News'
 
 interface NewsCardProps {
-    item: NewsItem;
+    item: NewsItem
 }
 
 export default function NewsCard({ item }: NewsCardProps) {
-    // Format date
-    const date = new Date(item.published_at).toLocaleDateString('zh-CN', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
+    const { t, i18n } = useTranslation()
+
+    // Format date based on current language
+    const date = new Date(item.published_at).toLocaleDateString(
+        i18n.language === 'zh-CN' ? 'zh-CN' : 'en-US',
+        {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }
+    )
 
     return (
         <div className="card h-100 shadow border-0 hover-shadow transition-all">
@@ -36,9 +42,9 @@ export default function NewsCard({ item }: NewsCardProps) {
             </div>
             <div className="card-footer p-4 pt-0 bg-transparent border-top-0">
                 <div className="d-flex align-items-center justify-content-end">
-                    <small className="text-primary fw-bold">阅读原文 <i className="bi bi-arrow-right ms-1"></i></small>
+                    <small className="text-primary fw-bold">{t('common.readMore')} <i className="bi bi-arrow-right ms-1"></i></small>
                 </div>
             </div>
         </div>
-    );
+    )
 }

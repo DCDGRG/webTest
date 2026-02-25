@@ -1,10 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import './i18n'
 import './styles.css'
 // Removed Vite default index.css to prevent layout overrides
 import './custom.css'
 import './green-theme.css'
 import './custom-green.css'
+import './styles/dark-theme.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import App from './App.tsx'
 
