@@ -9,7 +9,7 @@ options:
 
 steps:
   - name: gcr.io/cloud-builders/docker
-    args: ["build", "-t", "${_IMAGE}", "."]
+    args: ["build", "-f", "Dockerfile.frontend", "-t", "${_IMAGE}", "."]
 
   - name: gcr.io/cloud-builders/docker
     args: ["push", "${_IMAGE}"]
@@ -28,7 +28,6 @@ steps:
       - --memory=512Mi
       - --cpu=1
       - --set-env-vars=NODE_ENV=production
-      - --set-secrets=JWT_SECRET=jwt-secret:latest,ADMIN_DEFAULT_PASSWORD=admin-password:latest
 
 images:
   - ${_IMAGE}
