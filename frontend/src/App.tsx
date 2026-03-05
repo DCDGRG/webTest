@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 import { ThemeProvider } from './contexts/ThemeContext'
@@ -38,16 +38,30 @@ function PageLoader() {
 function Navbar() {
   const { isAuthenticated, admin, logout } = useAuth()
   const { t } = useTranslation()
+  const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Helper to check if a path is active
+  const isActive = (path: string) => location.pathname === path
+  const isDropdownActive = (paths: string[]) => paths.some(p => location.pathname === p)
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-      <div className="container px-5">
+    <nav className={`navbar navbar-expand-lg navbar-light bg-white fixed-top ${scrolled ? 'navbar-scrolled' : ''}`}>
+      <div className="container px-4 px-lg-5">
         <Link className="navbar-brand text-dark fw-bold d-flex align-items-center" to="/">
           <img src="/logo.svg" alt={t('nav.brand')} className="me-2" style={{ height: '32px', width: 'auto' }} />
           {t('nav.brand')}
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -59,26 +73,34 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item"><Link className="nav-link text-dark" to="/">{t('nav.home')}</Link></li>
-            <li className="nav-item"><Link className="nav-link text-dark" to="/about">{t('nav.about')}</Link></li>
-            <li className="nav-item"><Link className="nav-link text-dark" to="/pricing">{t('nav.products')}</Link></li>
-            <li className="nav-item"><Link className="nav-link text-dark" to="/contact">{t('nav.contact')}</Link></li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle text-dark" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('nav.techNews')}</a>
+            <li className="nav-item">
+              <Link className={`nav-link ${isActive('/') ? 'nav-link-active' : ''}`} to="/">{t('nav.home')}</Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${isActive('/about') ? 'nav-link-active' : ''}`} to="/about">{t('nav.about')}</Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${isActive('/pricing') ? 'nav-link-active' : ''}`} to="/pricing">{t('nav.products')}</Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${isActive('/contact') ? 'nav-link-active' : ''}`} to="/contact">{t('nav.contact')}</Link>
+            </li>
+            <li className={`nav-item dropdown ${isDropdownActive(['/blog-home', '/blog-post']) ? 'dropdown-active' : ''}`}>
+              <a className={`nav-link dropdown-toggle ${isDropdownActive(['/blog-home', '/blog-post']) ? 'nav-link-active' : ''}`} id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('nav.techNews')}</a>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                <li><Link className="dropdown-item" to="/blog-home">{t('nav.techArticles')}</Link></li>
-                <li><Link className="dropdown-item" to="/blog-post">{t('nav.industryNews')}</Link></li>
+                <li><Link className={`dropdown-item ${isActive('/blog-home') ? 'active' : ''}`} to="/blog-home">{t('nav.techArticles')}</Link></li>
+                <li><Link className={`dropdown-item ${isActive('/blog-post') ? 'active' : ''}`} to="/blog-post">{t('nav.industryNews')}</Link></li>
               </ul>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle text-dark" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('nav.portfolio')}</a>
+            <li className={`nav-item dropdown ${isDropdownActive(['/portfolio-overview', '/portfolio-item']) ? 'dropdown-active' : ''}`}>
+              <a className={`nav-link dropdown-toggle ${isDropdownActive(['/portfolio-overview', '/portfolio-item']) ? 'nav-link-active' : ''}`} id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('nav.portfolio')}</a>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                <li><Link className="dropdown-item" to="/portfolio-overview">{t('nav.portfolioOverview')}</Link></li>
-                <li><Link className="dropdown-item" to="/portfolio-item">{t('nav.portfolioItem')}</Link></li>
+                <li><Link className={`dropdown-item ${isActive('/portfolio-overview') ? 'active' : ''}`} to="/portfolio-overview">{t('nav.portfolioOverview')}</Link></li>
+                <li><Link className={`dropdown-item ${isActive('/portfolio-item') ? 'active' : ''}`} to="/portfolio-item">{t('nav.portfolioItem')}</Link></li>
               </ul>
             </li>
           </ul>
-          <div className="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0 navbar-controls">
+          <div className="navbar-controls">
             <ThemeLanguageSwitcher />
             <div className="vr d-none d-lg-block"></div>
             {isAuthenticated ? (
@@ -91,7 +113,7 @@ function Navbar() {
                 </button>
               </div>
             ) : (
-              <Link to="/admin/login" className="btn btn-primary btn-sm">
+              <Link to="/admin/login" className="btn btn-login btn-sm">
                 <i className="bi bi-person-fill me-1"></i>{t('common.login')}
               </Link>
             )}
@@ -110,7 +132,7 @@ function Footer() {
         <div className="row align-items-center justify-content-between flex-column flex-sm-row">
           <div className="col-auto d-flex align-items-center">
             <img src="/logo.svg" alt={t('nav.brand')} className="me-2" style={{ height: '24px', width: 'auto' }} />
-            <div className="small m-0 text-dark">{t('footer.copyright')} {new Date().getFullYear()} <span className="text-danger">❤️</span></div>
+            <div className="small m-0 text-dark">{t('footer.copyright')} {new Date().getFullYear()}</div>
           </div>
           <div className="col-auto">
             <a className="text-dark small text-decoration-none" href="#">{t('footer.privacy')}</a>
@@ -125,54 +147,128 @@ function Footer() {
   )
 }
 
-
-
 function HomePage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isZh = i18n.language === 'zh-CN' || i18n.language === 'zh'
 
-  const features = [
-    { icon: 'bi-gear-fill', title: t('features.moldMaking.title'), description: t('features.moldMaking.description') },
-    { icon: 'bi-droplet-fill', title: t('features.injection.title'), description: t('features.injection.description') },
-    { icon: 'bi-palette-fill', title: t('features.surface.title'), description: t('features.surface.description') },
-    { icon: 'bi-tools', title: t('features.assembly.title'), description: t('features.assembly.description') }
+  const services = [
+    {
+      icon: 'bi-gear-fill',
+      title: t('features.moldMaking.title'),
+      description: t('features.moldMaking.description'),
+      tags: isZh ? ['CNC加工', '精密模具', '高精度'] : ['CNC', 'Precision Mold', 'High Accuracy']
+    },
+    {
+      icon: 'bi-droplet-fill',
+      title: t('features.injection.title'),
+      description: t('features.injection.description'),
+      tags: isZh ? ['50T-800T', '双色注塑', '医疗级'] : ['50T-800T', 'Two-color', 'Medical Grade']
+    },
+    {
+      icon: 'bi-palette-fill',
+      title: t('features.surface.title'),
+      description: t('features.surface.description'),
+      tags: isZh ? ['无尘喷漆', 'UV工艺', '丝印'] : ['Clean Spray', 'UV Process', 'Silk Screen']
+    },
+    {
+      icon: 'bi-tools',
+      title: t('features.assembly.title'),
+      description: t('features.assembly.description'),
+      tags: isZh ? ['超声波焊接', '三坐标检测', '组装'] : ['Ultrasonic', 'CMM Testing', 'Assembly']
+    }
+  ]
+
+  const trustItems = isZh ? [
+    { icon: 'bi-shield-check', text: 'ISO9001 / IATF16949 / ISO13485' },
+    { icon: 'bi-truck', text: '全球交付能力' },
+    { icon: 'bi-precision', text: '±0.01mm 精度' },
+    { icon: 'bi-building', text: '10万级无尘车间' }
+  ] : [
+    { icon: 'bi-shield-check', text: 'ISO9001 / IATF16949 / ISO13485' },
+    { icon: 'bi-truck', text: 'Global Delivery' },
+    { icon: 'bi-precision', text: '±0.01mm Precision' },
+    { icon: 'bi-building', text: 'Class 100K Clean Room' }
   ]
 
   return (
     <>
-      <header className="bg-primary py-5 hero">
-        <div className="container px-5">
-          <div className="row gx-5 align-items-center justify-content-center">
-            <div className="col-lg-8 col-xl-7 col-xxl-6">
-              <div className="my-5 text-center text-xl-start">
-                <h1 className="display-5 fw-bolder text-white mb-2">{t('hero.title')}</h1>
-                <p className="lead fw-normal text-white mb-4">{t('hero.subtitle')}</p>
-                <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                  <a className="btn btn-cta btn-lg px-4 me-sm-3" href="#features">✨ {t('hero.learnServices')}</a>
-                  <a className="btn btn-outline-light btn-lg px-4" href="/about">{t('hero.aboutUs')}</a>
+      {/* Hero Section */}
+      <header className="bg-primary homepage-hero">
+        <div className="container px-4 px-lg-5">
+          <div className="row gx-5 align-items-center">
+            <div className="col-lg-6">
+              <div className="py-5 text-center text-lg-start">
+                <h1 className="hero-title text-white">{t('hero.title')}</h1>
+                <p className="hero-subtitle text-white">{t('hero.subtitle')}</p>
+
+                {/* Trust Indicators */}
+                <div className="trust-indicators">
+                  {trustItems.map((item, i) => (
+                    <div key={i} className="trust-item">
+                      <i className={`bi ${item.icon}`}></i>
+                      <span>{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="hero-cta">
+                  <a className="btn-cta-primary" href="#features">
+                    {isZh ? '了解我们的服务' : 'Explore Our Services'}
+                  </a>
+                  <a className="btn-cta-secondary" href="/about">
+                    {t('hero.aboutUs')}
+                  </a>
+                  <a className="btn-cta-link" href="/contact">
+                    {isZh ? '获取报价' : 'Get a Quote'} <i className="bi bi-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-              <div className="d-flex flex-column align-items-center">
-                <img src="/logo.svg" alt={t('nav.brand')} className="mb-4" style={{ height: '120px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
-                <img className="img-fluid rounded-3 my-3" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt={t('hero.title')} />
+            <div className="col-lg-6 d-none d-lg-block">
+              <div className="hero-image-container text-center">
+                <img
+                  className="hero-image img-fluid"
+                  src="https://images.unsplash.com/photo-1565043666747-69f6646db940?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                  alt={isZh ? '精密制造' : 'Precision Manufacturing'}
+                />
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <section className="py-5 bg-light" id="features">
-        <div className="container px-5 my-5">
-          <div className="row gx-5">
-            <div className="col-lg-4 mb-5 mb-lg-0"><h2 className="fw-bolder mb-0 gradient-text">{t('features.title')}</h2></div>
+      {/* Hero to Section Transition */}
+      <div className="hero-transition"></div>
+
+      {/* Services Section */}
+      <section className="services-section bg-light" id="features">
+        <div className="container px-4 px-lg-5">
+          <div className="row">
+            <div className="col-lg-4 mb-4 mb-lg-0">
+              <div className="section-header">
+                <h2 className="section-title">{t('features.title')}</h2>
+                <p className="section-subtitle">
+                  {isZh ? '一站式精密制造解决方案' : 'One-stop precision manufacturing solutions'}
+                </p>
+              </div>
+            </div>
             <div className="col-lg-8">
-              <div className="row gx-5 row-cols-1 row-cols-md-2">
-                {features.map((feature, i) => (
-                  <div key={i} className="col mb-5 h-100">
-                    <div className="feature bg-success bg-gradient text-white rounded-3 mb-3 elegant-shadow"><i className={`bi ${feature.icon}`}></i></div>
-                    <h2 className="h5">{feature.title}</h2>
-                    <p className="mb-0">{feature.description}</p>
+              <div className="row g-4">
+                {services.map((service, i) => (
+                  <div key={i} className="col-md-6">
+                    <div className="service-card">
+                      <div className="service-icon">
+                        <i className={`bi ${service.icon}`}></i>
+                      </div>
+                      <h3 className="service-title">{service.title}</h3>
+                      <p className="service-description">{service.description}</p>
+                      <div className="industry-tags">
+                        {service.tags.map((tag, j) => (
+                          <span key={j} className="industry-tag">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -181,26 +277,28 @@ function HomePage() {
         </div>
       </section>
 
-      <div className="py-5 light-teal-bg">
-        <div className="container px-5 my-5">
-          <div className="row gx-5 justify-content-center">
-            <div className="col-lg-10 col-xl-7">
+      {/* Section Divider */}
+      <div className="section-divider-gradient"></div>
+
+      {/* Testimonial Section */}
+      <section className="testimonial-section py-5">
+        <div className="container px-4 px-lg-5">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 col-xl-7">
               <div className="text-center">
-                <div className="fs-4 mb-4 fst-italic">"{t('testimonial.quote')}"</div>
+                <p className="testimonial-quote mb-4">"{t('testimonial.quote')}"</p>
                 <div className="d-flex align-items-center justify-content-center">
-                  <img className="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="" />
-                  <div className="fw-bold">
-                    {t('testimonial.name')}
-                    <span className="fw-bold text-primary mx-1">/</span>
-                    {t('testimonial.title')}
+                  <img className="rounded-circle me-3" src="https://dummyimage.com/48x48/ced4da/6c757d" alt="" style={{ width: '48px', height: '48px' }} />
+                  <div className="text-start">
+                    <div className="fw-bold">{t('testimonial.name')}</div>
+                    <div className="text-muted small">{t('testimonial.title')}</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
+      </section>
     </>
   )
 }

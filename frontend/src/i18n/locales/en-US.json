@@ -289,6 +289,8 @@
   "blog": {
     "techArticles": "Tech Articles",
     "industryNews": "Industry News",
+    "subtitle": "Latest technical insights and professional articles",
+    "industrySubtitle": "Stay updated with industry trends and exhibitions",
     "newsSubtitle": "Latest industry trends, technical insights, and exhibition information",
     "noNews": "No news available. Please try again later."
   },

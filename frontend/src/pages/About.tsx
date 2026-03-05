@@ -32,7 +32,8 @@ export default function About() {
 
   return (
     <>
-      <header className="py-5 bg-primary">
+      {/* Page Hero with Gradient */}
+      <header className="py-5 page-hero">
         <div className="container px-5">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-xxl-6">
@@ -42,17 +43,20 @@ export default function About() {
                 </div>
                 <h1 className="fw-bolder mb-3 text-white">{t('about.pageTitle')}</h1>
                 <p className="lead fw-normal text-white mb-4">{t('about.pageSubtitle')}</p>
-                <a className="btn btn-success btn-lg" href="#company-intro">{t('common.learnMore')}</a>
+                <a className="btn btn-gradient-success btn-lg" href="#company-intro">{t('common.learnMore')}</a>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <section className="py-5 light-teal-bg" id="company-intro">
+      {/* Transition */}
+      <div className="page-hero-transition"></div>
+
+      <section className="py-5 section-gradient-teal" id="company-intro">
         <div className="container px-5 my-5">
           <div className="row gx-5 align-items-center">
-            <div className="col-lg-6"><img className="img-fluid rounded mb-5 mb-lg-0" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt={t('about.philosophy')} /></div>
+            <div className="col-lg-6"><img className="img-fluid rounded mb-5 mb-lg-0" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt={t('about.philosophy')} style={{ borderRadius: 'var(--radius-lg)' }} /></div>
             <div className="col-lg-6">
               <h2 className="fw-bolder gradient-text">{t('about.philosophy')}</h2>
               <div className="mb-3">
@@ -76,10 +80,13 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-5 bg-light">
+      {/* Transition */}
+      <div className="section-transition-up"></div>
+
+      <section className="py-5">
         <div className="container px-5 my-5">
           <div className="row gx-5 align-items-center">
-            <div className="col-lg-6 order-first order-lg-last"><img className="img-fluid rounded mb-5 mb-lg-0" src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt={t('about.equipment')} /></div>
+            <div className="col-lg-6 order-first order-lg-last"><img className="img-fluid rounded mb-5 mb-lg-0" src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt={t('about.equipment')} style={{ borderRadius: 'var(--radius-lg)' }} /></div>
             <div className="col-lg-6">
               <h2 className="fw-bolder gradient-text">{t('about.equipment')}</h2>
               <p className="lead fw-normal text-muted mb-4">{t('about.equipmentSubtitle')}</p>
@@ -112,7 +119,10 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-5 light-teal-bg">
+      {/* Transition */}
+      <div className="section-transition-down"></div>
+
+      <section className="py-5 section-gradient-teal">
         <div className="container px-5 my-5">
           <div className="text-center mb-5">
             <h2 className="fw-bolder gradient-text">{t('about.productsAndApplications')}</h2>
@@ -122,14 +132,14 @@ export default function About() {
             {products.map((product, idx) => {
               const features = t(product.featuresKey, { returnObjects: true }) as string[]
               return (
-                <div key={idx} className="col mb-5 mb-5 mb-xl-0">
-                  <div className="text-center elegant-shadow p-3 rounded">
+                <div key={idx} className="col mb-5 mb-xl-0">
+                  <div className="gradient-card text-center p-4 h-100">
                     <div className="display-4 mb-3">{product.icon}</div>
                     <h5 className="fw-bolder">{t(product.titleKey)}</h5>
                     <p className="text-muted mb-3">{t(product.descKey)}</p>
-                    <div className="small">
+                    <div className="d-flex flex-wrap justify-content-center gap-1">
                       {features.map((feature, fIdx) => (
-                        <span key={fIdx} className="badge bg-success me-1 mb-1">{feature}</span>
+                        <span key={fIdx} className="gradient-tag">{feature}</span>
                       ))}
                     </div>
                   </div>
@@ -139,6 +149,9 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Transition */}
+      <div className="section-transition-up"></div>
 
       <section className="py-5">
         <div className="container px-5 my-5">
@@ -179,7 +192,10 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-5 light-teal-bg">
+      {/* Transition */}
+      <div className="section-transition-down"></div>
+
+      <section className="py-5 section-gradient-teal">
         <div className="container px-5 my-5">
           <div className="text-center">
             <h2 className="fw-bolder gradient-text">{t('about.commitment')}</h2>

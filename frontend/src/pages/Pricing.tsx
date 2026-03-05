@@ -18,7 +18,8 @@ export default function Pricing() {
 
   return (
     <>
-      <header className="py-5 bg-primary">
+      {/* Page Hero with Gradient */}
+      <header className="py-5 page-hero">
         <div className="container px-5">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-xxl-6">
@@ -28,22 +29,26 @@ export default function Pricing() {
                 </div>
                 <h1 className="fw-bolder mb-3 text-white">{t('pricing.pageTitle')}</h1>
                 <p className="lead fw-normal text-white mb-4">{t('pricing.pageSubtitle')}</p>
+                <a className="btn btn-gradient-success btn-lg" href="#core-services">{t('common.learnMore')}</a>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <section className="py-5 light-teal-bg">
+      {/* Transition */}
+      <div className="page-hero-transition"></div>
+
+      <section className="py-5 section-gradient-teal" id="core-services">
         <div className="container px-5 my-5">
           <div className="text-center mb-5">
-            <h2 className="fw-bolder gradient-text">🛠 {t('pricing.coreServices')}</h2>
+            <h2 className="fw-bolder gradient-text">{t('pricing.coreServices')}</h2>
             <p className="lead fw-normal text-muted mb-0">{t('pricing.coreServicesSubtitle')}</p>
           </div>
           <div className="row gx-5 justify-content-center">
             <div className="col-lg-6 col-xl-4 mb-4">
-              <div className="card h-100 shadow border-0 elegant-shadow">
-                <div className="card-header bg-success bg-gradient text-white text-center py-4">
+              <div className="gradient-card h-100">
+                <div className="card-header bg-success bg-gradient text-white text-center py-4" style={{ borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0' }}>
                   <h4 className="text-uppercase m-0">{t('pricing.moldDesign')}</h4>
                 </div>
                 <div className="card-body p-4">
@@ -64,8 +69,8 @@ export default function Pricing() {
             </div>
 
             <div className="col-lg-6 col-xl-4 mb-4">
-              <div className="card h-100 shadow border-0 elegant-shadow">
-                <div className="card-header bg-success bg-gradient text-white text-center py-4">
+              <div className="gradient-card h-100">
+                <div className="card-header bg-success bg-gradient text-white text-center py-4" style={{ borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0' }}>
                   <h4 className="text-uppercase m-0">
                     <i className="bi bi-star-fill text-warning me-2"></i>{t('pricing.injectionMolding')}
                   </h4>
@@ -88,8 +93,8 @@ export default function Pricing() {
             </div>
 
             <div className="col-lg-6 col-xl-4 mb-4">
-              <div className="card h-100 shadow border-0 elegant-shadow">
-                <div className="card-header bg-warning bg-gradient text-white text-center py-4">
+              <div className="gradient-card h-100">
+                <div className="card-header bg-warning bg-gradient text-white text-center py-4" style={{ borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0' }}>
                   <h4 className="text-uppercase m-0">{t('pricing.surfaceTreatment')}</h4>
                 </div>
                 <div className="card-body p-4">
@@ -112,125 +117,98 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Transition */}
+      <div className="section-transition-up"></div>
+
       <section className="py-5">
         <div className="container px-5 my-5">
           <div className="text-center mb-5">
-            <h2 className="fw-bolder gradient-text">🏭 {t('pricing.applicationAreas')}</h2>
+            <h2 className="fw-bolder gradient-text">{t('pricing.applicationAreas')}</h2>
             <p className="lead fw-normal text-muted mb-0">{t('pricing.applicationAreasSubtitle')}</p>
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 mb-5">
-              <div className="card h-100 elegant-shadow">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="feature bg-primary bg-gradient text-white rounded-3 me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                      <i className="bi bi-car-front-fill fs-4"></i>
-                    </div>
-                    <h4 className="mb-0">{t('pricing.automotive.title')}</h4>
+              <div className="gradient-card h-100 p-4">
+                <div className="d-flex align-items-center mb-3">
+                  <div className="gradient-feature me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <i className="bi bi-car-front-fill fs-4"></i>
                   </div>
-                  <p className="text-muted mb-3">{t('pricing.automotive.description')}</p>
-                  <div className="row g-2 mb-3">
-                    <div className="col-6">
-                      <span className="badge bg-light text-dark me-1 mb-1">PBT-GF30</span>
-                      <span className="badge bg-light text-dark me-1 mb-1">PPSU</span>
-                    </div>
-                    <div className="col-6">
-                      <span className="badge bg-light text-dark me-1 mb-1">PFA</span>
-                      <span className="badge bg-light text-dark me-1 mb-1">PA66</span>
-                    </div>
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <small className="text-muted">{t('pricing.automotive.features')}</small>
-                    <a href="#" className="btn btn-sm btn-outline-primary">{t('common.learnMore')}</a>
-                  </div>
+                  <h4 className="mb-0">{t('pricing.automotive.title')}</h4>
+                </div>
+                <p className="text-muted mb-3">{t('pricing.automotive.description')}</p>
+                <div className="d-flex flex-wrap gap-1 mb-3">
+                  <span className="gradient-tag">PBT-GF30</span>
+                  <span className="gradient-tag">PPSU</span>
+                  <span className="gradient-tag">PFA</span>
+                  <span className="gradient-tag">PA66</span>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <small className="text-muted">{t('pricing.automotive.features')}</small>
+                  <a href="#" className="btn btn-sm btn-gradient-primary">{t('common.learnMore')}</a>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6 mb-5">
-              <div className="card h-100 elegant-shadow">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="feature bg-success bg-gradient text-white rounded-3 me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                      <i className="bi bi-heart-pulse-fill fs-4"></i>
-                    </div>
-                    <h4 className="mb-0">{t('pricing.medical.title')}</h4>
+              <div className="gradient-card h-100 p-4">
+                <div className="d-flex align-items-center mb-3">
+                  <div className="gradient-feature me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <i className="bi bi-heart-pulse-fill fs-4"></i>
                   </div>
-                  <p className="text-muted mb-3">{t('pricing.medical.description')}</p>
-                  <div className="row g-2 mb-3">
-                    <div className="col-6">
-                      {(t('pricing.medical.badges', { returnObjects: true }) as string[]).slice(0, 2).map((badge, idx) => (
-                        <span key={idx} className="badge bg-light text-dark me-1 mb-1">{badge}</span>
-                      ))}
-                    </div>
-                    <div className="col-6">
-                      {(t('pricing.medical.badges', { returnObjects: true }) as string[]).slice(2).map((badge, idx) => (
-                        <span key={idx} className="badge bg-light text-dark me-1 mb-1">{badge}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <small className="text-muted">{t('pricing.medical.features')}</small>
-                    <a href="#" className="btn btn-sm btn-outline-success">{t('common.learnMore')}</a>
-                  </div>
+                  <h4 className="mb-0">{t('pricing.medical.title')}</h4>
+                </div>
+                <p className="text-muted mb-3">{t('pricing.medical.description')}</p>
+                <div className="d-flex flex-wrap gap-1 mb-3">
+                  {(t('pricing.medical.badges', { returnObjects: true }) as string[]).map((badge, idx) => (
+                    <span key={idx} className="gradient-tag">{badge}</span>
+                  ))}
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <small className="text-muted">{t('pricing.medical.features')}</small>
+                  <a href="#" className="btn btn-sm btn-gradient-primary">{t('common.learnMore')}</a>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6 mb-5">
-              <div className="card h-100 elegant-shadow">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="feature bg-warning bg-gradient text-white rounded-3 me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                      <i className="bi bi-lightning-charge-fill fs-4"></i>
-                    </div>
-                    <h4 className="mb-0">{t('pricing.electronics.title')}</h4>
+              <div className="gradient-card h-100 p-4">
+                <div className="d-flex align-items-center mb-3">
+                  <div className="gradient-feature me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <i className="bi bi-lightning-charge-fill fs-4"></i>
                   </div>
-                  <p className="text-muted mb-3">{t('pricing.electronics.description')}</p>
-                  <div className="row g-2 mb-3">
-                    <div className="col-6">
-                      <span className="badge bg-light text-dark me-1 mb-1">PEI</span>
-                      <span className="badge bg-light text-dark me-1 mb-1">PPS</span>
-                    </div>
-                    <div className="col-6">
-                      <span className="badge bg-light text-dark me-1 mb-1">PA66</span>
-                      <span className="badge bg-light text-dark me-1 mb-1">PC/ABS</span>
-                    </div>
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <small className="text-muted">{t('pricing.electronics.features')}</small>
-                    <a href="#" className="btn btn-sm btn-outline-warning">{t('common.learnMore')}</a>
-                  </div>
+                  <h4 className="mb-0">{t('pricing.electronics.title')}</h4>
+                </div>
+                <p className="text-muted mb-3">{t('pricing.electronics.description')}</p>
+                <div className="d-flex flex-wrap gap-1 mb-3">
+                  <span className="gradient-tag">PEI</span>
+                  <span className="gradient-tag">PPS</span>
+                  <span className="gradient-tag">PA66</span>
+                  <span className="gradient-tag">PC/ABS</span>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <small className="text-muted">{t('pricing.electronics.features')}</small>
+                  <a href="#" className="btn btn-sm btn-gradient-primary">{t('common.learnMore')}</a>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6 mb-5">
-              <div className="card h-100 elegant-shadow">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="feature bg-info bg-gradient text-white rounded-3 me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                      <i className="bi bi-gear-fill fs-4"></i>
-                    </div>
-                    <h4 className="mb-0">{t('pricing.engineeringPlastics.title')}</h4>
+              <div className="gradient-card h-100 p-4">
+                <div className="d-flex align-items-center mb-3">
+                  <div className="gradient-feature me-3" style={{width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <i className="bi bi-gear-fill fs-4"></i>
                   </div>
-                  <p className="text-muted mb-3">{t('pricing.engineeringPlastics.description')}</p>
-                  <div className="row g-2 mb-3">
-                    <div className="col-6">
-                      {(t('pricing.engineeringPlastics.badges', { returnObjects: true }) as string[]).slice(0, 2).map((badge, idx) => (
-                        <span key={idx} className="badge bg-light text-dark me-1 mb-1">{badge}</span>
-                      ))}
-                    </div>
-                    <div className="col-6">
-                      {(t('pricing.engineeringPlastics.badges', { returnObjects: true }) as string[]).slice(2).map((badge, idx) => (
-                        <span key={idx} className="badge bg-light text-dark me-1 mb-1">{badge}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <small className="text-muted">{t('pricing.engineeringPlastics.features')}</small>
-                    <a href="#" className="btn btn-sm btn-outline-info">{t('common.learnMore')}</a>
-                  </div>
+                  <h4 className="mb-0">{t('pricing.engineeringPlastics.title')}</h4>
+                </div>
+                <p className="text-muted mb-3">{t('pricing.engineeringPlastics.description')}</p>
+                <div className="d-flex flex-wrap gap-1 mb-3">
+                  {(t('pricing.engineeringPlastics.badges', { returnObjects: true }) as string[]).map((badge, idx) => (
+                    <span key={idx} className="gradient-tag">{badge}</span>
+                  ))}
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <small className="text-muted">{t('pricing.engineeringPlastics.features')}</small>
+                  <a href="#" className="btn btn-sm btn-gradient-primary">{t('common.learnMore')}</a>
                 </div>
               </div>
             </div>
@@ -238,10 +216,13 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="py-5 light-teal-bg">
+      {/* Transition */}
+      <div className="section-transition-down"></div>
+
+      <section className="py-5 section-gradient-teal">
         <div className="container px-5 my-5">
           <div className="text-center mb-5">
-            <h2 className="fw-bolder gradient-text">🔬 {t('pricing.specialtyMaterials')}</h2>
+            <h2 className="fw-bolder gradient-text">{t('pricing.specialtyMaterials')}</h2>
             <p className="lead fw-normal text-muted mb-0">{t('pricing.specialtyMaterialsSubtitle')}</p>
           </div>
           <div className="row gx-5 justify-content-center">
@@ -249,20 +230,18 @@ export default function Pricing() {
               const matData = t(`pricing.materials.${material.name}`, { returnObjects: true }) as { description: string; features: string[] }
               return (
                 <div key={idx} className="col-lg-4 col-md-6 mb-4">
-                  <div className="card h-100 elegant-shadow">
-                    <div className="card-body text-center p-4">
-                      <div className={`feature bg-${material.color} bg-gradient text-white rounded-3 mb-3 mx-auto`} style={{width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <h3 className="mb-0 fw-bold">{material.name}</h3>
-                      </div>
-                      <h5 className="card-title mb-3">{material.name}</h5>
-                      <p className="card-text text-muted mb-3">{matData.description}</p>
-                      <div className="mb-3">
-                        {matData.features.map((feature, fIdx) => (
-                          <span key={fIdx} className={`badge bg-${material.color} bg-opacity-10 text-${material.color} me-1 mb-1`}>{feature}</span>
-                        ))}
-                      </div>
-                      <a href="#" className={`btn btn-outline-${material.color}`}>{t('pricing.viewDetails')}</a>
+                  <div className="gradient-card h-100 text-center p-4">
+                    <div className={`feature bg-${material.color} bg-gradient text-white rounded-3 mb-3 mx-auto`} style={{width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                      <h3 className="mb-0 fw-bold">{material.name}</h3>
                     </div>
+                    <h5 className="card-title mb-3">{material.name}</h5>
+                    <p className="card-text text-muted mb-3">{matData.description}</p>
+                    <div className="d-flex flex-wrap justify-content-center gap-1 mb-3">
+                      {matData.features.map((feature, fIdx) => (
+                        <span key={fIdx} className="gradient-tag">{feature}</span>
+                      ))}
+                    </div>
+                    <a href="#" className={`btn btn-outline-${material.color}`}>{t('pricing.viewDetails')}</a>
                   </div>
                 </div>
               )
@@ -271,10 +250,13 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Transition */}
+      <div className="section-transition-up"></div>
+
       <section className="py-5">
         <div className="container px-5 my-5">
           <div className="text-center mb-5">
-            <h2 className="fw-bolder gradient-text">💰 {t('pricing.pricingExplanation')}</h2>
+            <h2 className="fw-bolder gradient-text">{t('pricing.pricingExplanation')}</h2>
             <p className="lead fw-normal text-muted mb-0">{t('pricing.pricingExplanationSubtitle')}</p>
           </div>
           <div className="row gx-5">
@@ -320,10 +302,13 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="py-5 light-teal-bg">
+      {/* Transition */}
+      <div className="section-transition-down"></div>
+
+      <section className="py-5 section-gradient-teal">
         <div className="container px-5 my-5">
           <div className="text-center">
-            <h2 className="fw-bolder gradient-text">📞 {t('pricing.getQuote')}</h2>
+            <h2 className="fw-bolder gradient-text">{t('pricing.getQuote')}</h2>
             <p className="lead fw-normal text-muted mb-4">{t('pricing.getQuoteSubtitle')}</p>
             <div className="row gx-5 justify-content-center mt-5">
               <div className="col-lg-8">
@@ -344,8 +329,8 @@ export default function Pricing() {
               </div>
             </div>
             <div className="mt-4">
-              <a className="btn btn-success btn-lg me-3" href="/contact">{t('common.contactUs')}</a>
-              <a className="btn btn-outline-success btn-lg" href="/about">{t('common.learnMore')}</a>
+              <a className="btn btn-gradient-success btn-lg me-3" href="/contact">{t('common.contactUs')}</a>
+              <a className="btn btn-outline-light btn-lg" href="/about">{t('common.learnMore')}</a>
             </div>
           </div>
         </div>

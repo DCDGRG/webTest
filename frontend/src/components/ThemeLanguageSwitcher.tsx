@@ -20,12 +20,12 @@ export default function ThemeLanguageSwitcher() {
                 title={isZh ? 'Switch to English' : '切换到中文'}
             >
                 <i className="bi bi-globe2 me-1"></i>
-                <span className="fw-medium">{isZh ? 'EN' : '中'}</span>
+                <span>{isZh ? 'EN' : '中'}</span>
             </button>
             <button
                 className="btn btn-outline-secondary"
                 onClick={toggleTheme}
-                title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+                title={theme === 'light' ? 'Dark mode' : 'Light mode'}
             >
                 <i className={`bi ${theme === 'light' ? 'bi-moon-fill' : 'bi-sun-fill'}`}></i>
             </button>

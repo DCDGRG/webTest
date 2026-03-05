@@ -1,166 +1,1005 @@
-/* Custom overrides for React/Vite version of Modern Business */
+/* ========================================
+   GLOBAL DESIGN SYSTEM
+   ======================================== */
 
-/* Offset content for fixed-top navbar */
-body { padding-top: 60px; }
+/* ===== Design Tokens ===== */
+:root {
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+  --space-4xl: 64px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 4px 20px rgba(45, 105, 117, 0.25);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}
+
+/* ===== Base Layout ===== */
+body {
+  padding-top: 76px;
+}
+
 @media (min-width: 992px) {
-	body { padding-top: 76px; }
+  body {
+    padding-top: 84px;
+  }
 }
 
-/* Hero section: ensure it adapts to viewport height and centers content */
-header.hero {
-	min-height: 60vh;
-	display: flex;
-	align-items: center;
+/* ========================================
+   GLOBAL NAVBAR
+   ======================================== */
+
+.navbar {
+  transition: all var(--transition-base);
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid transparent;
 }
 
-/* Fluid headline sizing in hero */
-header.hero .display-5 {
-	font-size: clamp(2rem, 4vw + 1rem, 3rem);
+.navbar.navbar-scrolled {
+  padding: var(--space-sm) 0;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--light-mint);
+  box-shadow: var(--shadow-md) !important;
 }
 
-/* Ensure hero image doesn't overflow */
-header.hero img {
-	max-width: 100%;
-	height: auto;
+.navbar.navbar-scrolled .navbar-brand img {
+  height: 26px !important;
 }
 
-/* ===== Navbar Button Animations ===== */
-
-/* Smooth transitions for all navbar buttons */
-.navbar .btn {
-	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+.navbar .navbar-brand img {
+  height: 32px;
+  transition: height var(--transition-base);
 }
 
-/* Scale and shadow on hover */
-.navbar .btn:hover {
-	transform: translateY(-1px);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.navbar .btn:active {
-	transform: translateY(0) scale(0.98);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Theme/Language switcher button group */
-.navbar .btn-group .btn {
-	transition: all 0.2s ease;
-}
-
-.navbar .btn-group .btn:hover {
-	transform: none;
-	box-shadow: none;
-	background-color: var(--bs-secondary);
-	color: white;
-}
-
-/* Icon spin animation for theme toggle */
-.navbar .btn .bi-sun-fill,
-.navbar .btn .bi-moon-fill {
-	transition: transform 0.3s ease;
-}
-
-.navbar .btn:hover .bi-sun-fill {
-	transform: rotate(180deg);
-}
-
-.navbar .btn:hover .bi-moon-fill {
-	transform: rotate(-20deg) scale(1.1);
-}
-
-/* Globe icon animation for language toggle */
-.navbar .btn .bi-globe2 {
-	transition: transform 0.3s ease;
-}
-
-.navbar .btn:hover .bi-globe2 {
-	transform: rotate(20deg);
-}
-
-/* Login button pulse effect */
-.navbar .btn-primary {
-	position: relative;
-	overflow: hidden;
-}
-
-.navbar .btn-primary::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 0;
-	height: 0;
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 50%;
-	transform: translate(-50%, -50%);
-	transition: width 0.4s ease, height 0.4s ease;
-}
-
-.navbar .btn-primary:hover::after {
-	width: 200px;
-	height: 200px;
-}
-
-/* Nav link hover underline animation */
+/* ===== Nav Links ===== */
 .navbar .nav-link {
-	position: relative;
-	transition: color 0.2s ease;
+  position: relative;
+  padding: var(--space-sm) var(--space-md) !important;
+  font-weight: 500;
+  color: var(--text-primary) !important;
+  transition: color var(--transition-fast);
+  border-radius: var(--radius-sm);
 }
 
-.navbar .nav-link::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 2px;
-	background: linear-gradient(90deg, var(--bs-primary), var(--bs-success));
-	transition: width 0.3s ease, left 0.3s ease;
-	border-radius: 1px;
+.navbar .nav-link:hover {
+  color: var(--primary-teal) !important;
+  background-color: rgba(45, 105, 117, 0.08) !important;
 }
 
-.navbar .nav-link:hover::after {
-	width: 80%;
-	left: 10%;
+/* Nav link underline effect */
+.navbar .nav-item:not(.dropdown) .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-teal);
+  transition: all var(--transition-base);
+  transform: translateX(-50%);
+  border-radius: 1px;
 }
 
-/* Dropdown menu animation */
+.navbar .nav-item:not(.dropdown) .nav-link:hover::after {
+  width: 60%;
+}
+
+/* ===== Active Nav Link State ===== */
+.navbar .nav-link.nav-link-active {
+  color: var(--primary-teal) !important;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(45, 105, 117, 0.1), rgba(106, 180, 163, 0.08)) !important;
+}
+
+/* Active underline for regular links */
+.navbar .nav-item:not(.dropdown) .nav-link.nav-link-active::after {
+  width: 70%;
+  background: linear-gradient(90deg, var(--primary-teal), var(--secondary-teal));
+  height: 2.5px;
+}
+
+/* Active dropdown parent - pill indicator */
+.navbar .dropdown.dropdown-active .dropdown-toggle {
+  color: var(--primary-teal) !important;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(45, 105, 117, 0.1), rgba(106, 180, 163, 0.08)) !important;
+}
+
+/* Active dropdown item */
+.navbar .dropdown-item.active {
+  background: linear-gradient(90deg, var(--pale-mint), rgba(106, 180, 163, 0.1)) !important;
+  color: var(--primary-teal) !important;
+  border-left-color: var(--primary-teal);
+  font-weight: 600;
+}
+
+/* ===== Dropdown - Fixed ===== */
+.navbar .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.navbar .dropdown-toggle::after {
+  transition: transform var(--transition-base);
+  border: none;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -4px;
+}
+
+.navbar .dropdown.show .dropdown-toggle::after {
+  transform: rotate(-135deg);
+  margin-top: 2px;
+}
+
 .navbar .dropdown-menu {
-	opacity: 0;
-	transform: translateY(-10px);
-	transition: opacity 0.2s ease, transform 0.2s ease;
-	display: block;
-	pointer-events: none;
+  margin-top: var(--space-sm) !important;
+  border: 1px solid var(--light-mint);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-sm) 0;
+  min-width: 200px;
+  animation: dropdownFadeIn 0.2s ease;
 }
 
-.navbar .dropdown.show .dropdown-menu {
-	opacity: 1;
-	transform: translateY(0);
-	pointer-events: auto;
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .navbar .dropdown-item {
-	transition: background-color 0.15s ease, padding-left 0.2s ease;
+  padding: var(--space-md) var(--space-lg);
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  border-left: 3px solid transparent;
 }
 
 .navbar .dropdown-item:hover {
-	padding-left: 1.5rem;
+  background: linear-gradient(90deg, var(--pale-mint), transparent) !important;
+  color: var(--primary-teal);
+  border-left-color: var(--primary-teal);
+  padding-left: calc(var(--space-lg) + 4px);
 }
 
-/* Navbar controls container spacing */
+/* ===== Navbar Controls Container ===== */
 .navbar-controls {
-	gap: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: linear-gradient(135deg, rgba(45, 105, 117, 0.06), rgba(106, 180, 163, 0.06));
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(45, 105, 117, 0.1);
+  margin-left: var(--space-lg);
 }
 
-@media (min-width: 992px) {
-	.navbar-controls {
-		gap: 1rem;
-	}
+@media (max-width: 991px) {
+  .navbar-controls {
+    margin: var(--space-lg) 0 0 0;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
-/* Vertical divider styling */
 .navbar .vr {
-	opacity: 0.3;
-	height: 24px;
-	align-self: center;
-} 
+  height: 20px;
+  opacity: 0.2;
+  margin: 0 var(--space-xs);
+}
+
+/* ===== Theme/Language Buttons ===== */
+.navbar .btn-group .btn {
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.navbar .btn-group .btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.navbar .btn-group .btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.navbar .btn-group .btn:hover {
+  background: var(--primary-teal);
+  border-color: var(--primary-teal);
+  color: white;
+  transform: none;
+}
+
+/* Icon animations */
+.navbar .btn .bi-sun-fill,
+.navbar .btn .bi-moon-fill {
+  transition: transform var(--transition-base);
+}
+
+.navbar .btn:hover .bi-sun-fill {
+  transform: rotate(180deg);
+}
+
+.navbar .btn:hover .bi-moon-fill {
+  transform: rotate(-15deg) scale(1.15);
+}
+
+.navbar .btn .bi-globe2 {
+  transition: transform var(--transition-base);
+}
+
+.navbar .btn:hover .bi-globe2 {
+  transform: rotate(20deg);
+}
+
+/* ===== Login Button ===== */
+.navbar .btn-login {
+  background: linear-gradient(135deg, var(--primary-teal), var(--secondary-teal));
+  border: none;
+  color: white !important;
+  padding: var(--space-sm) var(--space-lg);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glow);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.navbar .btn-login::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: left 0.5s ease;
+}
+
+.navbar .btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(45, 105, 117, 0.4);
+}
+
+.navbar .btn-login:hover::before {
+  left: 100%;
+}
+
+/* ========================================
+   GLOBAL CTA BUTTONS
+   ======================================== */
+
+/* Primary CTA - Amber/Gold */
+.btn-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: linear-gradient(135deg, var(--accent-amber), #E67E22);
+  border: none;
+  color: white !important;
+  padding: var(--space-md) var(--space-xl);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.btn-cta-primary:hover {
+  background: linear-gradient(135deg, #E67E22, #D97706);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
+  color: white !important;
+}
+
+/* Secondary CTA - Outline */
+.btn-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: white !important;
+  padding: calc(var(--space-md) - 2px) var(--space-xl);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.btn-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  color: white !important;
+}
+
+/* Tertiary CTA - Text Link */
+.btn-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  text-decoration: none;
+  padding: var(--space-sm) 0;
+  transition: all var(--transition-fast);
+}
+
+.btn-cta-link:hover {
+  color: white !important;
+  gap: var(--space-md);
+}
+
+.btn-cta-link i {
+  transition: transform var(--transition-fast);
+}
+
+.btn-cta-link:hover i {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   HOMEPAGE HERO ONLY
+   ======================================== */
+
+.homepage-hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, #1a4a4a 50%, var(--primary-teal) 100%);
+}
+
+.homepage-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(106, 180, 163, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(45, 105, 117, 0.4) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.homepage-hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-xl);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.75;
+  opacity: 0.95;
+  max-width: 560px;
+}
+
+/* Trust Indicators */
+.trust-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+  margin: var(--space-2xl) 0;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.trust-item i {
+  font-size: 1.15rem;
+  color: var(--accent-amber);
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));
+}
+
+/* Hero CTA Container */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+/* Hero Image */
+.hero-image-container {
+  position: relative;
+}
+
+.hero-image {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  transition: transform var(--transition-slow);
+}
+
+.hero-image:hover {
+  transform: scale(1.03) rotate(1deg);
+}
+
+/* Hero Transition */
+.hero-transition {
+  height: 100px;
+  background: linear-gradient(180deg, var(--primary-teal) 0%, var(--pale-mint) 100%);
+  margin-top: -1px;
+}
+
+/* ========================================
+   GLOBAL CARDS & COMPONENTS
+   ======================================== */
+
+/* Service Cards */
+.service-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  height: 100%;
+  border: 1px solid rgba(45, 105, 117, 0.08);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-teal), var(--secondary-teal));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(135deg, var(--primary-teal), var(--secondary-teal));
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.service-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.service-description {
+  font-size: 0.925rem;
+  color: #6c757d;
+  line-height: 1.65;
+  margin-bottom: var(--space-lg);
+}
+
+/* Industry Tags */
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.industry-tag {
+  font-size: 0.75rem;
+  padding: var(--space-xs) var(--space-md);
+  background: linear-gradient(135deg, var(--pale-mint), rgba(206, 223, 204, 0.5));
+  color: var(--primary-teal);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  border: 1px solid rgba(45, 105, 117, 0.1);
+}
+
+/* Section Styling */
+.services-section {
+  padding: var(--space-4xl) 0;
+}
+
+.section-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary-teal);
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Section Dividers */
+.section-divider-gradient {
+  height: 80px;
+  background: linear-gradient(180deg, var(--pale-mint), white);
+}
+
+/* Testimonial */
+.testimonial-section {
+  position: relative;
+  background: white;
+}
+
+.testimonial-section::before {
+  content: '"';
+  position: absolute;
+  top: var(--space-xl);
+  left: 8%;
+  font-size: 12rem;
+  color: rgba(45, 105, 117, 0.04);
+  font-family: Georgia, serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.testimonial-quote {
+  font-size: 1.35rem;
+  line-height: 1.85;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+/* ========================================
+   GLOBAL FEATURE ICON
+   ======================================== */
+
+.feature {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  border-radius: var(--radius-lg);
+}
+
+/* ========================================
+   PAGE HERO - Gradient Headers for All Pages
+   ======================================== */
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, #1a4a4a 50%, var(--primary-teal) 100%);
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(106, 180, 163, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 30%, rgba(45, 105, 117, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero h1 {
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-hero .lead {
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Page hero transition to next section */
+.page-hero-transition {
+  height: 60px;
+  background: linear-gradient(180deg, var(--primary-teal) 0%, var(--pale-mint) 100%);
+  margin-top: -1px;
+}
+
+/* ===== Subtle Page Hero (for Contact, FAQ, etc.) ===== */
+.page-hero-subtle {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #3a7a7a 0%, var(--primary-teal) 50%, #3a7a7a 100%);
+  padding: var(--space-3xl) 0 var(--space-2xl);
+}
+
+.page-hero-subtle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.page-hero-subtle > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-subtle h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+.page-hero-subtle .lead {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Subtle hero transition - shorter and softer */
+.page-hero-subtle-transition {
+  height: 32px;
+  background: linear-gradient(180deg, #3a7a7a 0%, #f8faf9 100%);
+  margin-top: -1px;
+}
+
+/* ===== Contact Form Card (Neutral with soft shadow) ===== */
+.contact-form-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contact-form-card {
+    padding: var(--space-3xl) var(--space-2xl);
+  }
+}
+
+.contact-form-card .form-control {
+  border-radius: var(--radius-md);
+  border-color: #e5e7eb;
+  padding: var(--space-md) var(--space-lg);
+}
+
+.contact-form-card .form-control:focus {
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(45, 105, 117, 0.1);
+}
+
+.contact-form-card .form-floating > label {
+  padding: var(--space-md) var(--space-lg);
+}
+
+/* ===== Contact Methods Grid (Subtle accent) ===== */
+.contact-methods {
+  background: linear-gradient(135deg, #f8faf9 0%, #f0f4f3 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  border: 1px solid rgba(45, 105, 117, 0.06);
+}
+
+.contact-method-item {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.contact-method-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-teal), var(--secondary-teal));
+  color: white;
+  border-radius: var(--radius-md);
+  margin: 0 auto var(--space-md);
+  font-size: 1.25rem;
+}
+
+/* Contact Section Background */
+.contact-section-bg {
+  background: #f8faf9;
+}
+
+/* ========================================
+   GRADIENT SECTIONS
+   ======================================== */
+
+.section-gradient-light {
+  position: relative;
+  background: linear-gradient(180deg, var(--pale-mint) 0%, white 100%);
+}
+
+.section-gradient-teal {
+  position: relative;
+  background: linear-gradient(135deg, var(--pale-mint) 0%, rgba(206, 223, 204, 0.6) 50%, var(--pale-mint) 100%);
+}
+
+.section-gradient-teal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(106, 180, 163, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Section transitions */
+.section-transition-down {
+  height: 80px;
+  background: linear-gradient(180deg, white 0%, var(--pale-mint) 100%);
+}
+
+.section-transition-up {
+  height: 80px;
+  background: linear-gradient(180deg, var(--pale-mint) 0%, white 100%);
+}
+
+/* ========================================
+   GRADIENT CARDS (Global)
+   ======================================== */
+
+.gradient-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(45, 105, 117, 0.08);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-teal), var(--secondary-teal));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.gradient-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.gradient-card:hover::before {
+  opacity: 1;
+}
+
+/* Card with gradient header */
+.gradient-card-header {
+  background: linear-gradient(135deg, var(--primary-teal), var(--secondary-teal)) !important;
+  border: none;
+}
+
+.gradient-card-header-success {
+  background: linear-gradient(135deg, var(--secondary-teal), var(--accent-color)) !important;
+  border: none;
+}
+
+.gradient-card-header-warning {
+  background: linear-gradient(135deg, #F59E0B, #E67E22) !important;
+  border: none;
+}
+
+/* ========================================
+   GRADIENT TAGS/PILLS (Global)
+   ======================================== */
+
+.gradient-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: var(--space-xs) var(--space-md);
+  background: linear-gradient(135deg, var(--pale-mint), rgba(206, 223, 204, 0.5));
+  color: var(--primary-teal);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  border: 1px solid rgba(45, 105, 117, 0.1);
+  transition: all var(--transition-fast);
+}
+
+.gradient-tag:hover {
+  background: linear-gradient(135deg, var(--light-mint), var(--pale-mint));
+  transform: translateY(-1px);
+}
+
+.gradient-tag-primary {
+  background: linear-gradient(135deg, rgba(45, 105, 117, 0.15), rgba(45, 105, 117, 0.08));
+  color: var(--primary-teal);
+}
+
+.gradient-tag-success {
+  background: linear-gradient(135deg, rgba(106, 180, 163, 0.2), rgba(106, 180, 163, 0.1));
+  color: var(--secondary-teal);
+}
+
+/* ========================================
+   GRADIENT FEATURE ICONS (Global)
+   ======================================== */
+
+.gradient-feature {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary-teal), var(--secondary-teal));
+  color: white;
+  box-shadow: var(--shadow-glow);
+  transition: all var(--transition-base);
+}
+
+.gradient-feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(45, 105, 117, 0.35);
+}
+
+.gradient-feature-sm {
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+}
+
+/* ========================================
+   GRADIENT BUTTONS (Additional)
+   ======================================== */
+
+.btn-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-teal), var(--secondary-teal));
+  border: none;
+  color: white;
+  font-weight: 600;
+  box-shadow: var(--shadow-glow);
+  transition: all var(--transition-base);
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, var(--secondary-teal), var(--accent-color));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 105, 117, 0.4);
+  color: white;
+}
+
+.btn-gradient-success {
+  background: linear-gradient(135deg, var(--secondary-teal), var(--accent-color));
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-gradient-success:hover {
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-teal));
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* ========================================
+   CONTACT PAGE SPECIFIC
+   ======================================== */
+
+.contact-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(223, 235, 223, 0.3));
+  border: 1px solid rgba(45, 105, 117, 0.1);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 991px) {
+  .homepage-hero {
+    min-height: 75vh;
+    text-align: center;
+  }
+
+  .homepage-hero .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .trust-indicators {
+    justify-content: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .trust-indicators {
+    gap: var(--space-md);
+  }
+
+  .trust-item {
+    font-size: 0.8rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}

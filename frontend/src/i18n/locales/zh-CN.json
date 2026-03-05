@@ -289,6 +289,8 @@
   "blog": {
     "techArticles": "技术文章",
     "industryNews": "行业动态",
+    "subtitle": "汇聚注塑行业最新技术干货与专业文章",
+    "industrySubtitle": "关注行业最新动态与展会信息",
     "newsSubtitle": "汇聚注塑行业最新动态、技术干货与展会信息",
     "noNews": "暂无最新资讯，请稍后再试。"
   },
