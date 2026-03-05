@@ -3,8 +3,8 @@ FROM node:20-alpine AS frontend-build
 WORKDIR /app/frontend
 
 # Copy frontend package files
-COPY frontend/package*.json ./
-RUN npm ci
+COPY frontend/package.json ./
+RUN npm install
 
 # Copy frontend source and build
 COPY frontend/ ./
@@ -14,9 +14,12 @@ RUN npm run build
 FROM node:20-alpine AS backend-build
 WORKDIR /app/backend
 
+# Install build dependencies for native modules (better-sqlite3)
+RUN apk add --no-cache python3 make g++
+
 # Copy backend package files
-COPY backend/package*.json ./
-RUN npm ci
+COPY backend/package.json ./
+RUN npm install
 
 # Copy backend source and build
 COPY backend/ ./
@@ -26,9 +29,12 @@ RUN npm run build
 FROM node:20-alpine AS production
 WORKDIR /app
 
+# Install build dependencies for native modules
+RUN apk add --no-cache python3 make g++
+
 # Install production dependencies only
-COPY backend/package*.json ./
-RUN npm ci --omit=dev
+COPY backend/package.json ./
+RUN npm install --omit=dev
 
 # Copy built backend
 COPY --from=backend-build /app/backend/dist ./dist
