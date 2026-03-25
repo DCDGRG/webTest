@@ -19,7 +19,7 @@ export default function NewsCard({ item }: NewsCardProps) {
     )
 
     return (
-        <div className="card h-100 shadow border-0 hover-shadow transition-all">
+        <div className="card h-100 border-0 news-feed-card">
             {item.image_url && (
                 <img className="card-img-top" src={item.image_url} alt={item.title} style={{ height: '200px', objectFit: 'cover' }} />
             )}
@@ -29,7 +29,7 @@ export default function NewsCard({ item }: NewsCardProps) {
                     <small className="text-muted">{date}</small>
                 </div>
                 <h5 className="card-title mb-3">
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark stretched-link">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="news-feed-link stretched-link">
                         {item.title}
                     </a>
                 </h5>

@@ -1,29 +1,18 @@
 import { useTranslation } from 'react-i18next'
+import PageHeader from '../components/PageHeader'
 
 export default function FAQ() {
   const { t } = useTranslation()
 
   return (
     <>
-      {/* Page Hero with Gradient */}
-      <header className="py-5 page-hero">
-        <div className="container px-5">
-          <div className="row justify-content-center">
-            <div className="col-lg-8 col-xxl-6">
-              <div className="text-center my-5">
-                <div className="gradient-feature mb-4 mx-auto" style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <i className="bi bi-question-circle fs-1"></i>
-                </div>
-                <h1 className="fw-bolder mb-3 text-white">{t('faq.pageTitle')}</h1>
-                <p className="lead fw-normal text-white mb-4">{t('faq.pageSubtitle')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Transition */}
-      <div className="page-hero-transition"></div>
+      <PageHeader
+        kicker="FAQ"
+        title={t('faq.pageTitle')}
+        subtitle={t('faq.pageSubtitle')}
+        iconClass="bi-question-circle"
+        compact
+      />
 
       <section className="py-5">
         <div className="container px-5 my-5">

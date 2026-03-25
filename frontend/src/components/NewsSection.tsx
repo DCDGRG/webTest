@@ -47,16 +47,18 @@ export default function NewsSection({
     if (loading) return <div className="text-center py-5"><div className="spinner-border text-primary" role="status"></div></div>
 
     return (
-        <section className="py-5 bg-light" id="news-feed">
+        <section className="py-5 news-feed-section" id="news-feed">
             <div className="container px-5 my-5">
-                <div className="row gx-5 justify-content-center">
-                    <div className="col-lg-8 col-xl-6">
-                        <div className="text-center">
-                            <h2 className="fw-bolder gradient-text">{title}</h2>
-                            <p className="lead fw-normal text-muted mb-5">{t('blog.newsSubtitle')}</p>
+                {title ? (
+                    <div className="row gx-5 justify-content-center">
+                        <div className="col-lg-8 col-xl-6">
+                            <div className="text-center">
+                                <h2 className="fw-bolder gradient-text">{title}</h2>
+                                <p className="lead fw-normal text-muted mb-5">{t('blog.newsSubtitle')}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                ) : null}
 
 
                 {news.length === 0 ? (

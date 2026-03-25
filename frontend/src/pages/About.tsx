@@ -1,29 +1,31 @@
 import { useTranslation } from 'react-i18next'
+import PageHeader from '../components/PageHeader'
 
 export default function About() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isZh = i18n.language === 'zh-CN' || i18n.language === 'zh'
 
   const products = [
     {
-      icon: '🚗',
+      icon: 'bi-car-front-fill',
       titleKey: 'about.automotive.title',
       descKey: 'about.automotive.description',
       featuresKey: 'about.automotive.features'
     },
     {
-      icon: '🏥',
+      icon: 'bi-heart-pulse-fill',
       titleKey: 'about.medical.title',
       descKey: 'about.medical.description',
       featuresKey: 'about.medical.features'
     },
     {
-      icon: '⚡',
+      icon: 'bi-lightning-charge-fill',
       titleKey: 'about.electronics.title',
       descKey: 'about.electronics.description',
       featuresKey: 'about.electronics.features'
     },
     {
-      icon: '🔬',
+      icon: 'bi-cpu-fill',
       titleKey: 'about.engineering.title',
       descKey: 'about.engineering.description',
       featuresKey: 'about.engineering.features'
@@ -32,26 +34,14 @@ export default function About() {
 
   return (
     <>
-      {/* Page Hero with Gradient */}
-      <header className="py-5 page-hero">
-        <div className="container px-5">
-          <div className="row justify-content-center">
-            <div className="col-lg-8 col-xxl-6">
-              <div className="text-center my-5">
-                <div className="text-center mb-4">
-                  <img src="/logo.svg" alt={t('nav.brand')} className="mb-3" style={{ height: '80px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
-                </div>
-                <h1 className="fw-bolder mb-3 text-white">{t('about.pageTitle')}</h1>
-                <p className="lead fw-normal text-white mb-4">{t('about.pageSubtitle')}</p>
-                <a className="btn btn-gradient-success btn-lg" href="#company-intro">{t('common.learnMore')}</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Transition */}
-      <div className="page-hero-transition"></div>
+      <PageHeader
+        kicker={t('nav.about')}
+        title={t('about.pageTitle')}
+        subtitle={t('about.pageSubtitle')}
+        showLogo
+        ctaLabel={t('common.learnMore')}
+        ctaHref="#company-intro"
+      />
 
       <section className="py-5 section-gradient-teal" id="company-intro">
         <div className="container px-5 my-5">
@@ -134,7 +124,9 @@ export default function About() {
               return (
                 <div key={idx} className="col mb-5 mb-xl-0">
                   <div className="gradient-card text-center p-4 h-100">
-                    <div className="display-4 mb-3">{product.icon}</div>
+                    <div className="gradient-feature mx-auto mb-3">
+                      <i className={`bi ${product.icon}`}></i>
+                    </div>
                     <h5 className="fw-bolder">{t(product.titleKey)}</h5>
                     <p className="text-muted mb-3">{t(product.descKey)}</p>
                     <div className="d-flex flex-wrap justify-content-center gap-1">
@@ -212,7 +204,7 @@ export default function About() {
                     <div className="text-muted">{t('about.injectionMachines')}</div>
                   </div>
                   <div className="col-4">
-                    <div className="h3 fw-bold text-success">10万级</div>
+                    <div className="h3 fw-bold text-success">{isZh ? '10万级' : 'Class 100K'}</div>
                     <div className="text-muted">{t('about.cleanRoom')}</div>
                   </div>
                 </div>

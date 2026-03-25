@@ -1,26 +1,17 @@
 import { useTranslation } from 'react-i18next'
+import PageHeader from '../components/PageHeader'
 
 export default function PortfolioItem() {
   const { t } = useTranslation()
 
   return (
     <>
-      {/* Page Hero with Gradient */}
-      <header className="py-5 page-hero">
-        <div className="container px-5">
-          <div className="row justify-content-center">
-            <div className="col-lg-8 col-xxl-6">
-              <div className="text-center my-5">
-                <h1 className="fw-bolder mb-3 text-white">{t('portfolio.projectTitle')}</h1>
-                <p className="lead fw-normal text-white mb-4">{t('portfolio.projectDescription')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Transition */}
-      <div className="page-hero-transition"></div>
+      <PageHeader
+        kicker={t('nav.portfolio')}
+        title={t('portfolio.projectTitle')}
+        subtitle={t('portfolio.projectDescription')}
+        compact
+      />
 
       <section className="py-5">
         <div className="container px-5 my-5">
