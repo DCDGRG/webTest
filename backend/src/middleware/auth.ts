@@ -10,6 +10,25 @@ export interface AuthRequest extends Request {
     };
 }
 
+// Verify the Bearer token on a request, returning the decoded admin or null.
+// Use this when a route wants to know whether the caller is authenticated
+// without rejecting unauthenticated requests outright (the middleware does that).
+export function verifyAuthToken(req: Request): { id: number; username: string } | null {
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return null;
+    }
+
+    const token = authHeader.substring(7);
+
+    try {
+        return jwt.verify(token, JWT_SECRET) as { id: number; username: string };
+    } catch {
+        return null;
+    }
+}
+
 export function authMiddleware(req: AuthRequest, res: Response, next: NextFunction) {
     const authHeader = req.headers.authorization;
 
@@ -18,15 +37,15 @@ export function authMiddleware(req: AuthRequest, res: Response, next: NextFuncti
         return;
     }
 
-    const token = authHeader.substring(7);
+    const admin = verifyAuthToken(req);
 
-    try {
-        const decoded = jwt.verify(token, JWT_SECRET) as { id: number; username: string };
-        req.admin = decoded;
-        next();
-    } catch {
+    if (!admin) {
         res.status(401).json({ error: 'Invalid token' });
+        return;
     }
+
+    req.admin = admin;
+    next();
 }
 
 export function generateToken(admin: { id: number; username: string }): string {

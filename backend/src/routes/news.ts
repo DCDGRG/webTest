@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { v4 as uuidv4 } from 'uuid';
 import db from '../db/schema.js';
-import { authMiddleware, AuthRequest } from '../middleware/auth.js';
+import { authMiddleware, verifyAuthToken, AuthRequest } from '../middleware/auth.js';
 
 const router = Router();
 
@@ -25,7 +25,10 @@ router.get('/', (req: Request, res: Response) => {
         const page = Math.max(1, parseInt(req.query.page as string) || 1);
         const limit = Math.min(50, Math.max(1, parseInt(req.query.limit as string) || 20));
         const category = req.query.category as string | undefined;
-        const includeUnpublished = req.query.includeUnpublished === 'true';
+        // Drafts/unpublished items must never leak to anonymous clients: only honor
+        // includeUnpublished when the request carries a valid admin auth token.
+        const includeUnpublished =
+            req.query.includeUnpublished === 'true' && verifyAuthToken(req) !== null;
         const offset = (page - 1) * limit;
 
         let query = 'SELECT * FROM news';
