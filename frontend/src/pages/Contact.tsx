@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser'
 import PageHeader from '../components/PageHeader'
+import { isZhLocale } from '../utils/locale'
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { t, i18n } = useTranslation()
-  const isZh = i18n.language === 'zh-CN' || i18n.language === 'zh'
+  const isZh = isZhLocale(i18n.language)
 
   const industries = isZh
     ? ['医疗器械', '汽车零部件', '电子电器', '智能家居', '工业设备']
@@ -74,22 +75,42 @@ export default function Contact() {
         kicker={t('nav.contact')}
         title={t('contact.pageTitle')}
         subtitle={t('contact.pageSubtitle')}
+        variant="contact"
         iconClass="bi-envelope-paper-fill"
         compact
+        links={[
+          { label: isZh ? '提交需求' : 'Inquiry Form', href: '#contact-form' },
+          { label: isZh ? '制造能力' : 'Capabilities', href: '/pricing' },
+          { label: isZh ? '公司概况' : 'Company Profile', href: '/about' }
+        ]}
+        metaItems={[
+          {
+            label: isZh ? '沟通路径' : 'Inquiry path',
+            value: isZh ? '需求确认、工艺判断、后续跟进' : 'Requirement review, process evaluation, and follow-up'
+          },
+          {
+            label: isZh ? '联系方式' : 'Contact',
+            value: isZh ? 'support@domain.com / (021) 1234-5678' : 'support@domain.com / (021) 1234-5678'
+          },
+          {
+            label: isZh ? '工厂与办公' : 'Factory and office',
+            value: isZh ? '上海制造支持与项目沟通' : 'Shanghai manufacturing support and project coordination'
+          }
+        ]}
       />
 
-      <section className="quote-intake-section">
+      <section className="quote-intake-section" id="contact-form">
         <div className="container px-4 px-lg-5">
           <div className="quote-intake-shell">
             <aside className="quote-sidebar">
               <p className="section-kicker">{isZh ? '项目沟通' : 'Project Intake'}</p>
               <h2>
-                {isZh ? '把询价表单做得更像工程项目入口。' : 'Turning the contact page into a clearer engineering intake.'}
+                {isZh ? '先把项目背景、材料方向和交付要求说明清楚。' : 'Start with the project background, material direction, and delivery requirements.'}
               </h2>
               <p>
                 {isZh
-                  ? '参考 Stitch 的结构，我们保留当前项目的轻量体验，但把询价需要的信息组织得更专业、更容易填写。'
-                  : 'Inspired by Stitch, the quote page keeps a simple single-page flow while organizing the details in a more professional intake structure.'}
+                  ? '我们会根据这些信息判断工艺路径、打样安排和后续沟通方式，便于尽快进入评估。'
+                  : 'These details help us judge the process path, sample plan, and follow-up workflow before formal review starts.'}
               </p>
 
               <div className="quote-sidebar-steps">

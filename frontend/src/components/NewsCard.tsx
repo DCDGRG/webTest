@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import type { NewsItem } from '../types/News'
+import { formatDate } from '../utils/formatDate'
 
 interface NewsCardProps {
     item: NewsItem
@@ -8,15 +9,7 @@ interface NewsCardProps {
 export default function NewsCard({ item }: NewsCardProps) {
     const { t, i18n } = useTranslation()
 
-    // Format date based on current language
-    const date = new Date(item.published_at).toLocaleDateString(
-        i18n.language === 'zh-CN' ? 'zh-CN' : 'en-US',
-        {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        }
-    )
+    const date = formatDate(item.published_at, i18n.language)
 
     return (
         <div className="card h-100 border-0 news-feed-card">

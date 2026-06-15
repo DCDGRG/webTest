@@ -1,5 +1,6 @@
 import { useTheme } from '../contexts/ThemeContext';
 import { useTranslation } from 'react-i18next';
+import { isZhLocale } from '../utils/locale';
 
 export default function ThemeLanguageSwitcher() {
     const { theme, toggleTheme } = useTheme();
@@ -10,7 +11,7 @@ export default function ThemeLanguageSwitcher() {
         i18n.changeLanguage(newLang);
     };
 
-    const isZh = i18n.language === 'zh-CN' || i18n.language === 'zh';
+    const isZh = isZhLocale(i18n.language);
 
     return (
         <div className="btn-group btn-group-sm" role="group">

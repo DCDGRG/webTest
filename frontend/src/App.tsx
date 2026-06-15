@@ -5,6 +5,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import ThemeLanguageSwitcher from './components/ThemeLanguageSwitcher'
+import { isZhLocale } from './utils/locale'
 
 // Lazy load pages for code splitting
 const About = lazy(() => import('./pages/About'))
@@ -128,30 +129,30 @@ function Navbar() {
 
 function Footer() {
   const { t, i18n } = useTranslation()
-  const isZh = i18n.language === 'zh-CN' || i18n.language === 'zh'
+  const isZh = isZhLocale(i18n.language)
   const footerColumns = [
     {
       title: isZh ? '制造能力' : 'Capabilities',
       links: [
-        { to: '/pricing', label: isZh ? '模具与注塑能力' : 'Tooling & Molding' },
-        { to: '/pricing', label: isZh ? '洁净车间与表面工艺' : 'Cleanroom & Finishing' },
-        { to: '/portfolio-overview', label: isZh ? '项目案例' : 'Project Gallery' }
+        { to: '/pricing', label: isZh ? '制造能力总览' : 'Manufacturing Capabilities' },
+        { to: '/pricing', label: isZh ? '设备与材料范围' : 'Equipment & Materials' },
+        { to: '/pricing', label: isZh ? '质量与交付' : 'Quality & Delivery' }
+      ]
+    },
+    {
+      title: isZh ? '项目支持' : 'Project Support',
+      links: [
+        { to: '/contact', label: isZh ? '提交项目需求' : 'Project Inquiry' },
+        { to: '/portfolio-overview', label: isZh ? '项目案例' : 'Program Examples' },
+        { to: '/faq', label: isZh ? '常见问题' : 'FAQ' }
       ]
     },
     {
       title: isZh ? '公司信息' : 'Company',
       links: [
         { to: '/about', label: t('nav.about') },
-        { to: '/blog-home', label: isZh ? '技术资讯' : 'Industry Updates' },
+        { to: '/blog-home', label: isZh ? '技术资讯' : 'Technical News' },
         { to: '/contact', label: t('nav.contact') }
-      ]
-    },
-    {
-      title: isZh ? '快速入口' : 'Quick Links',
-      links: [
-        { to: '/faq', label: t('faq.pageTitle') },
-        { to: '/portfolio-item', label: t('nav.portfolioItem') },
-        { to: '/pricing', label: isZh ? '获取报价' : 'Request Quote' }
       ]
     }
   ]
@@ -160,11 +161,23 @@ function Footer() {
     ? ['ISO 9001 / ISO 13485', '10万级洁净制造', 'PEEK / PEI / PPSU']
     : ['ISO 9001 / ISO 13485', 'Class 100K clean manufacturing', 'PEEK / PEI / PPSU']
 
+  const footerFacts = isZh
+    ? [
+        { label: '地址', value: '上海市松江区' },
+        { label: '支持', value: '模具、注塑、表面工艺、装配' },
+        { label: '响应', value: '项目资料 24 小时内初步反馈' }
+      ]
+    : [
+        { label: 'Location', value: 'Songjiang District, Shanghai' },
+        { label: 'Coverage', value: 'Tooling, molding, finishing, assembly' },
+        { label: 'Response', value: 'Initial review within 24 hours' }
+      ]
+
   return (
     <footer className="site-footer mt-auto">
       <div className="container px-4 px-lg-5">
         <div className="row g-5 site-footer-main">
-          <div className="col-lg-5">
+          <div className="col-lg-6">
             <div className="site-footer-brand">
               <img src="/logo.svg" alt={t('nav.brand')} />
               <div>
@@ -182,6 +195,14 @@ function Footer() {
                 <span key={mark}>{mark}</span>
               ))}
             </div>
+            <div className="site-footer-facts">
+              {footerFacts.map((fact) => (
+                <div key={fact.label} className="site-footer-fact">
+                  <span>{fact.label}</span>
+                  <strong>{fact.value}</strong>
+                </div>
+              ))}
+            </div>
           </div>
 
           {footerColumns.map((column) => (
@@ -194,8 +215,6 @@ function Footer() {
               </div>
             </div>
           ))}
-
-          <div className="col-lg-1 d-none d-lg-block"></div>
         </div>
 
         <div className="site-footer-bottom">
@@ -213,7 +232,7 @@ function Footer() {
 
 function HomePage() {
   const { t, i18n } = useTranslation()
-  const isZh = i18n.language === 'zh-CN' || i18n.language === 'zh'
+  const isZh = isZhLocale(i18n.language)
 
   const services = [
     {
@@ -361,14 +380,40 @@ function HomePage() {
     }
   ]
 
-  const performanceStats = isZh ? [
-    { value: '24h', label: '初步响应' },
-    { value: '31台', label: '注塑设备' },
-    { value: '20+', label: '模具与加工设备' }
+  const proofBand = isZh ? [
+    {
+      title: '24 小时初步响应',
+      description: '收到图纸、材料方向和批量需求后，可先做工艺与可行性判断。'
+    },
+    {
+      title: '31 台注塑设备',
+      description: '覆盖 50T-800T 产能区间，支持打样、小批量和量产切换。'
+    },
+    {
+      title: 'ISO 质量体系',
+      description: '按 ISO 9001 与 ISO 13485 组织过程控制、检验记录和批次追溯。'
+    },
+    {
+      title: '10 万级洁净制造',
+      description: '适合对环境控制、外观一致性和洁净要求更高的项目。'
+    }
   ] : [
-    { value: '24h', label: 'first response' },
-    { value: '31', label: 'injection machines' },
-    { value: '20+', label: 'tooling machines' }
+    {
+      title: 'Initial response within 24 hours',
+      description: 'Drawings, materials, and forecast volume can be reviewed first for process feasibility.'
+    },
+    {
+      title: '31 molding machines',
+      description: '50T-800T capacity supports sampling, pilot runs, and production handoff.'
+    },
+    {
+      title: 'ISO quality systems',
+      description: 'Process control, inspection records, and traceability follow ISO 9001 and ISO 13485.'
+    },
+    {
+      title: 'Class 100K clean manufacturing',
+      description: 'Suitable for programs with tighter cleanliness, cosmetic, and process-control requirements.'
+    }
   ]
 
   return (
@@ -523,13 +568,13 @@ function HomePage() {
         <div className="container px-4 px-lg-5">
           <div className="section-header text-center mx-auto">
             <p className="section-kicker">{isZh ? '项目视角' : 'Program Proof'}</p>
-            <h2 className="section-title">{isZh ? '把制造能力讲得更具体一些。' : 'A clearer look at how the manufacturing system works.'}</h2>
-            <p className="section-subtitle mb-0">
-              {isZh
-                ? '借鉴 Stitch 的工业型页面结构，我们把能力展示从模板卡片收成了更直接的案例与指标表达。'
-                : 'Inspired by the Stitch direction, the proof area now reads like an industrial editorial page instead of a generic card grid.'}
-            </p>
-          </div>
+              <h2 className="section-title">{isZh ? '把制造能力讲得更具体一些。' : 'A clearer look at how the manufacturing system works.'}</h2>
+              <p className="section-subtitle mb-0">
+                {isZh
+                  ? '通过项目案例、工艺路径和关键指标，帮助客户更快判断制造匹配度。'
+                  : 'Project examples, process paths, and selected metrics help clients judge manufacturing fit faster.'}
+              </p>
+            </div>
 
           <div className="row g-4 showcase-grid">
             {caseStudies.map((item) => (
@@ -552,12 +597,12 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="proof-stats">
-            {performanceStats.map((stat) => (
-              <div key={stat.label} className="proof-stat">
-                <strong>{stat.value}</strong>
-                <span>{stat.label}</span>
-              </div>
+          <div className="proof-band">
+            {proofBand.map((item) => (
+              <article key={item.title} className="proof-band-item">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -565,20 +610,32 @@ function HomePage() {
 
       <section className="final-cta-section">
         <div className="container px-4 px-lg-5">
-          <div className="final-cta-inner">
-            <div>
-              <p className="section-kicker">{isZh ? '开始沟通' : 'Start a Project'}</p>
+          <div className="final-cta-inner manufacturing-inquiry">
+            <div className="manufacturing-inquiry-copy">
+              <p className="section-kicker">{isZh ? '项目评估' : 'Project Evaluation'}</p>
               <h2 className="final-cta-title">
-                {isZh ? '如果您正在评估材料、模具或量产方案，我们可以尽快跟进。' : 'If you are evaluating materials, tooling, or production planning, we can help quickly.'}
+                {isZh ? '提交图纸、材料方向和预计批量，我们先做制造评估。' : 'Send drawings, material direction, and expected volume for an initial manufacturing review.'}
               </h2>
+              <p className="manufacturing-inquiry-text">
+                {isZh
+                  ? '适合前期选材、模具评审、打样安排和量产可行性判断。'
+                  : 'Useful for material selection, tooling review, sampling plans, and production feasibility.'}
+              </p>
             </div>
-            <div className="final-cta-actions">
+            <div className="manufacturing-inquiry-side">
+              <div className="manufacturing-inquiry-list">
+                <div>{isZh ? '建议提供 3D 图纸或 2D 尺寸要求' : '3D files or dimensional drawings are recommended'}</div>
+                <div>{isZh ? '说明材料方向、外观要求和用途' : 'Include material targets, cosmetic requirements, and application use'}</div>
+                <div>{isZh ? '补充预计批量、交期和验证节点' : 'Add expected volume, lead time, and validation timing'}</div>
+              </div>
+              <div className="final-cta-actions">
               <Link className="btn-cta-primary" to="/contact">
-                {isZh ? '获取报价' : 'Request a Quote'}
+                {isZh ? '提交项目需求' : 'Submit Project Brief'}
               </Link>
-              <Link className="final-cta-link" to="/about">
-                {t('hero.aboutUs')} <i className="bi bi-arrow-right"></i>
+              <Link className="final-cta-link" to="/pricing">
+                {isZh ? '查看制造能力' : 'Review Capabilities'} <i className="bi bi-arrow-right"></i>
               </Link>
+            </div>
             </div>
           </div>
         </div>

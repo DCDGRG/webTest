@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
+import { isZhLocale } from '../utils/locale'
 
 export default function About() {
   const { t, i18n } = useTranslation()
-  const isZh = i18n.language === 'zh-CN' || i18n.language === 'zh'
+  const isZh = isZhLocale(i18n.language)
 
   const products = [
     {
@@ -38,9 +39,24 @@ export default function About() {
         kicker={t('nav.about')}
         title={t('about.pageTitle')}
         subtitle={t('about.pageSubtitle')}
+        variant="trust"
         showLogo
-        ctaLabel={t('common.learnMore')}
+        ctaLabel={isZh ? '查看公司概况' : 'Company Profile'}
         ctaHref="#company-intro"
+        metaItems={[
+          {
+            label: isZh ? '公司定位' : 'Company profile',
+            value: isZh ? '精密模塑与特种塑料制造' : 'Precision molding and specialty plastics manufacturing'
+          },
+          {
+            label: isZh ? '制造重点' : 'Manufacturing focus',
+            value: isZh ? '模具、注塑、洁净制造、表面工艺与装配' : 'Tooling, molding, clean manufacturing, finishing, and assembly'
+          },
+          {
+            label: isZh ? '服务行业' : 'Industries served',
+            value: isZh ? '医疗、汽车、电子与工业设备' : 'Medical, automotive, electronics, and industrial equipment'
+          }
+        ]}
       />
 
       <section className="py-5 section-gradient-teal" id="company-intro">
