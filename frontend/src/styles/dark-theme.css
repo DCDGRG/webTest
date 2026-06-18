@@ -395,17 +395,23 @@
   color: rgba(91, 181, 166, 0.92);
 }
 
-[data-bs-theme="dark"] .proof-stat {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.06);
+[data-bs-theme="dark"] .proof-band {
+  border-top-color: #2a3540;
+  border-left-color: #2a3540;
 }
 
-[data-bs-theme="dark"] .proof-stat strong {
-  color: var(--secondary-teal);
+[data-bs-theme="dark"] .proof-band-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-right-color: #2a3540;
+  border-bottom-color: #2a3540;
 }
 
-[data-bs-theme="dark"] .proof-stat span {
-  color: rgba(231, 233, 234, 0.6);
+[data-bs-theme="dark"] .proof-band-item h3 {
+  color: #e7e9ea;
+}
+
+[data-bs-theme="dark"] .proof-band-item p {
+  color: rgba(231, 233, 234, 0.68);
 }
 
 [data-bs-theme="dark"] .process-item {
@@ -425,6 +431,15 @@
 
 [data-bs-theme="dark"] .final-cta-inner {
   border-top-color: #2a3540;
+}
+
+[data-bs-theme="dark"] .manufacturing-inquiry-text {
+  color: rgba(231, 233, 234, 0.7);
+}
+
+[data-bs-theme="dark"] .manufacturing-inquiry-list div {
+  color: #e7e9ea;
+  border-bottom-color: #2a3540;
 }
 
 /* ========================================
@@ -495,7 +510,7 @@
 }
 
 [data-bs-theme="dark"] .site-footer {
-  background: linear-gradient(180deg, #0e161d 0%, #10161d 100%);
+  background: #11191f;
   border-top-color: rgba(255, 255, 255, 0.06);
 }
 
@@ -509,6 +524,18 @@
 [data-bs-theme="dark"] .site-footer-tags span {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .site-footer-fact {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-bs-theme="dark"] .site-footer-fact span {
+  color: rgba(231, 233, 234, 0.5);
+}
+
+[data-bs-theme="dark"] .site-footer-fact strong {
+  color: rgba(231, 233, 234, 0.9);
 }
 
 /* ========================================
@@ -569,22 +596,21 @@
 [data-bs-theme="dark"] .page-hero::before,
 [data-bs-theme="dark"] .page-hero-subtle::before {
   background:
-    linear-gradient(180deg, rgba(8, 16, 19, 0.04) 0%, rgba(8, 16, 19, 0.12) 44%, rgba(22, 31, 37, 0.05) 100%),
-    radial-gradient(ellipse at 30% 72%, rgba(91, 181, 166, 0.12) 0%, transparent 54%),
-    radial-gradient(ellipse at 72% 28%, rgba(255, 255, 255, 0.04) 0%, transparent 34%);
+    linear-gradient(180deg, rgba(6, 11, 15, 0.08) 0%, rgba(6, 11, 15, 0.16) 44%, rgba(15, 20, 25, 0.04) 100%),
+    linear-gradient(0deg, rgba(91, 181, 166, 0.06), rgba(91, 181, 166, 0.06));
 }
 
 [data-bs-theme="dark"] .page-shell-hero::after,
 [data-bs-theme="dark"] .page-hero::after,
 [data-bs-theme="dark"] .page-hero-subtle::after {
-  background: linear-gradient(180deg, rgba(15, 20, 25, 0) 0%, rgba(24, 38, 40, 0.12) 34%, rgba(26, 31, 38, 0.72) 100%);
+  background: linear-gradient(180deg, rgba(15, 20, 25, 0) 0%, rgba(18, 27, 32, 0.16) 42%, rgba(26, 31, 38, 0.84) 100%);
 }
 
 [data-bs-theme="dark"] .page-shell-hero {
   background:
-    linear-gradient(180deg, #102126 0%, #14282d 40%, #193338 100%),
-    radial-gradient(circle at 20% 18%, rgba(111, 190, 176, 0.08) 0%, transparent 28%),
-    radial-gradient(circle at 80% 14%, rgba(255, 255, 255, 0.03) 0%, transparent 20%);
+    linear-gradient(180deg, #0f1f23 0%, #15292e 42%, #1a3338 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 120px);
+  background-size: auto, 120px 100%;
 }
 
 [data-bs-theme="dark"] .page-shell-kicker,
@@ -592,10 +618,71 @@
   color: rgba(231, 233, 234, 0.82);
 }
 
+[data-bs-theme="dark"] .page-shell-title,
+[data-bs-theme="dark"] .page-shell-meta-item strong {
+  color: #edf1f1;
+}
+
+[data-bs-theme="dark"] .page-shell-link {
+  color: rgba(231, 233, 234, 0.78);
+}
+
+[data-bs-theme="dark"] .page-shell-link:hover {
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .page-shell-links {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .page-shell-meta-item {
+  background: rgba(255, 255, 255, 0.04);
+  border-left-color: rgba(91, 181, 166, 0.64);
+}
+
+[data-bs-theme="dark"] .page-shell-meta-item span {
+  color: rgba(231, 233, 234, 0.56);
+}
+
 [data-bs-theme="dark"] .page-shell-transition,
 [data-bs-theme="dark"] .page-hero-transition,
 [data-bs-theme="dark"] .page-hero-subtle-transition {
-  background: linear-gradient(180deg, rgba(26, 31, 38, 0) 0%, rgba(23, 31, 37, 0.14) 28%, rgba(24, 31, 37, 0.58) 68%, #1a1f26 100%);
+  background: linear-gradient(180deg, rgba(26, 31, 38, 0) 0%, rgba(23, 31, 37, 0.14) 42%, #1a1f26 100%);
+}
+
+[data-bs-theme="dark"] .page-shell-trust {
+  background:
+    linear-gradient(180deg, #122329 0%, #183038 44%, #1f3b43 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.024) 0, rgba(255, 255, 255, 0.024) 1px, transparent 1px, transparent 120px);
+  background-size: auto, 120px 100%;
+}
+
+[data-bs-theme="dark"] .page-shell-capability {
+  background:
+    linear-gradient(180deg, #0d1c21 0%, #13282e 44%, #1a363b 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 0, rgba(255, 255, 255, 0.022) 1px, transparent 1px, transparent 120px);
+  background-size: auto, 120px 100%;
+}
+
+[data-bs-theme="dark"] .page-shell-editorial {
+  background:
+    linear-gradient(180deg, #1c3137 0%, #254046 46%, #2c4d52 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 120px);
+  background-size: auto, 120px 100%;
+}
+
+[data-bs-theme="dark"] .page-shell-catalog {
+  background:
+    linear-gradient(180deg, #13252a 0%, #1a3137 44%, #214046 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.024) 0, rgba(255, 255, 255, 0.024) 1px, transparent 1px, transparent 120px);
+  background-size: auto, 120px 100%;
+}
+
+[data-bs-theme="dark"] .page-shell-contact {
+  background:
+    linear-gradient(180deg, #112126 0%, #183037 44%, #1f3d43 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 0, rgba(255, 255, 255, 0.022) 1px, transparent 1px, transparent 120px);
+  background-size: auto, 120px 100%;
 }
 
 /* Contact Form Card - Dark Mode */
@@ -739,11 +826,11 @@
 }
 
 [data-bs-theme="dark"] .section-transition-down {
-  background: linear-gradient(180deg, #0f1419 0%, #13191e 28%, #182123 72%, #1c2829 100%);
+  background: linear-gradient(180deg, #0f1419 0%, #121a1d 40%, #161f21 72%, #182123 100%);
 }
 
 [data-bs-theme="dark"] .section-transition-up {
-  background: linear-gradient(180deg, #1b2728 0%, #182123 34%, #12191d 74%, #0f1419 100%);
+  background: linear-gradient(180deg, #162022 0%, #141d1f 34%, #111719 72%, #0f1419 100%);
 }
 
 /* ========================================
@@ -858,4 +945,62 @@
 
 [data-bs-theme="dark"] ::-webkit-scrollbar-thumb:hover {
   background: #4a5568;
+}
+
+/* ========================================
+   MANUFACTURING PAGE - DARK MODE
+   ======================================== */
+
+[data-bs-theme="dark"] .manufacturing-section-muted {
+  background: rgba(24, 36, 35, 0.62);
+}
+
+[data-bs-theme="dark"] .manufacturing-proof-grid,
+[data-bs-theme="dark"] .capability-module-list,
+[data-bs-theme="dark"] .capability-module-row,
+[data-bs-theme="dark"] .industry-fit-item,
+[data-bs-theme="dark"] .delivery-assurance-item,
+[data-bs-theme="dark"] .material-reference-item,
+[data-bs-theme="dark"] .equipment-material-block,
+[data-bs-theme="dark"] .equipment-material-item {
+  border-color: rgba(143, 167, 163, 0.14);
+}
+
+[data-bs-theme="dark"] .manufacturing-proof-item,
+[data-bs-theme="dark"] .equipment-material-block {
+  background: rgba(23, 31, 30, 0.72);
+}
+
+[data-bs-theme="dark"] .manufacturing-proof-item strong,
+[data-bs-theme="dark"] .process-flow-number,
+[data-bs-theme="dark"] .capability-module-point i {
+  color: #9db8b3;
+}
+
+[data-bs-theme="dark"] .manufacturing-proof-item span,
+[data-bs-theme="dark"] .capability-module-copy h3,
+[data-bs-theme="dark"] .process-flow-step h3,
+[data-bs-theme="dark"] .equipment-material-block h3,
+[data-bs-theme="dark"] .industry-fit-item h3,
+[data-bs-theme="dark"] .delivery-assurance-item h3,
+[data-bs-theme="dark"] .equipment-material-item span,
+[data-bs-theme="dark"] .material-reference-item strong {
+  color: #edf1ed;
+}
+
+[data-bs-theme="dark"] .manufacturing-proof-item p,
+[data-bs-theme="dark"] .capability-module-copy p,
+[data-bs-theme="dark"] .process-flow-step p,
+[data-bs-theme="dark"] .industry-fit-item p,
+[data-bs-theme="dark"] .delivery-assurance-item p,
+[data-bs-theme="dark"] .material-reference-item p {
+  color: #a3afaa;
+}
+
+[data-bs-theme="dark"] .process-flow-step {
+  border-top-color: rgba(143, 167, 163, 0.24);
+}
+
+[data-bs-theme="dark"] .manufacturing-cta-shell {
+  background: #16211f;
 }
