@@ -590,6 +590,39 @@ p,
     url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnSYooF3eikwwDL3vNGHU83qYyeQ9SbHujdsxkpIi7BHN97_AKgZkm0N8Pn8POpbVPeTBAqIK38f81mO3cp7Z_L657Dj7R-Mg9fHoHpP2NfQG1YkUk0V2vuj78YbASNTJ6b9X3Kei_5if7nzaT0GTL2OHdrVMnWzYySuu16dTigunISZdN5tbR_Qr2hwxisk66BorYjVQHrYCVFQqkzmQAgwt4Uc0_nwG_hxM6eZ-0EBUTZT3INlXtWMYcPycYkM4tfz3AS89lxagG") center center / cover no-repeat;
 }
 
+.hero-shader {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0b181d 0%, #163035 60%, #2f5f5c 100%);
+}
+
+.hero-shader-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-shader-grain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.hero-shader-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(7, 20, 24, 0.62) 0%, rgba(7, 20, 24, 0.3) 48%, rgba(7, 20, 24, 0.04) 100%);
+  pointer-events: none;
+}
+
 .homepage-hero::before {
   content: '';
   position: absolute;
