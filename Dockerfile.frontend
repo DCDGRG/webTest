@@ -8,9 +8,13 @@ COPY package.json package-lock.json ./
 COPY frontend/package.json ./frontend/
 COPY backend/package.json ./backend/
 
-# Install only the frontend workspace's deps from the root lockfile.
-# -w frontend skips the backend's native deps, so no compiler toolchain is needed.
-RUN npm ci -w frontend
+# Install only the frontend workspace's deps. Use `npm install` (not `npm ci`)
+# so platform-specific optional deps resolve for the build OS — e.g.
+# @rollup/rollup-linux-x64-musl on alpine; npm ci skips those when the lockfile
+# was generated on another platform (npm/cli#4828). The root lockfile still
+# pins versions, and -w frontend skips the backend's native deps so no
+# compiler toolchain is needed.
+RUN npm install -w frontend --no-audit --no-fund
 
 # Copy frontend source and build
 COPY frontend/ ./frontend/
