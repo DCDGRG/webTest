@@ -1,6 +1,5 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
-
-type Theme = 'light' | 'dark';
+import { getInitialTheme, nextTheme, THEME_KEY, type Theme } from '../utils/theme';
 
 interface ThemeContextType {
     theme: Theme;
@@ -9,20 +8,8 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const THEME_KEY = 'theme';
-
 export function ThemeProvider({ children }: { children: ReactNode }) {
-    const [theme, setTheme] = useState<Theme>(() => {
-        const stored = localStorage.getItem(THEME_KEY);
-        if (stored === 'light' || stored === 'dark') {
-            return stored;
-        }
-        // Check system preference
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark';
-        }
-        return 'light';
-    });
+    const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
     useEffect(() => {
         localStorage.setItem(THEME_KEY, theme);
@@ -30,7 +17,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }, [theme]);
 
     const toggleTheme = () => {
-        setTheme(prev => prev === 'light' ? 'dark' : 'light');
+        setTheme(prev => nextTheme(prev));
     };
 
     return (

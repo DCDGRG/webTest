@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ShaderBackground from './ShaderBackground'
+import { isInternalHref } from '../utils/nav'
 
 type PageHeaderVariant = 'default' | 'trust' | 'capability' | 'editorial' | 'catalog' | 'contact'
 
@@ -33,7 +34,7 @@ function HeaderLink({ link }: { link: PageHeaderLink }) {
     return <a className="page-shell-link" href={link.href}>{link.label}</a>
   }
 
-  if (link.href.startsWith('/')) {
+  if (isInternalHref(link.href)) {
     return <Link className="page-shell-link" to={link.href}>{link.label}</Link>
   }
 
@@ -77,7 +78,7 @@ export default function PageHeader({
 
               {ctaLabel && ctaHref ? (
                 <div className="page-shell-actions">
-                  {ctaHref.startsWith('/') ? (
+                  {isInternalHref(ctaHref) ? (
                     <Link className="btn-cta-primary" to={ctaHref}>{ctaLabel}</Link>
                   ) : (
                     <a className="btn-cta-primary" href={ctaHref}>{ctaLabel}</a>

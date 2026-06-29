@@ -2,6 +2,7 @@ export interface NewsItem {
     id: string;
     title: string;
     summary: string;
+    content?: string | null;
     url: string;
     published_at: string;
     source_name: string;

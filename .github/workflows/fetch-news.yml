@@ -1,0 +1,45 @@
+name: Refresh industry news
+
+on:
+  schedule:
+    # Daily at 21:17 UTC (~05:17 Beijing time). cron is always UTC.
+    - cron: "17 21 * * *"
+  workflow_dispatch: {}
+
+# Allow the job to commit the refreshed news.json back to the repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-news
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # The aggregator only needs rss-parser (pinned to the version the app uses).
+      - name: Install rss-parser
+        run: npm install --no-save --no-audit --no-fund rss-parser@3
+
+      - name: Fetch latest news
+        run: node frontend/scripts/fetch-news.mjs
+
+      - name: Commit if news changed
+        run: |
+          if [ -n "$(git status --porcelain frontend/public/data/news.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add frontend/public/data/news.json
+            git commit -m "chore(news): refresh industry & tech news feed"
+            git push
+            echo "Committed refreshed news feed."
+          else
+            echo "No news changes — nothing to commit."
+          fi

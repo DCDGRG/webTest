@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { NewsItem } from '../types/News'
+import { selectNews } from '../utils/news'
 import NewsCard from './NewsCard'
 
 interface NewsSectionProps {
@@ -40,9 +41,7 @@ export default function NewsSection({
             })
     }, [])
 
-    const filteredNews = category
-        ? news.filter(item => item.category === category)
-        : news
+    const visibleNews = selectNews(news, { category, limit })
 
     if (loading) return <div className="text-center py-5"><div className="spinner-border text-primary" role="status"></div></div>
 
@@ -61,13 +60,13 @@ export default function NewsSection({
                 ) : null}
 
 
-                {news.length === 0 ? (
+                {visibleNews.length === 0 ? (
                     <div className="text-center text-muted">
                         <p>{t('blog.noNews')}</p>
                     </div>
                 ) : (
                     <div className={`row gx-5 row-cols-1 row-cols-md-2 ${cols}`}>
-                        {filteredNews.slice(0, limit || filteredNews.length).map((item) => (
+                        {visibleNews.map((item) => (
                             <div key={item.id} className="col mb-5">
                                 <NewsCard item={item} />
                             </div>

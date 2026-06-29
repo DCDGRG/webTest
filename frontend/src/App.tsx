@@ -6,6 +6,7 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import ThemeLanguageSwitcher from './components/ThemeLanguageSwitcher'
 import { isZhLocale } from './utils/locale'
+import { isHeroRoute } from './utils/nav'
 
 // Lazy load pages for code splitting
 const About = lazy(() => import('./pages/About'))
@@ -13,6 +14,7 @@ const Pricing = lazy(() => import('./pages/Pricing'))
 const FAQ = lazy(() => import('./pages/FAQ'))
 const BlogHome = lazy(() => import('./pages/BlogHome'))
 const IndustryNews = lazy(() => import('./pages/IndustryNews'))
+const NewsArticle = lazy(() => import('./pages/NewsArticle'))
 const PortfolioOverview = lazy(() => import('./pages/PortfolioOverview'))
 const PortfolioItem = lazy(() => import('./pages/PortfolioItem'))
 const Contact = lazy(() => import('./pages/Contact'))
@@ -41,8 +43,7 @@ function Navbar() {
   const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
-  const heroRoutes = ['/', '/about', '/pricing', '/contact', '/faq', '/blog-home', '/blog-post', '/portfolio-overview', '/portfolio-item']
-  const isHeroRoute = heroRoutes.includes(location.pathname)
+  const isHero = isHeroRoute(location.pathname)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +58,7 @@ function Navbar() {
   const isDropdownActive = (paths: string[]) => paths.some(p => location.pathname === p)
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-light bg-white fixed-top ${scrolled ? 'navbar-scrolled' : ''} ${isHeroRoute ? 'navbar-hero-shell' : ''} ${isHeroRoute && !scrolled ? 'navbar-floating' : ''}`}>
+    <nav className={`navbar navbar-expand-lg navbar-light bg-white fixed-top ${scrolled ? 'navbar-scrolled' : ''} ${isHero ? 'navbar-hero-shell' : ''} ${isHero && !scrolled ? 'navbar-floating' : ''}`}>
       <div className="container px-4 px-lg-5">
         <Link className="navbar-brand text-dark fw-bold d-flex align-items-center" to="/">
           <img src="/logo.svg" alt={t('nav.brand')} className="me-2" style={{ height: '32px', width: 'auto' }} />
@@ -663,6 +664,7 @@ function AppLayout() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/blog-home" element={<BlogHome />} />
             <Route path="/blog-post" element={<IndustryNews />} />
+            <Route path="/news/:id" element={<NewsArticle />} />
             <Route path="/portfolio-overview" element={<PortfolioOverview />} />
             <Route path="/portfolio-item" element={<PortfolioItem />} />
 

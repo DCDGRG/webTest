@@ -1,14 +1,13 @@
 import { useTheme } from '../contexts/ThemeContext';
 import { useTranslation } from 'react-i18next';
-import { isZhLocale } from '../utils/locale';
+import { isZhLocale, nextLanguage } from '../utils/locale';
 
 export default function ThemeLanguageSwitcher() {
     const { theme, toggleTheme } = useTheme();
     const { i18n } = useTranslation();
 
     const toggleLanguage = () => {
-        const newLang = i18n.language === 'zh-CN' ? 'en-US' : 'zh-CN';
-        i18n.changeLanguage(newLang);
+        i18n.changeLanguage(nextLanguage(i18n.language));
     };
 
     const isZh = isZhLocale(i18n.language);
