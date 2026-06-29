@@ -46,6 +46,19 @@ describe('NewsCard', () => {
     expect(link).not.toHaveAttribute('target', '_blank')
   })
 
+  it('renders a "read more" footer that is itself a link to the source', () => {
+    renderCard(baseItem)
+    const readMore = screen.getByRole('link', { name: /common\.readMore/i })
+    expect(readMore).toHaveAttribute('href', 'https://example.com/article')
+    expect(readMore).toHaveAttribute('target', '_blank')
+  })
+
+  it('"read more" links to the internal page for an owned article', () => {
+    renderCard({ ...baseItem, content: 'Full body text here.' })
+    const readMore = screen.getByRole('link', { name: /common\.readMore/i })
+    expect(readMore).toHaveAttribute('href', '/news/1')
+  })
+
   it('renders the source name as a badge', () => {
     renderCard(baseItem)
     expect(screen.getByText('Mold Tech Weekly')).toBeInTheDocument()

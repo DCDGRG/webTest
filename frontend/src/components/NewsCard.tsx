@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import type { NewsItem } from '../types/News'
@@ -14,6 +15,19 @@ export default function NewsCard({ item }: NewsCardProps) {
     const date = formatDate(item.published_at, i18n.language)
     const external = isExternalNews(item)
 
+    // One link target for the whole card; rendered both as the stretched title
+    // link and as the explicit "read more" link in the footer.
+    const renderLink = (className: string, children: ReactNode, style?: React.CSSProperties) =>
+        external ? (
+            <a href={item.url} target="_blank" rel="noopener noreferrer" className={className} style={style}>
+                {children}
+            </a>
+        ) : (
+            <Link to={`/news/${item.id}`} className={className} style={style}>
+                {children}
+            </Link>
+        )
+
     return (
         <div className="card h-100 border-0 news-feed-card">
             {item.image_url && (
@@ -25,15 +39,7 @@ export default function NewsCard({ item }: NewsCardProps) {
                     <small className="text-muted">{date}</small>
                 </div>
                 <h5 className="card-title mb-3">
-                    {external ? (
-                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="news-feed-link stretched-link">
-                            {item.title}
-                        </a>
-                    ) : (
-                        <Link to={`/news/${item.id}`} className="news-feed-link stretched-link">
-                            {item.title}
-                        </Link>
-                    )}
+                    {renderLink('news-feed-link stretched-link', item.title)}
                 </h5>
 
                 {item.summary && (
@@ -44,7 +50,13 @@ export default function NewsCard({ item }: NewsCardProps) {
             </div>
             <div className="card-footer p-4 pt-0 bg-transparent border-top-0">
                 <div className="d-flex align-items-center justify-content-end">
-                    <small className="text-primary fw-bold">{t('common.readMore')} <i className={`bi ${external ? 'bi-box-arrow-up-right' : 'bi-arrow-right'} ms-1`}></i></small>
+                    {/* A real link, layered above the stretched-link overlay (z-index) so
+                        it is directly clickable. */}
+                    {renderLink(
+                        'news-feed-readmore text-primary fw-bold text-decoration-none small',
+                        <>{t('common.readMore')} <i className={`bi ${external ? 'bi-box-arrow-up-right' : 'bi-arrow-right'} ms-1`}></i></>,
+                        { position: 'relative', zIndex: 2 }
+                    )}
                 </div>
             </div>
         </div>
