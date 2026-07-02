@@ -41,6 +41,11 @@
 }
 
 /* ===== Base Layout ===== */
+html {
+  /* Offset in-page anchor jumps so headings clear the fixed navbar. */
+  scroll-padding-top: calc(var(--nav-offset) + 16px);
+}
+
 body {
   padding-top: var(--nav-offset);
   font-family: var(--font-sans);
@@ -140,7 +145,7 @@ p,
 }
 
 .navbar.navbar-hero-shell.navbar-scrolled .nav-link:hover,
-.navbar.navbar-hero-shell.navbar-scrolled .dropdown.dropdown-active .dropdown-toggle {
+.navbar.navbar-hero-shell.navbar-scrolled .dropdown.dropdown-active > .nav-link {
   color: white !important;
   background: rgba(255, 255, 255, 0.1) !important;
 }
@@ -155,11 +160,6 @@ p,
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-}
-
-.navbar.navbar-hero-shell.navbar-scrolled .dropdown-toggle::after {
-  border-right-color: white;
-  border-bottom-color: white;
 }
 
 .navbar.navbar-hero-shell.navbar-scrolled .btn-login {
@@ -203,7 +203,7 @@ p,
 }
 
 .navbar.navbar-floating .nav-link:hover,
-.navbar.navbar-floating .dropdown.dropdown-active .dropdown-toggle {
+.navbar.navbar-floating .dropdown.dropdown-active > .nav-link {
   color: white !important;
   background: rgba(255, 255, 255, 0.12) !important;
 }
@@ -226,11 +226,6 @@ p,
   background: rgba(255, 255, 255, 0.07);
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-}
-
-.navbar.navbar-floating .dropdown-toggle::after {
-  border-right-color: white;
-  border-bottom-color: white;
 }
 
 .navbar.navbar-floating .btn-login {
@@ -312,7 +307,7 @@ p,
 }
 
 /* Active dropdown parent - pill indicator */
-.navbar .dropdown.dropdown-active .dropdown-toggle {
+.navbar .dropdown.dropdown-active > .nav-link {
   color: var(--primary-teal) !important;
   font-weight: 600;
   background: linear-gradient(135deg, rgba(45, 105, 117, 0.1), rgba(106, 180, 163, 0.08)) !important;
@@ -327,27 +322,8 @@ p,
 }
 
 /* ===== Dropdown - Fixed ===== */
-.navbar .dropdown-toggle {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-}
-
-.navbar .dropdown-toggle::after {
-  transition: transform var(--transition-base);
-  border: none;
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  margin-top: -4px;
-}
-
-.navbar .dropdown.show .dropdown-toggle::after {
-  transform: rotate(-135deg);
-  margin-top: 2px;
+.navbar .dropdown {
+  position: relative;
 }
 
 .navbar .dropdown-menu {
@@ -358,6 +334,13 @@ p,
   padding: var(--space-sm) 0;
   min-width: 200px;
   animation: dropdownFadeIn 0.2s ease;
+}
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover > .dropdown-menu,
+  .navbar .dropdown:focus-within > .dropdown-menu {
+    display: block;
+  }
 }
 
 @keyframes dropdownFadeIn {
@@ -399,10 +382,67 @@ p,
 }
 
 @media (max-width: 991px) {
-  .navbar-controls {
-    margin: var(--space-lg) 0 0 0;
-    justify-content: center;
+  .navbar .navbar-collapse {
+    max-height: calc(100vh - var(--nav-offset) - 16px);
+    overflow-y: auto;
+    padding: var(--space-sm) 0 var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    margin-top: var(--space-sm);
+  }
+
+  .navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     width: 100%;
+    margin-bottom: 0 !important;
+  }
+
+  .navbar .nav-item {
+    min-width: 0;
+  }
+
+  .navbar .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 48px;
+    padding: 0.65rem var(--space-xl) !important;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+    background: transparent !important;
+    border: none !important;
+    border-left: 2px solid transparent !important;
+    border-radius: 0 !important;
+  }
+
+  .navbar .nav-link:hover {
+    border-left-color: rgba(45, 105, 117, 0.4) !important;
+    background: rgba(45, 105, 117, 0.06) !important;
+  }
+
+  .navbar .nav-link.nav-link-active {
+    border-left-color: var(--primary-teal) !important;
+    background: rgba(45, 105, 117, 0.08) !important;
+    font-weight: 600;
+  }
+
+  .navbar .nav-item + .nav-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .navbar-controls {
+    margin: var(--space-md) var(--space-xl) 0;
+    justify-content: center;
+    width: calc(100% - var(--space-xl) * 2);
+    padding: var(--space-sm);
+  }
+
+  .navbar .btn-login,
+  .navbar .btn-group .btn {
+    min-height: 36px;
   }
 }
 
@@ -2495,7 +2535,9 @@ p,
 
 @media (max-width: 991px) {
   .page-shell-hero {
-    padding: var(--space-4xl) 0 calc(var(--space-3xl) + var(--space-2xl));
+    /* Top padding must include the nav offset: the hero has margin-top:-76px,
+       so without it the first line (kicker) hides under the fixed navbar. */
+    padding: calc(var(--nav-offset) + var(--space-2xl)) 0 calc(var(--space-3xl) + var(--space-2xl));
   }
 
   .page-shell-layout-split {

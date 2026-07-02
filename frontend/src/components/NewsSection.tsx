@@ -9,14 +9,18 @@ interface NewsSectionProps {
     showFilter?: boolean
     cols?: string
     title?: string
+    subtitle?: string
     category?: string
+    id?: string
 }
 
 export default function NewsSection({
     limit,
     cols = "row-cols-lg-3",
     title,
-    category
+    subtitle,
+    category,
+    id = "news-feed"
 }: NewsSectionProps) {
     const [news, setNews] = useState<NewsItem[]>([])
     const [loading, setLoading] = useState(true)
@@ -46,14 +50,14 @@ export default function NewsSection({
     if (loading) return <div className="text-center py-5"><div className="spinner-border text-primary" role="status"></div></div>
 
     return (
-        <section className="py-5 news-feed-section" id="news-feed">
+        <section className="py-5 news-feed-section" id={id}>
             <div className="container px-5 my-5">
                 {title ? (
                     <div className="row gx-5 justify-content-center">
                         <div className="col-lg-8 col-xl-6">
                             <div className="text-center">
                                 <h2 className="fw-bolder gradient-text">{title}</h2>
-                                <p className="lead fw-normal text-muted mb-5">{t('blog.newsSubtitle')}</p>
+                                <p className="lead fw-normal text-muted mb-5">{subtitle ?? t('blog.newsSubtitle')}</p>
                             </div>
                         </div>
                     </div>

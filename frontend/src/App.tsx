@@ -1,23 +1,24 @@
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, Navigate, useLocation } from 'react-router-dom'
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import ThemeLanguageSwitcher from './components/ThemeLanguageSwitcher'
+import ScrollToTop from './components/ScrollToTop'
 import { isZhLocale } from './utils/locale'
 import { isHeroRoute } from './utils/nav'
+import { usePageMeta } from './hooks/usePageMeta'
 
 // Lazy load pages for code splitting
 const About = lazy(() => import('./pages/About'))
 const Pricing = lazy(() => import('./pages/Pricing'))
 const FAQ = lazy(() => import('./pages/FAQ'))
 const BlogHome = lazy(() => import('./pages/BlogHome'))
-const IndustryNews = lazy(() => import('./pages/IndustryNews'))
 const NewsArticle = lazy(() => import('./pages/NewsArticle'))
 const PortfolioOverview = lazy(() => import('./pages/PortfolioOverview'))
-const PortfolioItem = lazy(() => import('./pages/PortfolioItem'))
 const Contact = lazy(() => import('./pages/Contact'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 // Admin pages
 const AdminLogin = lazy(() => import('./pages/admin/Login'))
@@ -42,6 +43,7 @@ function Navbar() {
   const { isAuthenticated, admin, logout } = useAuth()
   const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
   const isHero = isHeroRoute(location.pathname)
 
@@ -52,6 +54,11 @@ function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close the mobile menu after navigating to a new route.
+  useEffect(() => {
+    setMobileMenuOpen(false)
+  }, [location.pathname])
 
   // Helper to check if a path is active
   const isActive = (path: string) => location.pathname === path
@@ -67,15 +74,14 @@ function Navbar() {
         <button
           className="navbar-toggler border-0"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          aria-expanded={mobileMenuOpen}
           aria-label="Toggle navigation"
+          onClick={() => setMobileMenuOpen((open) => !open)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className={`collapse navbar-collapse ${mobileMenuOpen ? 'show' : ''}`} id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className={`nav-link ${isActive('/') ? 'nav-link-active' : ''}`} to="/">{t('nav.home')}</Link>
@@ -89,19 +95,15 @@ function Navbar() {
             <li className="nav-item">
               <Link className={`nav-link ${isActive('/contact') ? 'nav-link-active' : ''}`} to="/contact">{t('nav.contact')}</Link>
             </li>
-            <li className={`nav-item dropdown ${isDropdownActive(['/blog-home', '/blog-post']) ? 'dropdown-active' : ''}`}>
-              <a className={`nav-link dropdown-toggle ${isDropdownActive(['/blog-home', '/blog-post']) ? 'nav-link-active' : ''}`} id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('nav.techNews')}</a>
-              <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                <li><Link className={`dropdown-item ${isActive('/blog-home') ? 'active' : ''}`} to="/blog-home">{t('nav.techArticles')}</Link></li>
-                <li><Link className={`dropdown-item ${isActive('/blog-post') ? 'active' : ''}`} to="/blog-post">{t('nav.industryNews')}</Link></li>
-              </ul>
+            <li className="nav-item">
+              <Link className={`nav-link ${isDropdownActive(['/blog-home', '/blog-post']) ? 'nav-link-active' : ''}`} to="/blog-home">
+                {t('nav.techNews')}
+              </Link>
             </li>
-            <li className={`nav-item dropdown ${isDropdownActive(['/portfolio-overview', '/portfolio-item']) ? 'dropdown-active' : ''}`}>
-              <a className={`nav-link dropdown-toggle ${isDropdownActive(['/portfolio-overview', '/portfolio-item']) ? 'nav-link-active' : ''}`} id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('nav.portfolio')}</a>
-              <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                <li><Link className={`dropdown-item ${isActive('/portfolio-overview') ? 'active' : ''}`} to="/portfolio-overview">{t('nav.portfolioOverview')}</Link></li>
-                <li><Link className={`dropdown-item ${isActive('/portfolio-item') ? 'active' : ''}`} to="/portfolio-item">{t('nav.portfolioItem')}</Link></li>
-              </ul>
+            <li className="nav-item">
+              <Link className={`nav-link ${isDropdownActive(['/portfolio-overview', '/portfolio-item']) ? 'nav-link-active' : ''}`} to="/portfolio-overview">
+                {t('nav.portfolio')}
+              </Link>
             </li>
           </ul>
           <div className="navbar-controls">
@@ -234,6 +236,13 @@ function Footer() {
 function HomePage() {
   const { t, i18n } = useTranslation()
   const isZh = isZhLocale(i18n.language)
+
+  usePageMeta(
+    isZh ? '上海奎星电子科技 | 精密模具与注塑成型' : 'Shanghai Kuixing Electronics | Precision Molding',
+    isZh
+      ? '上海奎星电子科技专注精密模具设计制造、注塑成型与特种塑料加工，服务医疗器械、汽车零部件与电子电器行业。'
+      : 'Precision tooling, injection molding and specialty plastics for medical, automotive and electronics programs.'
+  )
 
   const services = [
     {
@@ -652,6 +661,7 @@ function AppLayout() {
 
   return (
     <div className="d-flex flex-column h-100 min-vh-100">
+      <ScrollToTop />
       <main className="flex-shrink-0">
         {!isAdminRoute && <Navbar />}
         <Suspense fallback={<PageLoader />}>
@@ -663,10 +673,12 @@ function AppLayout() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/blog-home" element={<BlogHome />} />
-            <Route path="/blog-post" element={<IndustryNews />} />
+            {/* Merged into the combined Tech News page */}
+            <Route path="/blog-post" element={<Navigate to="/blog-home" replace />} />
             <Route path="/news/:id" element={<NewsArticle />} />
             <Route path="/portfolio-overview" element={<PortfolioOverview />} />
-            <Route path="/portfolio-item" element={<PortfolioItem />} />
+            {/* Merged into the combined Products page */}
+            <Route path="/portfolio-item" element={<Navigate to="/portfolio-overview" replace />} />
 
             {/* Admin routes */}
             <Route path="/admin/login" element={<AdminLogin />} />
@@ -675,6 +687,9 @@ function AppLayout() {
             <Route path="/admin/news/new" element={<ProtectedRoute><AdminNewsEdit /></ProtectedRoute>} />
             <Route path="/admin/news/:id/edit" element={<ProtectedRoute><AdminNewsEdit /></ProtectedRoute>} />
             <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
+
+            {/* 404 — must stay last */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>

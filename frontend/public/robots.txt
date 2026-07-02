@@ -1,0 +1,8 @@
+# robots.txt — 上海奎星电子科技 (Shanghai Kuixing Electronics)
+# NOTE: replace the domain below with the real production domain.
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+
+Sitemap: https://www.shkxmolding.com/sitemap.xml

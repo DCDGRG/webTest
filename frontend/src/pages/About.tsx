@@ -1,10 +1,18 @@
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
 import { isZhLocale } from '../utils/locale'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function About() {
   const { t, i18n } = useTranslation()
   const isZh = isZhLocale(i18n.language)
+
+  usePageMeta(
+    isZh ? '关于我们 | 上海奎星电子科技' : 'About Us | Shanghai Kuixing Electronics',
+    isZh
+      ? '上海奎星电子科技——精密模具设计制造、注塑成型与特种塑料加工，服务医疗器械、汽车零部件与电子电器行业。'
+      : 'Shanghai Kuixing Electronics — precision tooling, injection molding and specialty plastics for medical, automotive and electronics programs.'
+  )
 
   const products = [
     {

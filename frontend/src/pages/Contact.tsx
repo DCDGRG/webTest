@@ -4,12 +4,27 @@ import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser'
 import PageHeader from '../components/PageHeader'
 import { isZhLocale } from '../utils/locale'
+import { usePageMeta } from '../hooks/usePageMeta'
+
+// EmailJS credentials — overridable via env (VITE_EMAILJS_*), with the existing
+// project values as fallback so the form keeps working without extra config.
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_5zuwifn'
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_tmqtmbu'
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'BATcGtGTu--0S1rZz'
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [feedback, setFeedback] = useState<{ type: 'error' | 'success'; text: string } | null>(null)
   const { t, i18n } = useTranslation()
   const isZh = isZhLocale(i18n.language)
+
+  usePageMeta(
+    isZh ? '联系我们 | 上海奎星电子科技' : 'Contact Us | Shanghai Kuixing Electronics',
+    isZh
+      ? '提交图纸、材料方向与预计批量，我们将在 24 小时内做出初步制造与可行性评估。'
+      : 'Send drawings, material direction and expected volume for an initial manufacturing review within 24 hours.'
+  )
 
   const industries = isZh
     ? ['医疗器械', '汽车零部件', '电子电器', '智能家居', '工业设备']
@@ -51,22 +66,48 @@ export default function Contact() {
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault()
+    setFeedback(null)
 
-    if (form.current) {
-      setIsSubmitting(true)
-      emailjs.sendForm('service_5zuwifn', 'template_tmqtmbu', form.current, 'BATcGtGTu--0S1rZz')
-        .then((result) => {
-          console.log(result.text)
-          alert(t('contact.successMessage'))
-          form.current?.reset()
-        }, (error) => {
-          console.log(error.text)
-          alert(t('contact.errorMessage'))
-        })
-        .finally(() => {
-          setIsSubmitting(false)
-        })
+    const el = form.current
+    if (!el) return
+
+    const data = new FormData(el)
+    const name = String(data.get('name') || '').trim()
+    const email = String(data.get('email') || '').trim()
+    const message = String(data.get('message') || '').trim()
+    const phone = String(data.get('phone') || '').trim()
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    const phoneValid = phone === '' || /^[+\d][\d\s()\-]{5,}$/.test(phone)
+
+    if (!name || !email || !message) {
+      setFeedback({ type: 'error', text: isZh ? '请填写姓名、邮箱和需求说明。' : 'Please fill in your name, email and message.' })
+      return
     }
+    if (!emailValid) {
+      setFeedback({ type: 'error', text: isZh ? '请输入有效的邮箱地址。' : 'Please enter a valid email address.' })
+      return
+    }
+    if (!phoneValid) {
+      setFeedback({ type: 'error', text: isZh ? '请输入有效的电话号码。' : 'Please enter a valid phone number.' })
+      return
+    }
+
+    setIsSubmitting(true)
+    emailjs
+      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, el, EMAILJS_PUBLIC_KEY)
+      .then(() => {
+        setFeedback({ type: 'success', text: t('contact.successMessage') })
+        el.reset()
+      })
+      .catch(() => {
+        setFeedback({
+          type: 'error',
+          text: isZh
+            ? '提交失败，请稍后重试，或直接邮件联系我们。'
+            : 'Submission failed. Please try again later, or email us directly.'
+        })
+      })
+      .finally(() => setIsSubmitting(false))
   }
 
   return (
@@ -140,7 +181,7 @@ export default function Contact() {
             </aside>
 
             <div className="quote-form-shell">
-              <form ref={form} onSubmit={sendEmail} className="quote-form-layout">
+              <form ref={form} onSubmit={sendEmail} className="quote-form-layout" noValidate>
                 <section className="quote-form-block">
                   <div className="quote-form-heading">
                     <span>01</span>
@@ -244,6 +285,15 @@ export default function Contact() {
                     </div>
                   </div>
                 </section>
+
+                {feedback && (
+                  <div
+                    className={`alert ${feedback.type === 'success' ? 'alert-success' : 'alert-danger'} mb-0`}
+                    role="alert"
+                  >
+                    {feedback.text}
+                  </div>
+                )}
 
                 <div className="quote-form-actions">
                   <div className="quote-form-security">

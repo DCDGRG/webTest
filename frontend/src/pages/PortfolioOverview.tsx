@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
 import { isZhLocale } from '../utils/locale'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 interface Product {
   // Image file expected under /public/products/<image>; falls back to a
@@ -110,6 +111,13 @@ export default function PortfolioOverview() {
   const { t, i18n } = useTranslation()
   const isZh = isZhLocale(i18n.language)
 
+  usePageMeta(
+    isZh ? '产品展示 | 上海奎星电子科技' : 'Products | Shanghai Kuixing Electronics',
+    isZh
+      ? '医疗、汽车、电子等行业的注塑件、模具与表面处理工艺案例展示。'
+      : 'Injection-molded parts, tooling and finishing examples across medical, automotive and electronics.'
+  )
+
   return (
     <>
       <PageHeader
@@ -120,8 +128,8 @@ export default function PortfolioOverview() {
         iconClass="bi-grid-3x3-gap"
         compact
         links={[
-          { label: isZh ? '产品展示' : 'Products', href: '#portfolio-grid' },
-          { label: isZh ? '应用方向' : 'Applications', href: '#portfolio-cta' },
+          { label: isZh ? '产品案例' : 'Products', href: '#portfolio-grid' },
+          { label: isZh ? '项目案例' : 'Project Example', href: '#portfolio-detail' },
           { label: isZh ? '提交需求' : 'Submit Inquiry', href: '/contact' }
         ]}
         metaItems={[
@@ -177,6 +185,48 @@ export default function PortfolioOverview() {
                 </article>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Project example (merged from the former product-detail page) */}
+      <section className="py-5" id="portfolio-detail">
+        <div className="container px-5 my-5">
+          <div className="text-center mb-5">
+            <h2 className="fw-bolder gradient-text">{isZh ? '项目案例' : 'Project Example'}</h2>
+            <p className="lead fw-normal text-muted">
+              {isZh
+                ? '从结构件到外观件的精密注塑项目示例，覆盖模具、成型、表面处理与装配。'
+                : 'A precision molding project example — tooling, molding, finishing and assembly, from structural to cosmetic parts.'}
+            </p>
+          </div>
+          <div className="row gx-5">
+            <div className="col-12">
+              <div className="gradient-card p-3 mb-4">
+                <img className="img-fluid rounded-3 w-100" src="https://dummyimage.com/1300x700/e9ecef/6c757d" alt={isZh ? '项目案例主图' : 'Project example'} loading="lazy" />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="gradient-card p-3 mb-4">
+                <img className="img-fluid rounded-3 w-100" src="https://dummyimage.com/600x400/e9ecef/6c757d" alt="" loading="lazy" />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="gradient-card p-3 mb-4">
+                <img className="img-fluid rounded-3 w-100" src="https://dummyimage.com/600x400/e9ecef/6c757d" alt="" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="lead fw-normal text-muted mb-4">
+              {isZh
+                ? '结合模具开发、注塑成型、表面处理与装配，提供从打样到量产的一体化交付。'
+                : 'Tooling, molding, finishing and assembly combined for integrated delivery from sampling to production.'}
+            </p>
+            <a className="btn btn-gradient-primary" href="/contact">
+              {isZh ? '提交项目需求' : 'Submit a project brief'}
+              <i className="bi-arrow-right ms-2"></i>
+            </a>
           </div>
         </div>
       </section>

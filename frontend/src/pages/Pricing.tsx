@@ -2,10 +2,18 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
 import { isZhLocale } from '../utils/locale'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Pricing() {
   const { i18n } = useTranslation()
   const isZh = isZhLocale(i18n.language)
+
+  usePageMeta(
+    isZh ? '制造能力与产品服务 | 上海奎星电子科技' : 'Capabilities & Services | Shanghai Kuixing Electronics',
+    isZh
+      ? '模具设计、CNC 加工、50T-800T 注塑成型、双色与表面处理、装配交付一体化制造能力。'
+      : 'Tooling, CNC machining, 50T–800T injection molding, two-shot, finishing and assembly under one delivery path.'
+  )
 
   const capabilityProofs = isZh
     ? [

@@ -5,6 +5,7 @@ import type { NewsItem } from '../types/News'
 import { formatDate } from '../utils/formatDate'
 import { isZhLocale } from '../utils/locale'
 import { splitParagraphs, categoryLabel, categoryListHref } from '../utils/news'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 type Status = 'loading' | 'ready' | 'notfound'
 
@@ -36,6 +37,14 @@ export default function NewsArticle() {
       active = false
     }
   }, [id])
+
+  usePageMeta(
+    item
+      ? `${item.title} | 上海奎星电子科技`
+      : isZh
+        ? '资讯 | 上海奎星电子科技'
+        : 'News | Shanghai Kuixing Electronics'
+  )
 
   if (status === 'loading') {
     return (

@@ -1,8 +1,18 @@
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
+import { isZhLocale } from '../utils/locale'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function FAQ() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isZh = isZhLocale(i18n.language)
+
+  usePageMeta(
+    isZh ? '常见问题 | 上海奎星电子科技' : 'FAQ | Shanghai Kuixing Electronics',
+    isZh
+      ? '关于模具开发、注塑成型、材料选择、交期与合作方式的常见问题解答。'
+      : 'Answers about tooling, molding, material selection, lead times and how to work with us.'
+  )
 
   return (
     <>
