@@ -9,7 +9,7 @@
     "source_name": "Spherical Insights",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.616Z"
+    "created_at": "2026-08-02T22:09:27.858Z"
   },
   {
     "id": "rss-1uu7h17",
@@ -18,10 +18,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9KUWRKU2pVUXZTNWhjZEpaSERmVE0yY2xYVEQ4cVh2b2RTQUEwaFllUVBfT3NLTTBROU1xeXhQbUg4bEhWell3LWwzUmtUZE5rLU4wS2RGYjBzNGg4N09qdmdmQlBOZUpEdFNsS1RIWjJrejlxN3ppQg?oc=5",
     "published_at": "2026-07-29T14:06:50.000Z",
-    "source_name": "新浪财经",
+    "source_name": "新浪财经_金融信息服务商",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.516Z"
+    "created_at": "2026-08-02T22:09:27.704Z"
   },
   {
     "id": "rss-zymykd",
@@ -33,7 +33,7 @@
     "source_name": "Spherical Insights",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.616Z"
+    "created_at": "2026-08-02T22:09:27.858Z"
   },
   {
     "id": "rss-1ycv1ab",
@@ -42,22 +42,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUlFKYjdvY1NVSHlwQzBDcXlJYkNZZHJrbnBwVnVEZHFkQ2tPckRGc2s5OEhvaVYzVjJQZktQZ0c1Z1oyMnpwUEhJZlJIdzFzb00zb2FFeEpjTVVpa2s3azZzQnFpTXRBVERlWlJ6Uzk0bWJPTHpnOW82MnV2OXNWUjA1SjA?oc=5",
     "published_at": "2026-07-29T01:49:00.000Z",
-    "source_name": "新浪财经",
+    "source_name": "新浪财经_金融信息服务商",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.496Z"
-  },
-  {
-    "id": "rss-gp1g08",
-    "title": "浙大团队让塑料“上天”！",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5jUnhfMERKSlY5YUZJcWdWZWZYcnlZU1FYZ0ZtNEdCZnY3VjJXOHJsX2VsZmRTWVNJVVlzY0NIVWUxdi1qb2lpUWNkeC1SSXlKdXMzWE13WlZaQ1lEM21vc3QwUmlNR0FoV01tOF9sc0VUalE?oc=5",
-    "published_at": "2026-07-27T11:15:00.000Z",
-    "source_name": "潮新闻",
-    "category": "technical",
-    "image_url": null,
-    "created_at": "2026-08-01T22:10:36.616Z"
+    "created_at": "2026-08-02T22:09:27.722Z"
   },
   {
     "id": "rss-1pyumef",
@@ -69,7 +57,7 @@
     "source_name": "同花顺财经",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.616Z"
+    "created_at": "2026-08-02T22:09:27.858Z"
   },
   {
     "id": "rss-16qlid8",
@@ -81,19 +69,7 @@
     "source_name": "Sohu",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.496Z"
-  },
-  {
-    "id": "rss-190rew1",
-    "title": "富强鑫HB-2500R电动式水平转盘对射注塑机成功交付小糸车灯",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObVRnX2cxeWdhU20xVFRZVnF0V3lXc0FOOENtTV80WWk0N1dfak9BeTl3UVhGR3ViUkJ1eHFPZnI5WllKM2RmUUtmbklzc1FGWUo1aTVzVEs0WFphcE1ZdTUxOE1vUUxjRzNHc2MtLXBGNXllTG1OQUdUNEtrM3pCTThOMWM0UU0?oc=5",
-    "published_at": "2026-07-23T10:05:00.000Z",
-    "source_name": "新浪财经",
-    "category": "industry",
-    "image_url": null,
-    "created_at": "2026-08-01T22:10:36.551Z"
+    "created_at": "2026-08-02T22:09:27.722Z"
   },
   {
     "id": "rss-qnqtzg",
@@ -105,7 +81,19 @@
     "source_name": "手机网易网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.616Z"
+    "created_at": "2026-08-02T22:09:27.858Z"
+  },
+  {
+    "id": "rss-166bezy",
+    "title": "物流混乱、工艺不稳就盲目砸钱上自动化，设备终将闲置吃灰；中小厂升级铁律：先理顺车间布局，再考虑机械手与 AGV",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5PejQyaHNxeHMzc3Bqd3FaVW5lTlF4QVhDQzk3ZUVHZEowQWdUVTVQUFB2WDU4SHFFM3hqdTNFN3BjaGt0TUVTenlPX1hOcVN1aDIxaWRsRDBQQkNiSXJzUm13?oc=5",
+    "published_at": "2026-07-22T01:06:41.000Z",
+    "source_name": "手机网易网",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-08-02T22:09:27.704Z"
   },
   {
     "id": "rss-hkogqf",
@@ -117,7 +105,31 @@
     "source_name": "环渤海新闻网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.574Z"
+    "created_at": "2026-08-02T22:09:27.746Z"
+  },
+  {
+    "id": "rss-jaiiu9",
+    "title": "2026注塑模具监视器厂家技术创新排名｜硬核技术维度测评",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE53aDdzTUxqYzI5anl0MWFTdVhZZEsxWThtT3JwNTZ6RUd4cjVTNFk3MUpxWmMxeXVRcUoxVFgybEZDNTNxWHczVTA4eHlrRjZrQ1AwZURIeWVZU3VCdFprUUNB?oc=5",
+    "published_at": "2026-07-17T07:00:00.000Z",
+    "source_name": "手机网易网",
+    "category": "industry",
+    "image_url": null,
+    "created_at": "2026-08-02T22:09:27.734Z"
+  },
+  {
+    "id": "rss-18zr4o",
+    "title": "2034 年注塑机市场规模及份额报告",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVzB6d3RhVEw4VXpNQUVpb2xPVEdESVJwRVhYRG85eG56bnM5LWlkU214RDhZMEl3VXl1S05tZzZNS0NWeUcxQWZiaEtmVVowVEx1OFI1ZnA2OE1GZGpYa2dlQlBFQTMydHVobnBHUk5vQWprdGFLTFlHcEIzdVc3dlFlcUZaRlB3YXMtSC1FY0l2MURqUElaS3cxZGJjcExo?oc=5",
+    "published_at": "2026-07-13T07:00:00.000Z",
+    "source_name": "Fortune Business Insights",
+    "category": "industry",
+    "image_url": null,
+    "created_at": "2026-08-02T22:09:27.734Z"
   },
   {
     "id": "rss-1mc381d",
@@ -129,7 +141,7 @@
     "source_name": "Fortune Business Insights",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.574Z"
+    "created_at": "2026-08-02T22:09:27.746Z"
   },
   {
     "id": "rss-gzm0zc",
@@ -138,10 +150,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxObTVfcUtCejJDbGlmU3R1QzVzUnVjV2FSMFZuRzJJelp1bUtmRmE4QmpKTWJPbS1DN1Q5OGFoUkZMRm1lU1l1b2NWMmppd2RFX2JxUkV2dEhfbHdSMzRvY09jSHBFWmR0R1dFbWFlVTFSaHEzQkdkVHByTi1kX2RFTnhTUQ?oc=5",
     "published_at": "2026-07-10T07:00:00.000Z",
-    "source_name": "straitsresearch.com",
+    "source_name": "Straits Research",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.551Z"
+    "created_at": "2026-08-02T22:09:27.734Z"
   },
   {
     "id": "rss-13kbdth",
@@ -150,10 +162,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPWXQwRXhXQmN4WGN0TjdnMVVtWlpyZmlTY1Jnbkl1V21hMWxaUTJfM0ZkVjgwRF9fVlNCQkI2UzNnRFlPa09zblY3Qm9zSGJrYVJsQm9NX2F5SzV3Z05Mbk9jbjhqLXEtc2xKQW1YUTdQNDd0eTQ3R0pJNEFwUGU4eA?oc=5",
     "published_at": "2026-07-10T07:00:00.000Z",
-    "source_name": "straitsresearch.com",
+    "source_name": "Straits Research",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.551Z"
+    "created_at": "2026-08-02T22:09:27.734Z"
   },
   {
     "id": "rss-ig3ppu",
@@ -162,22 +174,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5wRTI4NzVDakpGNGVyM204WmNtX2FpbUVXNDAtaHBwenNPU3RjTjN1MzROWUhCanZHajhIT1FxcjQ3T216dVphRGdmY1VJY2QwcW9pcFA2LWMxcThoZHNadV9qb2p6ZmZkdmkxbV93?oc=5",
     "published_at": "2026-07-08T07:00:00.000Z",
-    "source_name": "新浪财经",
+    "source_name": "cj.sina.cn",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.478Z"
-  },
-  {
-    "id": "rss-18zr4o",
-    "title": "2034 年注塑机市场规模及份额报告",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVzB6d3RhVEw4VXpNQUVpb2xPVEdESVJwRVhYRG85eG56bnM5LWlkU214RDhZMEl3VXl1S05tZzZNS0NWeUcxQWZiaEtmVVowVEx1OFI1ZnA2OE1GZGpYa2dlQlBFQTMydHVobnBHUk5vQWprdGFLTFlHcEIzdVc3dlFlcUZaRlB3YXMtSC1FY0l2MURqUElaS3cxZGJjcExo?oc=5",
-    "published_at": "2026-07-06T07:00:00.000Z",
-    "source_name": "Fortune Business Insights",
-    "category": "industry",
-    "image_url": null,
-    "created_at": "2026-08-01T22:10:36.551Z"
+    "created_at": "2026-08-02T22:09:27.677Z"
   },
   {
     "id": "rss-1wgjkpq",
@@ -189,6 +189,6 @@
     "source_name": "手机网易网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-01T22:10:36.551Z"
+    "created_at": "2026-08-02T22:09:27.734Z"
   }
 ]
