@@ -9,7 +9,7 @@
     "source_name": "手机新浪网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.660Z"
+    "created_at": "2026-08-23T21:35:03.496Z"
   },
   {
     "id": "rss-z98e2o",
@@ -21,7 +21,7 @@
     "source_name": "搜狐网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.661Z"
+    "created_at": "2026-08-23T21:35:03.496Z"
   },
   {
     "id": "rss-l5eow0",
@@ -33,7 +33,7 @@
     "source_name": "womenofchina.com",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.661Z"
+    "created_at": "2026-08-23T21:35:03.496Z"
   },
   {
     "id": "rss-2von58",
@@ -45,19 +45,19 @@
     "source_name": "中华网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.675Z"
+    "created_at": "2026-08-23T21:35:03.525Z"
   },
   {
-    "id": "rss-3x1yw5",
-    "title": "印尼经济目标：2027年增长6% 塑料行业寻求新的增长引擎",
+    "id": "rss-ggzdp7",
+    "title": "航天专用PEEK材料项目获批！",
     "summary": "",
     "content": null,
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBSY0hKQm42Yy1sS3lfd0V2NVA1V1pkajRENjhrdzREMDdNSVV6eXhWQkNvMVRvbEdvaTFWWF9nblVRNU5oeS1IWVh5dVZkWjhWUklGTTRFUUk2SDI1TWNVUExLeUpVMDZ5NWI3VXYwMUlHN0hHb1E?oc=5",
-    "published_at": "2026-08-20T21:00:00.000Z",
-    "source_name": "Shangbao Indonesia",
-    "category": "industry",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1IdUQ1ejdRTUxHblljWlkwZ2I4ODRDQV9XanhTOHNGUGJfN3dUeVh3RmVPYlFUb2NCbUpqY2J3N2JHNWR3WDJfa1pyV2hEYTFrSDRF?oc=5",
+    "published_at": "2026-08-20T06:08:00.000Z",
+    "source_name": "电子工程专辑",
+    "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.682Z"
+    "created_at": "2026-08-23T21:35:03.517Z"
   },
   {
     "id": "rss-1jv8cnp",
@@ -69,7 +69,7 @@
     "source_name": "CSDN",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.699Z"
+    "created_at": "2026-08-23T21:35:03.517Z"
   },
   {
     "id": "rss-1dzav3",
@@ -81,19 +81,7 @@
     "source_name": "新浪财经",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.699Z"
-  },
-  {
-    "id": "rss-8xal42",
-    "title": "上海张江高新区“十五五”规划： 补齐电子化学品、高温合金等战略短板",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1tRVhGZXZRZ0NzQW5uXzVKTmRtWEF4bHRaUThUdEI1dVFXNU9pNlY1UzBUR3lVTTY3TDdnLW01THBxcnhIMVlUZ2VHcXh3UVpIOTVvUjQ0eG5aMjltVnJUWTl3?oc=5",
-    "published_at": "2026-08-19T03:12:19.000Z",
-    "source_name": "观点网",
-    "category": "technical",
-    "image_url": null,
-    "created_at": "2026-08-22T21:34:51.699Z"
+    "created_at": "2026-08-23T21:35:03.517Z"
   },
   {
     "id": "rss-19oa6mf",
@@ -105,7 +93,7 @@
     "source_name": "中华网科技频道",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.644Z"
+    "created_at": "2026-08-23T21:35:03.536Z"
   },
   {
     "id": "rss-3lcd7j",
@@ -117,7 +105,7 @@
     "source_name": "nfplus.nfnews.com",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.682Z"
+    "created_at": "2026-08-23T21:35:03.483Z"
   },
   {
     "id": "rss-1smja6l",
@@ -126,10 +114,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QeEt6NDJ2aDhiTDNzWlBTZjhPdDVpWEZOTWg2YnppcE1nck9sRmNzR2hpdzFfSUFNS1NpZTNyTDVvc2JJX1p5S1RBTVlVdk1ma3BrV3cwMWFlQ1E?oc=5",
     "published_at": "2026-08-16T06:47:36.000Z",
-    "source_name": "汽车之家",
+    "source_name": "车家号",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.661Z"
+    "created_at": "2026-08-23T21:35:03.496Z"
   },
   {
     "id": "rss-46sijd",
@@ -141,7 +129,7 @@
     "source_name": "大众网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.644Z"
+    "created_at": "2026-08-23T21:35:03.536Z"
   },
   {
     "id": "rss-1h8tu7j",
@@ -153,7 +141,7 @@
     "source_name": "大众网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.644Z"
+    "created_at": "2026-08-23T21:35:03.536Z"
   },
   {
     "id": "rss-8k55b3",
@@ -165,7 +153,7 @@
     "source_name": "中华网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.644Z"
+    "created_at": "2026-08-23T21:35:03.536Z"
   },
   {
     "id": "rss-c9ghpe",
@@ -177,7 +165,19 @@
     "source_name": "For Insights Consultancy",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.644Z"
+    "created_at": "2026-08-23T21:35:03.536Z"
+  },
+  {
+    "id": "rss-18zr4o",
+    "title": "2034 年注塑机市场规模及份额报告",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVzB6d3RhVEw4VXpNQUVpb2xPVEdESVJwRVhYRG85eG56bnM5LWlkU214RDhZMEl3VXl1S05tZzZNS0NWeUcxQWZiaEtmVVowVEx1OFI1ZnA2OE1GZGpYa2dlQlBFQTMydHVobnBHUk5vQWprdGFLTFlHcEIzdVc3dlFlcUZaRlB3YXMtSC1FY0l2MURqUElaS3cxZGJjcExo?oc=5",
+    "published_at": "2026-08-03T07:00:00.000Z",
+    "source_name": "Fortune Business Insights",
+    "category": "industry",
+    "image_url": null,
+    "created_at": "2026-08-23T21:35:03.536Z"
   },
   {
     "id": "rss-19t1xxr",
@@ -189,6 +189,6 @@
     "source_name": "搜狐网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-08-22T21:34:51.644Z"
+    "created_at": "2026-08-23T21:35:03.536Z"
   }
 ]
