@@ -9,7 +9,7 @@
     "source_name": "济南新闻",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.849Z"
+    "created_at": "2026-09-22T23:35:56.749Z"
   },
   {
     "id": "rss-hqv1is",
@@ -21,7 +21,7 @@
     "source_name": "手机新浪网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.773Z"
+    "created_at": "2026-09-22T23:35:56.741Z"
   },
   {
     "id": "rss-1taemdl",
@@ -30,10 +30,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdmxpTjl0R1M0bTZiSnhXMERQSTkzM3VTSFh4S0xPSW9hOXdJcW4tYTVoSW1GSHI1THpJZnFsUlNvLWFSOEQwT1hDWE42V3JFVDlNajhvYzJSNjlRUDNKUURyTmVQOVZZUWlWZE8wVWdveXJwNzNlNUhkWWlUTE1SSnoydTlrMTQ?oc=5",
     "published_at": "2026-09-20T19:09:46.000Z",
-    "source_name": "新浪财经",
+    "source_name": "新浪财经_金融信息服务商",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.773Z"
+    "created_at": "2026-09-22T23:35:56.741Z"
   },
   {
     "id": "rss-1bz4b1l",
@@ -45,7 +45,7 @@
     "source_name": "新浪财经",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.913Z"
+    "created_at": "2026-09-22T23:35:56.846Z"
   },
   {
     "id": "rss-1k5wt24",
@@ -57,7 +57,7 @@
     "source_name": "搜狐网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.799Z"
+    "created_at": "2026-09-22T23:35:58.878Z"
   },
   {
     "id": "rss-rf99l",
@@ -69,7 +69,19 @@
     "source_name": "content.foshanplus.com",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.849Z"
+    "created_at": "2026-09-22T23:35:56.749Z"
+  },
+  {
+    "id": "rss-1br8se3",
+    "title": "河北沧县多家企业亮相2026第七届中国·北方塑料产业博览会",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQW0tT1V1WTZueldZQTFxNUFPVGFWUDB4MDRnenIwLVczYUNUTFZaTDVWRWVjWms0YXc0Q3pTa2h4QnBhN0lEeUhxaHJobDliUU9OcUdhajg4TW9CUWdOdFprU3dvaWZodFlhcGtqbFdsNnBjUURxc1FEQXg5TGFDUE93?oc=5",
+    "published_at": "2026-09-19T13:00:44.000Z",
+    "source_name": "新华网河北频道",
+    "category": "industry",
+    "image_url": null,
+    "created_at": "2026-09-22T23:35:56.846Z"
   },
   {
     "id": "rss-t9n9xs",
@@ -81,19 +93,7 @@
     "source_name": "搜狐网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.913Z"
-  },
-  {
-    "id": "rss-n31hcy",
-    "title": "断供中国高端机床，这个国家还在挣扎！",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5ySDhBT2JLVjYzQU5qSTNvRy0zQ3lfVHlxc0puWU9TR2wzcklneGprSWNUSUxqT2lkdTVOYkpDY1B6UFdlZWdHdkJlSS1GUFV1RkpDT1dvS0RRWUtCUVc5ZV9ENUE5MWt6RWRaRmZ4Y21xUQ?oc=5",
-    "published_at": "2026-09-18T15:24:57.000Z",
-    "source_name": "手机新浪网",
-    "category": "industry",
-    "image_url": null,
-    "created_at": "2026-09-22T00:06:20.849Z"
+    "created_at": "2026-09-22T23:35:56.846Z"
   },
   {
     "id": "rss-1119wnb",
@@ -105,7 +105,7 @@
     "source_name": "搜狐网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.754Z"
+    "created_at": "2026-09-22T23:35:56.687Z"
   },
   {
     "id": "rss-7q85o9",
@@ -117,7 +117,7 @@
     "source_name": "体坛加",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.773Z"
+    "created_at": "2026-09-22T23:35:56.741Z"
   },
   {
     "id": "rss-3hfpz8",
@@ -129,7 +129,7 @@
     "source_name": "体坛加",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.773Z"
+    "created_at": "2026-09-22T23:35:56.742Z"
   },
   {
     "id": "rss-b9uh48",
@@ -141,7 +141,7 @@
     "source_name": "凤凰网财经",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.754Z"
+    "created_at": "2026-09-22T23:35:56.687Z"
   },
   {
     "id": "rss-1fsq0f6",
@@ -150,22 +150,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE02YjA2S0lMcVBYdzhjX2E2aFBmYmhvemplbDFnUXhEZjhVclVlZzU2QkZNRzZVcVhCZnh5WG9RblJJRi0wczUwQXpMV0tyYmZBVHRPdW9yaXVLeElQbkduNmJWMDlHUGtPM2k4?oc=5",
     "published_at": "2026-09-15T20:10:40.000Z",
-    "source_name": "中国经济网",
+    "source_name": "paper.ce.cn",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.754Z"
-  },
-  {
-    "id": "rss-g0ttp8",
-    "title": "ARBURG（阿博格）亮相 Allpack 2026",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUWxFOUcyRkN2U1hCOE5tZnFxV3ZFbE05OS00V1pBWnBYZFV1MUZTdXd4VU9OdWhQejRCQUpXR29hM05iemtfUXJsLUY1OEhsU2s0bmlfVE8xVzY4X2dPVXIzNGlGUEtMNEYwUHkyWmduRWdObE8tTFJYODIzUEpWakYtN0Q?oc=5",
-    "published_at": "2026-09-09T07:00:00.000Z",
-    "source_name": "ARBURG",
-    "category": "industry",
-    "image_url": null,
-    "created_at": "2026-09-22T00:06:20.849Z"
+    "created_at": "2026-09-22T23:35:56.687Z"
   },
   {
     "id": "rss-1frogie",
@@ -177,7 +165,7 @@
     "source_name": "Vietnam.vn",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.913Z"
+    "created_at": "2026-09-22T23:35:56.846Z"
   },
   {
     "id": "rss-2we9w4",
@@ -189,6 +177,18 @@
     "source_name": "紫牛新闻",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-22T00:06:20.849Z"
+    "created_at": "2026-09-22T23:35:56.749Z"
+  },
+  {
+    "id": "rss-1w6oekb",
+    "title": "自主研发铸就设备硬核！青岛鼎益PP蜂窝板生产线迭代升级稳定量产_山东新闻",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1va2doWHNVbXNNSVBEZFNpeFp2X2I0OEJIb2xwWkhib1BOQVJ5WFU5Zzcza2QtMkZ4amlXRnlwaDlwUG1waTBzTV9xYV9YWXJRdnZLU082UndOenJKdVhwQVZKZkhtelVQ?oc=5",
+    "published_at": "2026-09-08T23:08:00.000Z",
+    "source_name": "大众网",
+    "category": "industry",
+    "image_url": null,
+    "created_at": "2026-09-22T23:35:56.846Z"
   }
 ]
