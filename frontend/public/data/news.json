@@ -6,10 +6,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBOUUpwZ3djbmI0cUNqYjViT0s1ZFpSUHVxMnUwSVZMYUJCcnhPQmNwRndpdHBUN2lxTUloY2c3UXphTjg2c2lTLTNidmd1SEVr?oc=5",
     "published_at": "2026-09-24T07:28:44.000Z",
-    "source_name": "凤凰网财经",
+    "source_name": "凤凰网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.286Z"
+    "created_at": "2026-09-25T23:57:00.277Z"
   },
   {
     "id": "rss-c1tsar",
@@ -21,31 +21,7 @@
     "source_name": "青岛日报",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.420Z"
-  },
-  {
-    "id": "rss-1gf9qbe",
-    "title": "掘金宠物出海新赛道，相聚顺德！",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5odHJHMEg4MnR6RlhYclpQbmJVeFNxR0dZcFI4WWVTQlpjV2MxbWlNVEs0dzBTMUdlNFFlZGlJYV9tRVRGZTJOMEFsNzA?oc=5",
-    "published_at": "2026-09-24T01:55:29.000Z",
-    "source_name": "雨果跨境",
-    "category": "technical",
-    "image_url": null,
-    "created_at": "2026-09-24T23:52:58.336Z"
-  },
-  {
-    "id": "rss-1dhab2",
-    "title": "深化产教融合 宁波鄞州职高与海天集团共育技能人才",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBDbWxDWVJsaXczUUlsN3Y4NFF0VnQ1VGwzTkE5eUpWb0cydktjNU5weFlJNU8zaTZJT2xEbDlrRXgzc1JmZjZLZHktUmtlQUg5ODM1QW54RndwZ2hMOEZ4bThHampnTDJ1amJ5VTZzOA?oc=5",
-    "published_at": "2026-09-23T13:06:45.000Z",
-    "source_name": "央广网",
-    "category": "industry",
-    "image_url": null,
-    "created_at": "2026-09-24T23:52:58.373Z"
+    "created_at": "2026-09-25T23:57:00.284Z"
   },
   {
     "id": "rss-1dciorr",
@@ -57,7 +33,7 @@
     "source_name": "深圳核博会",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.286Z"
+    "created_at": "2026-09-25T23:57:00.277Z"
   },
   {
     "id": "rss-i11zn8",
@@ -69,19 +45,7 @@
     "source_name": "奥一网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.286Z"
-  },
-  {
-    "id": "rss-1jeba3i",
-    "title": "视频直播丨中塑股份9月22日深交所上市仪式",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUlVOWFB3QUNxeGVaNkRsd3pjdk9hcnRTZDlnSmhwQUpEV0hISzZIelFRaDdDQVRPZ2VyX0ZUNklQYzB6Tm1lY3hqT0VmdExOMjFkNHlJUldaczRfNERidk5QMGZzRFdKMEx4ejBlNnBWbDV6SjZPd1EtUEpqUFM1Mm9UMjNteTg3d0xuQ1FlaGxqUGFvWDhUYXVjLS1qRU51RjdoelJreW4?oc=5",
-    "published_at": "2026-09-22T02:04:34.000Z",
-    "source_name": "finance.sina.cn",
-    "category": "technical",
-    "image_url": null,
-    "created_at": "2026-09-24T23:52:58.286Z"
+    "created_at": "2026-09-25T23:57:00.277Z"
   },
   {
     "id": "rss-hqv1is",
@@ -90,10 +54,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE45YVZnYjE2U0o0cHJjYWhXcTdqVERJQ0phYmRNUFJiQ010T0Jzano4NklrdmlDMmpZY1VJai1rRzJzeEphX1JvanBPNld0WUtuWE5SWG1TWGRtcnBITlBrZjZmS1RTLVpUREE?oc=5",
     "published_at": "2026-09-21T03:42:00.000Z",
-    "source_name": "sina.cn",
+    "source_name": "手机新浪网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.263Z"
+    "created_at": "2026-09-25T23:57:00.233Z"
   },
   {
     "id": "rss-1taemdl",
@@ -102,10 +66,10 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdmxpTjl0R1M0bTZiSnhXMERQSTkzM3VTSFh4S0xPSW9hOXdJcW4tYTVoSW1GSHI1THpJZnFsUlNvLWFSOEQwT1hDWE42V3JFVDlNajhvYzJSNjlRUDNKUURyTmVQOVZZUWlWZE8wVWdveXJwNzNlNUhkWWlUTE1SSnoydTlrMTQ?oc=5",
     "published_at": "2026-09-20T19:09:46.000Z",
-    "source_name": "finance.sina.cn",
+    "source_name": "新浪财经",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.262Z"
+    "created_at": "2026-09-25T23:57:00.233Z"
   },
   {
     "id": "rss-1bz4b1l",
@@ -117,7 +81,7 @@
     "source_name": "新浪财经",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.420Z"
+    "created_at": "2026-09-25T23:57:00.284Z"
   },
   {
     "id": "rss-rf99l",
@@ -129,7 +93,7 @@
     "source_name": "content.foshanplus.com",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.372Z"
+    "created_at": "2026-09-25T23:57:00.245Z"
   },
   {
     "id": "rss-t9n9xs",
@@ -141,19 +105,7 @@
     "source_name": "搜狐网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.420Z"
-  },
-  {
-    "id": "rss-7q85o9",
-    "title": "欧亿亚洲娱乐开户注塑三大核心挑战破解！高耐热PA工艺优化方案：稳尺寸、提光洁、降废品",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1KZk1wWWNzTXduYTEyd0VPU01qYzloWGlFNXBGTkdpZUx6VTRTbzVETmZfLXkwS0tRUEZIWUNLQkV3QVpqQzg4UUxzVjFBVVNU?oc=5",
-    "published_at": "2026-09-17T10:43:31.000Z",
-    "source_name": "体坛",
-    "category": "technical",
-    "image_url": null,
-    "created_at": "2026-09-24T23:52:58.262Z"
+    "created_at": "2026-09-25T23:57:00.284Z"
   },
   {
     "id": "rss-zuc4k0",
@@ -162,10 +114,46 @@
     "content": null,
     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE03UE5TbWVSeXZNQTlUdEZGZmdhYlFyZlBhZXA5dV9ReG5hSTVKRjlsME5wSWJ3ZEZ3Nk5ndHczaHQ3bGFnREF6aVh3ZU5jT1Y2aVZFaXo2ekd1NU9GSjdlOHgwYVBQTVRLQnBRVU9LRlVZTkMya2c?oc=5",
     "published_at": "2026-09-17T01:55:40.000Z",
-    "source_name": "中华网",
+    "source_name": "tech.china.com",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.421Z"
+    "created_at": "2026-09-25T23:57:00.284Z"
+  },
+  {
+    "id": "rss-b9uh48",
+    "title": "恒道科技：部分技术达国际先进水平 国内市占率位居内资企业首位",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE52eFJXblZhdnNGVVRybXZiZWFYOEJnTFRCRTY4ZWdKUW9seE04ZzkxbFpBQllPb1ItamlKN3dkbFZURUhBT2ZrN0QwUEE4R3hL?oc=5",
+    "published_at": "2026-09-16T09:06:07.000Z",
+    "source_name": "凤凰网",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-09-25T23:57:00.249Z"
+  },
+  {
+    "id": "rss-mgdewq",
+    "title": "Fakuma 2026：多组份注塑成型",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUW5lOHNBakpRZWNNTF9EMzlFQjBTVlNITGNmS2VkZnNBM0hTVThNYjhPU1JrN0VJN1UyQkxJb0JQVWhVMHhnUjE4bHgzVUItS09VcU5lUG8wRDhLRi1URWNXT1dPLS1DRFR0eU9sY0RoMENOWlFnX3ZWWW9zdW5rX2xhNDhES1dfR1JPOU1QbnRBdndXWDNDVFJNTHJVN1FtN0RxNw?oc=5",
+    "published_at": "2026-09-15T07:00:00.000Z",
+    "source_name": "ARBURG",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-09-25T23:57:00.233Z"
+  },
+  {
+    "id": "rss-856czk",
+    "title": "巴臣实业改性工程塑料深度测评：多场景性能解析",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWjBlUkViRG40VlhvSUFQY2RMQ0JYYjhRRUg0SHdONEtVSmhMVVNzYTVudXZXY0h5SjV1cjd1RHRyNm81ZC1JWng3TWhEN1ZjRXBzN01vSlNsT041LVVWSG81bW5FMlQwQk1MNllmWmJyVmpRRzFZY2I2T2daenV0TEtRTWpoS3lWc0pzeg?oc=5",
+    "published_at": "2026-09-15T03:08:10.000Z",
+    "source_name": "搜狐网",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-09-25T23:57:00.277Z"
   },
   {
     "id": "rss-2we9w4",
@@ -177,7 +165,7 @@
     "source_name": "紫牛新闻",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.372Z"
+    "created_at": "2026-09-25T23:57:00.245Z"
   },
   {
     "id": "rss-1w6oekb",
@@ -189,6 +177,18 @@
     "source_name": "大众网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-09-24T23:52:58.420Z"
+    "created_at": "2026-09-25T23:57:00.284Z"
+  },
+  {
+    "id": "rss-qku6am",
+    "title": "衣架注塑成型解决方案：WINTEC t‑win 实现高效生产、提升资源利用率，保障高投资回报",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQeG01QUtiWTdiUlB1c2V2dUJZQzdqczctZzNqbjJTeGs4MTR4aFFScmRaMmxLUGhrYUo3Y3ZmTVBoX2s5ZXM5Q0p2NEplSGlRVWZvWndzN1Zid0p3Wk1Zc0ZZdkZoNUFSblJhWmRNdnE4bkFzTVhhWmFkQlRfdGI2eDNZTFBWU3FzYkZKaQ?oc=5",
+    "published_at": "2026-09-08T05:56:00.000Z",
+    "source_name": "搜狐网",
+    "category": "industry",
+    "image_url": null,
+    "created_at": "2026-09-25T23:57:00.245Z"
   }
 ]
