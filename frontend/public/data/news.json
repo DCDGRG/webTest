@@ -9,7 +9,7 @@
     "source_name": "温州新闻",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.233Z"
+    "created_at": "2026-11-15T01:01:23.860Z"
   },
   {
     "id": "rss-f2sz9d",
@@ -21,7 +21,7 @@
     "source_name": "中华网财经",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.233Z"
+    "created_at": "2026-11-15T01:01:23.860Z"
   },
   {
     "id": "rss-f2spk9",
@@ -33,55 +33,19 @@
     "source_name": "金融界",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.171Z"
+    "created_at": "2026-11-15T01:01:23.782Z"
   },
   {
-    "id": "rss-ao6deh",
-    "title": "金发科技(600143.SH)：目前在建项目主要集中在新材料板块和海外改性塑料板块",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9JdldIb19WS3BMeE41MHc0VEg4WHV2dndVeF91QmxyQjdQUmxIQ2ZVZVhHWUJ5aWo0WUFhbmRwQUJjTXJWNy1rWkZiWFluZi0wblNLWmR6azRXNEZfRzRmUWdUdl9uZjhoQmxmeWlzbjVzZ1Jq?oc=5",
-    "published_at": "2026-11-10T11:24:37.000Z",
-    "source_name": "金融界",
-    "category": "technical",
-    "image_url": null,
-    "created_at": "2026-11-14T01:26:42.285Z"
-  },
-  {
-    "id": "rss-sxavrf",
-    "title": "北交所策略专题报告：关注光刻胶小巨人博砚电子，二板式注塑机小巨人博创智能_趋势策略_研报",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9nMEotVkl5aHpRNUozOEpTQTZQblFnb3N4SHpLRFBkdHN3Z2lpeF9vWGM4Q3RmNGdxblByMEVLNHRZNEF2ajdMQkJkWFA2QkttaGVRcWhIOW11aVJHVkxkeEdB?oc=5",
-    "published_at": "2026-11-09T00:35:00.000Z",
-    "source_name": "证券之星",
-    "category": "industry",
-    "image_url": null,
-    "created_at": "2026-11-14T01:26:42.232Z"
-  },
-  {
-    "id": "rss-1cud8hw",
+    "id": "rss-1agwuh4",
     "title": "“九”逢知己，德国注塑巨头把中国客户变成“合伙人”：在进博有三级跳",
     "summary": "",
     "content": null,
-    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96YXF4aDFlSlRmOXdfVXJmNDlpZkRnOEJYMmF5M3BmbmpwV3lsS2ozdjVBZm1SV0NGNmpSbHJQUmdvWXdYMmZweHJNNEJoeERwd3YzR0llRnEwMkEteUE?oc=5",
-    "published_at": "2026-11-04T23:06:00.000Z",
-    "source_name": "上观新闻",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONXZ5ajhpWDlXNXY3amNxSEh2NWozX1Bnbll0RVZxNzZUYk5Mck03LXN4RVhZdFQyd1dMU3RpWXFYVlM5R0hrblAxcy05WWFDeVVyTzREWVhMYllaNUhNbFgxZWxlZWkzVDczZTJ4Uk0wcFNreHdtY1h4WE54RXJBX1d4ZmpyQzA2V3pQeQ?oc=5",
+    "published_at": "2026-11-04T23:06:02.000Z",
+    "source_name": "Sohu",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.182Z"
-  },
-  {
-    "id": "rss-e7bisf",
-    "title": "2026年工艺品文具注塑代加工行业发展现状与市场占有率研究分析报告",
-    "summary": "",
-    "content": null,
-    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE14MzBNSXpCbHh0VldQbDlPSlBrRWVSWkRIdHRGWDRtWjJqc21sQkVEZUFNd1kybWlqX1FILWtOcWNuT0s4YkxISnZURU5ueFU?oc=5",
-    "published_at": "2026-11-04T08:48:35.000Z",
-    "source_name": "凤凰网",
-    "category": "technical",
-    "image_url": null,
-    "created_at": "2026-11-14T01:26:42.174Z"
+    "created_at": "2026-11-15T01:01:23.798Z"
   },
   {
     "id": "rss-b8xd2w",
@@ -93,19 +57,19 @@
     "source_name": "凤凰网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.232Z"
+    "created_at": "2026-11-15T01:01:23.816Z"
   },
   {
-    "id": "rss-14wmyf",
+    "id": "rss-1nmp5ot",
     "title": "全球注塑机行业的冬天，快熬到头了？",
     "summary": "",
     "content": null,
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBQWUtza1lIZThIYkhocWVzbzJBTGR0U0ZBNUtRSmhLOTFNdDRlSGM0V1NRa1F2MTVlWWhoTWlNWlNWdlM1aTh5dWJ5X1dTTkZsYXFTdnR1NmJYTTlOZ2hQVlVhVXNaUURYMkM4a25UeVlrTV9vaklMQ1BidDIzUQ?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8yd0xLZl9LeFhjb2E4N1ptbEV6SmZTZERxNi1kYWlwNUNremU2MTNSMWdkUDlPYnc0Y1gtQmNtaGdNaFJ3Z1pLUWd4THBRUV9MVEtiTkJjSnFtYkNIdFNiN0lMRGFBcFBtc0pndmdqZw?oc=5",
     "published_at": "2026-11-01T07:00:00.000Z",
     "source_name": "新浪财经",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.232Z"
+    "created_at": "2026-11-15T01:01:23.816Z"
   },
   {
     "id": "rss-1aoq3xt",
@@ -117,7 +81,19 @@
     "source_name": "中华网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.171Z"
+    "created_at": "2026-11-15T01:01:23.782Z"
+  },
+  {
+    "id": "rss-18zr4o",
+    "title": "2034 年注塑机市场规模及份额报告",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVzB6d3RhVEw4VXpNQUVpb2xPVEdESVJwRVhYRG85eG56bnM5LWlkU214RDhZMEl3VXl1S05tZzZNS0NWeUcxQWZiaEtmVVowVEx1OFI1ZnA2OE1GZGpYa2dlQlBFQTMydHVobnBHUk5vQWprdGFLTFlHcEIzdVc3dlFlcUZaRlB3YXMtSC1FY0l2MURqUElaS3cxZGJjcExo?oc=5",
+    "published_at": "2026-10-26T07:00:00.000Z",
+    "source_name": "Fortune Business Insights",
+    "category": "industry",
+    "image_url": null,
+    "created_at": "2026-11-15T01:01:23.816Z"
   },
   {
     "id": "rss-rjyooa",
@@ -129,7 +105,7 @@
     "source_name": "中国日报网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.233Z"
+    "created_at": "2026-11-15T01:01:23.860Z"
   },
   {
     "id": "rss-1pafo2y",
@@ -141,7 +117,7 @@
     "source_name": "凤凰网",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.174Z"
+    "created_at": "2026-11-15T01:01:23.787Z"
   },
   {
     "id": "rss-heiuni",
@@ -153,7 +129,7 @@
     "source_name": "TradingView",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.285Z"
+    "created_at": "2026-11-15T01:01:23.862Z"
   },
   {
     "id": "rss-s9zk4e",
@@ -165,7 +141,7 @@
     "source_name": "凤凰网",
     "category": "industry",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.182Z"
+    "created_at": "2026-11-15T01:01:23.798Z"
   },
   {
     "id": "rss-10cwwc2",
@@ -177,7 +153,7 @@
     "source_name": "Fortune Business Insights",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.285Z"
+    "created_at": "2026-11-15T01:01:23.862Z"
   },
   {
     "id": "rss-4wdtc2",
@@ -189,6 +165,30 @@
     "source_name": "财富号",
     "category": "technical",
     "image_url": null,
-    "created_at": "2026-11-14T01:26:42.174Z"
+    "created_at": "2026-11-15T01:01:23.787Z"
+  },
+  {
+    "id": "rss-41maq8",
+    "title": "刹车踏板材料要升级？两种方案怎么选#刹车踏板#汽车材料#工程塑料#高强钢#汽车安全",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE03dFN3M2g5ZG5FUjQzVkJJNTVLZDdzQVFCeEZld2hTN3R6SEZscnNfZy1fWE83bElsa2wzUmY0THdlTVl1Rkl4eWp1QjJkSmc3QlBVWWgydnZzODZqejdiQUJRaG1mNmRsRWp3?oc=5",
+    "published_at": "2026-10-11T07:00:00.000Z",
+    "source_name": "财富号",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-11-15T01:01:23.862Z"
+  },
+  {
+    "id": "rss-1o41za8",
+    "title": "长虹注塑车间AI“搭子”解放工艺师双手！",
+    "summary": "",
+    "content": null,
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE93bVl4WmZ0bHJSS05KbjZJby11TE5VT090cHo3UE9LZlYwOHg2Mk9TWUhUXzB2V3BIVDRBQXlMTmZYZy1VYXVlZEJOMXFJZGxINHpnOFhKNXFKMjJUay1ZUjFDVmZBakJoYkZZeGNJVQ?oc=5",
+    "published_at": "2026-08-26T07:00:00.000Z",
+    "source_name": "央广财经",
+    "category": "technical",
+    "image_url": null,
+    "created_at": "2026-11-15T01:01:23.787Z"
   }
 ]
