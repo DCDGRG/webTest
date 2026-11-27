@@ -31,22 +31,22 @@
     "aboutUs": "About Us"
   },
   "features": {
-    "title": "Professional Precision Manufacturing Services",
+    "title": "From Precision Tooling to Finished Plastic Parts",
     "moldMaking": {
       "title": "Precision Mold Making",
-      "description": "Professional CNC machining center, precision mold design and manufacturing, ensuring product accuracy and quality"
+      "description": "CNC machining centers, engraving equipment and Sodick EDM machines support precision mold design and manufacturing."
     },
     "injection": {
       "title": "Injection Molding",
-      "description": "31 injection machines, 50T-800T specifications, supporting two-color, vertical, thin-wall high-speed injection"
+      "description": "50–800T molding machines support custom parts in PEEK, PEI, PPSU and other specialty and engineering plastics."
     },
     "surface": {
       "title": "Surface Treatment",
-      "description": "Class 100,000 clean spray booth, automatic painting and UV assembly line, silk screen, pad printing, hot stamping"
+      "description": "Two plastic painting lines and one UV painting line are complemented by screen printing, pad printing and hot stamping."
     },
     "assembly": {
       "title": "Assembly & Testing",
-      "description": "Ultrasonic welding, assembly equipment, coordinate measuring machine, colorimeter and other precision testing equipment"
+      "description": "Assembly connects molded parts with finished products, with quality checks focused on dimensions, appearance and fit."
     }
   },
   "testimonial": {
@@ -61,83 +61,94 @@
   },
   "about": {
     "pageTitle": "Shanghai Kuixing Electronics Technology Co., Ltd.",
-    "pageSubtitle": "Located in Baoshan District, Shanghai, specializing in precision mold design and manufacturing, injection molding, painting, printing, pad printing, hot stamping, assembly and other integrated services. Focused on custom processing of high-performance specialty plastic products, widely used in analytical instruments, medical devices, automotive parts, sensors, smart home and other fields.",
+    "pageSubtitle": "Established in 2005, we specialize in custom tooling and plastic parts, with integrated mold design, injection molding, finishing and assembly.",
     "philosophy": "Corporate Philosophy",
-    "policy": "Policy:",
-    "policyContent": "100% Service, Zero Defects in Quality",
-    "spirit": "Spirit:",
-    "spiritContent": "Professional · Integrity · Pioneering · Innovation",
-    "purpose": "Purpose:",
-    "purposeContent": "Everyone for Quality, Process Control, Stable Quality, Customer Satisfaction",
-    "goal": "Goal:",
-    "goalContent": "Continuously improve competitiveness, cohesion and innovation to create greater value for customers and society",
+    "policy": "Service and Quality Policy",
+    "policyContent": "Our aim is full commitment to service and zero defects, with customer needs and quality awareness guiding each manufacturing stage.",
+    "spirit": "Our Values",
+    "spiritContent": "Professionalism, integrity, initiative and innovation. We bring technical care to each request and build lasting partnerships through honest communication.",
+    "purpose": "Quality Principles",
+    "purposeContent": "Quality is everyone’s responsibility. Controlled processes and consistent production support customer satisfaction.",
+    "goal": "Continuous Improvement",
+    "goalContent": "We keep improving our technology, management and teamwork to deliver dependable products and service.",
     "equipment": "Equipment & Workshops",
-    "equipmentSubtitle": "The company has advanced production and testing equipment to ensure product accuracy and quality.",
+    "equipmentSubtitle": "Toolmaking, molding and finishing equipment connect plastic part development with production and assembly.",
     "moldDept": "Mold Department:",
-    "moldDeptContent": "CNC machining centers, Sodick EDM machines, grinders, drilling machines, 20+ units",
+    "moldDeptContent": "CNC machining centers, engraving equipment and Sodick EDM machines for precision mold production.",
     "injectionDept": "Injection Department:",
-    "injectionDeptContent": "31 injection machines (50T-800T, including two-color, vertical, thin-wall high-speed)",
+    "injectionDeptContent": "A range of injection molding machines with capacities from 50 to 800 tons.",
     "paintDept": "Paint Department:",
-    "paintDeptContent": "Class 100,000 clean spray booth, automatic painting and UV assembly line",
+    "paintDeptContent": "Two plastic painting lines and one UV painting line, with screen printing, pad printing and hot stamping.",
     "assemblyShop": "Assembly Workshop:",
-    "assemblyShopContent": "Silk screen, pad printing, hot stamping, ultrasonic welding equipment",
-    "testEquipment": "Testing Equipment:",
-    "testEquipmentContent": "Coordinate measuring machine, 2D image measuring instrument, colorimeter, friction tester, etc.",
+    "assemblyShopContent": "Plastic part assembly connects molding with finishing operations.",
+    "testEquipment": "Quality Inspection:",
+    "testEquipmentContent": "Checks focus on part dimensions, appearance and assembly requirements, supported by process quality control.",
     "medicalShop": "Medical Parts Workshop:",
-    "medicalShopContent": "Class 100,000 clean medical parts injection workshop, meeting high-end medical product requirements",
+    "medicalShopContent": "A Class 100K cleanroom for injection molding medical components supports parts with controlled-environment requirements.",
     "productsAndApplications": "Products & Applications",
-    "productsSubtitle": "We provide high-performance plastic parts for multiple industries",
+    "productsSubtitle": "Serving analytical instruments, medical devices, automotive parts, sensors and smart home applications.",
     "automotive": {
       "title": "Automotive Parts",
-      "description": "PBT-GF30, PPSU, PFA, PA66 material products",
-      "features": ["High Strength", "Corrosion Resistant", "Lightweight"]
+      "description": "Tooling, injection molding and finishing for automotive plastic components.",
+      "features": ["Tool development", "Injection molding", "Finishing"]
     },
     "medical": {
       "title": "Medical Devices",
-      "description": "Orthopedic instruments, endoscope handles, medical consumables",
-      "features": ["Biocompatible", "Sterile Requirements", "Precision Manufacturing"]
+      "description": "Specialty plastic processing and cleanroom molding for medical device components.",
+      "features": ["Specialty materials", "Cleanroom molding", "Process control"]
     },
     "electronics": {
       "title": "Electronics",
-      "description": "PEI, PPS, PA66 high-strength, corrosion-resistant components",
-      "features": ["Insulation", "Heat Resistant", "Dimensionally Stable"]
+      "description": "Custom housings and functional parts for analytical instruments, sensors and electronics.",
+      "features": ["Analytical instruments", "Sensors", "Plastic housings"]
     },
     "engineering": {
       "title": "Engineering Plastics",
-      "description": "Heat-resistant, corrosion-resistant, transparent functional material products",
-      "features": ["Specialty Materials", "Custom Processing", "Quality Assured"]
+      "description": "Processing PEEK, PEI, PPSU and engineering plastics including PC/ABS, PA12 and PC.",
+      "features": ["Material review", "Custom processing", "Assembly"]
     },
     "qualityTitle": "Quality & Certifications",
-    "qualitySubtitle": "The company has established a complete quality system and standardized process",
+    "qualitySubtitle": "Quality awareness and controlled production processes support continuous improvement.",
     "certification": "Certifications:",
-    "certificationContent": "ISO9001, IATF16949:2016, ISO13485",
-    "qualification": "Qualifications:",
-    "qualificationContent": "Class 100,000 clean injection workshop",
+    "certificationContent": "ISO 9001:2015, IATF 16949:2016 and ISO 13485:2016.",
+    "qualification": "Clean Manufacturing",
+    "qualificationContent": "A Class 100K cleanroom for injection molding medical components.",
     "moldProcess": "Mold Analysis Process:",
     "moldProcessContent": "3D Data Confirmation → Mold Flow & Structural Analysis → Improvement Suggestions → Customer Confirmation → Mold Manufacturing → Product Delivery",
-    "customersTitle": "Customers & Markets",
-    "customersSubtitle": "Serving global customers, building long-term partnerships",
-    "serviceRegion": "Service Regions:",
-    "serviceRegionContent": "China, USA, Europe, Asia and other regions",
+    "customersTitle": "Materials and Applications",
+    "customersSubtitle": "Tooling and plastic processing services aligned with part use and manufacturing requirements.",
+    "serviceRegion": "Integrated Service",
+    "serviceRegionContent": "Coordinating requirement review, mold design, molding, finishing and assembly.",
     "serviceIndustry": "Service Industries:",
     "serviceIndustryContent": "Healthcare, Automotive, Electronics, Smart Home, Analytical Instruments",
     "materialExpertise": "Material Expertise:",
-    "materialExpertiseContent": "PEEK, PEI, PPSU, PPS, PFA, TPE, PC/ABS, PA12, PC and other high-performance specialty plastics",
+    "materialExpertiseContent": "PEEK, PEI, PPSU, PPS, PFA, TPE, PC/ABS, PA12, PC and other specialty and engineering plastics",
     "commitment": "Our Commitment",
-    "commitmentContent": "We will continue to uphold the spirit of 'Professional, Integrity, Pioneering, Innovation', continuously optimize technology and management, and work hand in hand with global customers to create win-win outcomes with high-quality products and excellent service.",
-    "moldEquipment": "Mold Equipment",
-    "injectionMachines": "Injection Machines",
-    "cleanRoom": "Clean Room"
+    "commitmentContent": "We bring technical care to every operation and honest communication to every request. Quality is a shared responsibility, and continuous improvement helps us build lasting customer partnerships.",
+    "moldEquipment": "Year established",
+    "injectionMachines": "Molding capacity",
+    "cleanRoom": "Clean Room",
+    "profileTitle": "Precision Molding, from Material to Application",
+    "profileIntro": "Shanghai Kuixing Electronics Technology Co., Ltd. was founded in August 2005 and is located at Building 19, No. 1688 Jinshao Road, Baoshan District, Shanghai. Our team of over 100 employees includes more than 40 core technical staff, supporting precision tooling, injection molding and plastic part finishing.",
+    "profileApplications": "We serve analytical instruments, medical devices, automotive parts, sensors and smart home applications. Part geometry, materials and end-use requirements guide tooling, molding, painting, printing and assembly, connecting product development with production.",
+    "founded": "Established",
+    "foundedValue": "August 2005",
+    "team": "Employees",
+    "teamValue": "Over 100",
+    "technicalTeam": "Core technical staff",
+    "technicalTeamValue": "Over 40",
+    "address": "Address",
+    "addressValue": "Building 19, No. 1688 Jinshao Road, Baoshan District, Shanghai"
   },
   "contact": {
     "pageTitle": "Contact Us",
-    "pageSubtitle": "We look forward to hearing from you and are ready to answer your questions",
+    "pageSubtitle": "Tell us about your part, material and expected volume to discuss tooling, injection molding or finishing requirements.",
     "name": "Name",
     "namePlaceholder": "Enter your name...",
     "email": "Email",
     "phone": "Phone",
-    "message": "Message",
-    "messagePlaceholder": "Enter your message...",
+    "message": "Project Requirements",
+    "messagePlaceholder": "Describe the part application, material or grade, dimensions, appearance requirements, expected volume and timing. Let us know if drawings are available for follow-up.",
     "submitting": "Submitting...",
     "submitMessage": "Submit Message",
     "successMessage": "We have received your message and will contact you soon!",
@@ -295,8 +306,8 @@
     "noNews": "No news available. Please try again later."
   },
   "portfolio": {
-    "ourWork": "Our Work",
-    "companyPortfolio": "Company Portfolio",
+    "ourWork": "Plastic Parts and Manufacturing Processes",
+    "companyPortfolio": "Explore applications for precision tooling, injection molding, finishing and assembly.",
     "projectName": "Project Name",
     "projectTitle": "Project Title",
     "projectDescription": "Project description details...",

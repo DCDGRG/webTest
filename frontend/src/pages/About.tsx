@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { workshopPhotos } from '../data/companyPhotos'
 import PageHeader from '../components/PageHeader'
 import { isZhLocale } from '../utils/locale'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -67,10 +68,32 @@ export default function About() {
         ]}
       />
 
-      <section className="py-5 section-gradient-teal" id="company-intro">
+      <section className="py-5" id="company-intro">
+        <div className="container px-5 my-5">
+          <div className="row gx-5 gy-4">
+            <div className="col-lg-7">
+              <h2 className="fw-bolder gradient-text mb-4">{t('about.profileTitle')}</h2>
+              <p className="lead text-muted">{t('about.profileIntro')}</p>
+              <p className="text-muted mb-0">{t('about.profileApplications')}</p>
+            </div>
+            <div className="col-lg-5">
+              <dl className="mb-0">
+                {['founded', 'team', 'technicalTeam', 'address'].map((key) => (
+                  <div key={key} className="mb-4">
+                    <dt className="fw-bold mb-1">{t(`about.${key}`)}</dt>
+                    <dd className="text-muted mb-0">{t(`about.${key}Value`)}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-5 section-gradient-teal">
         <div className="container px-5 my-5">
           <div className="row gx-5 align-items-center">
-            <div className="col-lg-6"><img className="img-fluid rounded mb-5 mb-lg-0" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt={t('about.philosophy')} style={{ borderRadius: 'var(--radius-lg)' }} /></div>
+            <div className="col-lg-6"><img className="img-fluid rounded mb-5 mb-lg-0" width="1200" height="900" loading="lazy" src={workshopPhotos.inspection.src} alt={workshopPhotos.inspection.title[isZh ? 'zh' : 'en']} style={{ borderRadius: 'var(--radius-lg)' }} /></div>
             <div className="col-lg-6">
               <h2 className="fw-bolder gradient-text">{t('about.philosophy')}</h2>
               <div className="mb-3">
@@ -100,7 +123,7 @@ export default function About() {
       <section className="py-5">
         <div className="container px-5 my-5">
           <div className="row gx-5 align-items-center">
-            <div className="col-lg-6 order-first order-lg-last"><img className="img-fluid rounded mb-5 mb-lg-0" src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt={t('about.equipment')} style={{ borderRadius: 'var(--radius-lg)' }} /></div>
+            <div className="col-lg-6 order-first order-lg-last"><img className="img-fluid rounded mb-5 mb-lg-0" width="1200" height="900" loading="lazy" src={workshopPhotos.moldingShop.src} alt={workshopPhotos.moldingShop.title[isZh ? 'zh' : 'en']} style={{ borderRadius: 'var(--radius-lg)' }} /></div>
             <div className="col-lg-6">
               <h2 className="fw-bolder gradient-text">{t('about.equipment')}</h2>
               <p className="lead fw-normal text-muted mb-4">{t('about.equipmentSubtitle')}</p>
@@ -220,11 +243,11 @@ export default function About() {
               <div className="col-lg-8">
                 <div className="row gx-5 text-center">
                   <div className="col-4">
-                    <div className="h3 fw-bold text-success">20+</div>
+                    <div className="h3 fw-bold text-success">2005</div>
                     <div className="text-muted">{t('about.moldEquipment')}</div>
                   </div>
                   <div className="col-4">
-                    <div className="h3 fw-bold text-success">31</div>
+                    <div className="h3 fw-bold text-success">50–800T</div>
                     <div className="text-muted">{t('about.injectionMachines')}</div>
                   </div>
                   <div className="col-4">

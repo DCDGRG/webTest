@@ -11,22 +11,22 @@ export default function Pricing() {
   usePageMeta(
     isZh ? '制造能力与产品服务 | 上海奎星电子科技' : 'Capabilities & Services | Shanghai Kuixing Electronics',
     isZh
-      ? '模具设计、CNC 加工、50T-800T 注塑成型、双色与表面处理、装配交付一体化制造能力。'
-      : 'Tooling, CNC machining, 50T–800T injection molding, two-shot, finishing and assembly under one delivery path.'
+      ? '模具设计、CNC 加工、50T-800T 注塑成型、表面处理、装配交付一体化制造能力。'
+      : 'Tooling, CNC machining, 50T–800T injection molding, finishing and assembly under one delivery path.'
   )
 
   const capabilityProofs = isZh
     ? [
-        { value: '24h', label: '初步响应', detail: '先看图纸、材料和批量。' },
-        { value: '31', label: '注塑设备', detail: '50T-800T 覆盖打样到量产。' },
-        { value: 'ISO', label: '质量体系', detail: '过程记录按体系执行。' },
-        { value: 'DFM', label: '导入支持', detail: '评审、试样、量产切换。' }
+        { value: '2005', label: '成立年份', detail: '自 2005 年 8 月开展精密模塑业务。' },
+        { value: '50–800T', label: '注塑设备吨位', detail: '配备多种型号注塑设备。' },
+        { value: 'ISO / IATF', label: '质量体系', detail: 'ISO 9001、IATF 16949、ISO 13485。' },
+        { value: '40+', label: '技术骨干', detail: '支撑模具开发与生产技术沟通。' }
       ]
     : [
-        { value: '24h', label: 'Initial response', detail: 'First look at drawings, materials, and volume.' },
-        { value: '31', label: 'Molding machines', detail: '50T-800T from pilot to production.' },
-        { value: 'ISO', label: 'Quality systems', detail: 'Controlled under documented procedures.' },
-        { value: 'DFM', label: 'Launch support', detail: 'Review, trials, and production handoff.' }
+        { value: '2005', label: 'Established', detail: 'Precision molding since August 2005.' },
+        { value: '50–800T', label: 'Molding capacity', detail: 'A range of injection molding machines.' },
+        { value: 'ISO / IATF', label: 'Quality systems', detail: 'ISO 9001, IATF 16949 and ISO 13485.' },
+        { value: '40+', label: 'Core technical staff', detail: 'Supporting tooling and production coordination.' }
       ]
 
   const capabilityModules = isZh
@@ -38,13 +38,13 @@ export default function Pricing() {
         },
         {
             title: 'CNC 加工与模具制造',
-            description: '加工、试模和修模放在同一节奏里推进。',
+            description: '依托 CNC 加工中心、精雕及沙迪克火花机，开展模具加工与试模修正。',
             points: ['CNC / EDM 加工', '试模修正']
         },
         {
             title: '注塑成型与试样验证',
             description: '确认材料、尺寸、外观和过程稳定性。',
-            points: ['50T-800T 注塑', '双色 / 薄壁工艺']
+            points: ['50–800T 注塑', '特种塑料加工']
         },
         {
             title: '表面处理与装配交付',
@@ -60,13 +60,13 @@ export default function Pricing() {
         },
         {
           title: 'CNC machining and tool build',
-          description: 'Machining, trials, and corrections stay in one loop.',
+          description: 'CNC machining centers, engraving equipment and Sodick EDM machines support toolmaking and trial corrections.',
           points: ['CNC / EDM machining', 'Trial correction']
         },
         {
           title: 'Molding and sample validation',
           description: 'Materials, dimensions, appearance, and repeatability are confirmed in trials.',
-          points: ['50T-800T molding', 'Two-shot / thin-wall']
+          points: ['50–800T molding', 'Specialty plastic processing']
         },
         {
           title: 'Finishing and assembly delivery',
@@ -93,29 +93,29 @@ export default function Pricing() {
     ? [
         {
           title: '设备基础',
-          items: ['50T-800T 注塑设备', 'CNC 加工中心', '火花机与线切割', '喷涂 / UV', '装配工位']
+          items: ['50T-800T 注塑设备', 'CNC 加工中心', '精雕与沙迪克火花机', '两条喷漆线 / 一条 UV 喷漆线', '装配工位']
         },
         {
           title: '支持材料',
-          items: ['PEEK / PEI / PPSU', 'PPS / PFA / TPE', '工程塑料', '医疗与耐温材料']
+          items: ['PEEK / PEI / PPSU', 'PPS / PFA / TPE', 'PC/ABS / PA12 / PC', '特种塑料与工程塑料']
         },
         {
           title: '加工方式',
-          items: ['常规 / 薄壁注塑', '双色 / 嵌件注塑', '喷涂与印刷', '焊接与装配']
+          items: ['注塑与洁净注塑', '喷漆与 UV 工艺', '丝印 / 移印 / 烫金', '零件组装']
         }
       ]
     : [
         {
           title: 'Equipment base',
-          items: ['50T-800T molding machines', 'CNC machining centers', 'EDM and wire cutting', 'Spray / UV line', 'Assembly stations']
+          items: ['50T-800T molding machines', 'CNC machining centers', 'Engraving and Sodick EDM', 'Two painting lines / one UV painting line', 'Assembly stations']
         },
         {
           title: 'Supported materials',
-          items: ['PEEK / PEI / PPSU', 'PPS / PFA / TPE', 'Engineering plastics', 'Medical and high-temperature materials']
+          items: ['PEEK / PEI / PPSU', 'PPS / PFA / TPE', 'PC/ABS / PA12 / PC', 'Specialty and engineering plastics']
         },
         {
           title: 'Process coverage',
-          items: ['Standard / thin-wall molding', 'Two-shot / insert molding', 'Coating and printing', 'Welding and assembly']
+          items: ['Molding and cleanroom molding', 'Painting and UV finishing', 'Screen / pad printing / hot stamping', 'Part assembly']
         }
       ]
 
@@ -142,13 +142,13 @@ export default function Pricing() {
 
   const deliveryPoints = isZh
     ? [
-        { title: '质量标准', description: '按 ISO 体系组织记录和控制。' },
+        { title: '质量标准', description: '按 ISO 9001、IATF 16949 与 ISO 13485 体系开展质量管理。' },
         { title: '检验方式', description: '尺寸、外观和功能确认。' },
-        { title: '交付节奏', description: '支持打样到量产切换。' },
+        { title: '交付衔接', description: '支持打样到量产切换。' },
         { title: '项目支持', description: '异常反馈和交付跟进。' }
       ]
     : [
-        { title: 'Quality standards', description: 'Controlled under ISO-based procedures.' },
+        { title: 'Quality standards', description: 'Quality management follows ISO 9001, IATF 16949 and ISO 13485 systems.' },
         { title: 'Inspection coverage', description: 'Dimensional, cosmetic, and functional checks.' },
         { title: 'Delivery rhythm', description: 'From pilot runs to production handoff.' },
         { title: 'Program support', description: 'Issue response and shipment follow-up.' }
@@ -197,12 +197,12 @@ export default function Pricing() {
             <div className="manufacturing-intro-copy">
               <p className="section-kicker">{isZh ? '能力范围' : 'Capability Scope'}</p>
               <h2 className="section-title">
-                {isZh ? '先看范围，再判断项目能不能推进。' : 'Start with scope, then judge whether the program is practical.'}
+                {isZh ? '以模具、材料与工艺协同，完成塑料零件定制制造。' : 'Coordinated tooling, materials and processes for custom plastic parts.'}
               </h2>
               <p className="section-subtitle mb-0">
                 {isZh
-                  ? '把客户最常问的工艺、设备、交付和质量信息放在一起。'
-                  : 'The most practical information is grouped here: process, equipment, delivery, and quality.'}
+                  ? '从 CNC 模具加工到注塑成型，再到喷漆、印刷、烫金与组装，各制造环节配套衔接。'
+                  : 'CNC toolmaking, injection molding, painting, printing, hot stamping and assembly are coordinated across production stages.'}
               </p>
             </div>
             <div className="manufacturing-proof-grid">
@@ -250,7 +250,7 @@ export default function Pricing() {
         <div className="container px-4 px-lg-5">
           <div className="manufacturing-section-head">
             <p className="section-kicker">{isZh ? '制造流程' : 'Manufacturing Flow'}</p>
-            <h2 className="section-title">{isZh ? '项目推进节奏' : 'Project workflow'}</h2>
+            <h2 className="section-title">{isZh ? '项目制造流程' : 'Project workflow'}</h2>
           </div>
           <div className="process-flow-grid">
             {processSteps.map((step, index) => (
@@ -342,7 +342,7 @@ export default function Pricing() {
             <div className="final-cta-actions">
               <Link className="btn-cta-primary" to="/contact">{isZh ? '提交项目需求' : 'Submit Project Brief'}</Link>
               <Link className="final-cta-link" to="/contact">
-                {isZh ? '查看提交流程' : 'View inquiry path'} <i className="bi bi-arrow-right"></i>
+                {isZh ? '联系项目团队' : 'Contact our team'} <i className="bi bi-arrow-right"></i>
               </Link>
             </div>
           </div>

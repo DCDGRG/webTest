@@ -31,22 +31,22 @@
     "aboutUs": "关于我们"
   },
   "features": {
-    "title": "专业的精密制造服务",
+    "title": "从精密模具到塑料成品的一站式制造",
     "moldMaking": {
       "title": "精密模具制造",
-      "description": "专业CNC加工中心，精密模具设计与制造，确保产品精度与品质"
+      "description": "配备 CNC 加工中心、精雕及沙迪克火花机，开展精密模具设计、加工与制造。"
     },
     "injection": {
       "title": "注塑成型",
-      "description": "31台注塑机，50T-800T规格齐全，支持双色、立式、薄壁高速注塑"
+      "description": "50–800T 注塑设备覆盖不同规格零件，支持 PEEK、PEI、PPSU 等特种塑料及工程塑料的定制成型。"
     },
     "surface": {
       "title": "表面处理",
-      "description": "10万级无尘喷漆车间，自动喷漆与UV流水线，丝印、移印、烫金工艺"
+      "description": "配备两条专业塑胶喷漆流水线和一条 UV 喷漆线，提供喷漆、丝印、移印与烫金加工。"
     },
     "assembly": {
       "title": "组装检测",
-      "description": "超声波焊接、组装设备，三坐标测量仪、色差仪等精密检测设备"
+      "description": "衔接塑料零件加工与成品组装，围绕尺寸、外观和装配要求开展质量控制。"
     }
   },
   "testimonial": {
@@ -61,83 +61,94 @@
   },
   "about": {
     "pageTitle": "上海奎星电子科技有限公司",
-    "pageSubtitle": "位于上海宝山区，专业从事精密模具设计制造、注塑成型及喷涂、印刷、移印、烫金、组装等一条龙服务。专注于高性能特种塑料制品的定制加工，广泛应用于分析仪器、医疗器械、汽车零部件、传感器、智能家居等领域。",
+    "pageSubtitle": "始于 2005 年，专注精密模具与塑料零部件定制制造，提供从模具设计、注塑成型到表面处理与组装的一站式服务。",
     "philosophy": "企业理念",
-    "policy": "方针：",
-    "policyContent": "服务百分百，质量零缺陷",
-    "spirit": "精神：",
-    "spiritContent": "专业 · 诚信 · 开拓 · 创新",
-    "purpose": "宗旨：",
-    "purposeContent": "人人品管、过程受控、质量稳定、客户满意",
-    "goal": "目标：",
-    "goalContent": "不断提升竞争力、凝聚力与创新力，为客户与社会创造更大价值",
+    "policy": "服务与质量方针",
+    "policyContent": "以“服务百分百，质量零缺陷”为追求，将客户需求与质量意识贯穿各制造环节。",
+    "spirit": "企业精神",
+    "spiritContent": "专业、诚信、开拓、创新。以专业技术回应需求，以诚信沟通建立长期合作。",
+    "purpose": "质量管理宗旨",
+    "purposeContent": "人人品管、过程受控、质量稳定、客户满意。将质量责任落实到岗位，将过程控制落实到生产。",
+    "goal": "持续改进方向",
+    "goalContent": "持续推进技术与管理改进，提升团队协作和制造能力，为客户提供稳定的产品与服务。",
     "equipment": "设备与车间",
-    "equipmentSubtitle": "公司拥有先进的生产与检测设备，确保产品精度与品质。",
+    "equipmentSubtitle": "以模具加工、注塑成型和表面处理设备为基础，衔接塑料零件从开发到组装的制造环节。",
     "moldDept": "模具部：",
-    "moldDeptContent": "CNC 加工中心、沙迪克火花机、磨床、钻床等 20+ 台",
+    "moldDeptContent": "CNC 加工中心、精雕及沙迪克火花机等精密模具生产设备。",
     "injectionDept": "注塑部：",
-    "injectionDeptContent": "31 台注塑机（50T–800T，包括双色、立式、薄壁高速机）",
+    "injectionDeptContent": "配备多种型号注塑机，吨位范围为 50–800T。",
     "paintDept": "喷漆部：",
-    "paintDeptContent": "10 万级无尘喷漆车间，自动喷漆与 UV 流水线",
+    "paintDeptContent": "两条专业塑胶喷漆流水线、一条 UV 喷漆线，配合丝印、移印及烫金工艺。",
     "assemblyShop": "组装车间：",
-    "assemblyShopContent": "丝印、移印、烫金、超声波焊接等设备",
-    "testEquipment": "检测设备：",
-    "testEquipmentContent": "三坐标测量仪、二次元影像仪、色差仪、摩擦测试仪等",
+    "assemblyShopContent": "提供塑料零件组装服务，衔接注塑成型与表面处理工序。",
+    "testEquipment": "质量检验：",
+    "testEquipmentContent": "围绕零件尺寸、外观和装配要求开展检验，落实过程质量控制。",
     "medicalShop": "医疗配件车间：",
-    "medicalShopContent": "10万级无尘医疗配件注塑车间，满足高端医疗产品要求",
+    "medicalShopContent": "配备 10 万级无尘医疗配件注塑车间，支持有洁净生产要求的塑料零件加工。",
     "productsAndApplications": "产品与应用领域",
-    "productsSubtitle": "我们为多个行业提供高性能塑料零部件",
+    "productsSubtitle": "服务分析仪器、医疗器械、汽车零部件、传感器与智能家居等应用领域。",
     "automotive": {
       "title": "汽车零部件",
-      "description": "PBT-GF30、PPSU、PFA、PA66 等材料产品",
-      "features": ["高强度", "耐腐蚀", "轻量化"]
+      "description": "面向汽车塑料零部件，配套模具开发、注塑成型与表面处理。",
+      "features": ["模具开发", "注塑成型", "表面处理"]
     },
     "medical": {
       "title": "医疗器械",
-      "description": "骨科器械、内窥镜手柄、医疗耗材",
-      "features": ["生物相容性", "无菌要求", "精密制造"]
+      "description": "面向医疗器械塑料零件，提供特种材料加工与洁净注塑服务。",
+      "features": ["特种材料", "洁净注塑", "过程控制"]
     },
     "electronics": {
       "title": "电子电器",
-      "description": "PEI、PPS、PA66 等高强度、耐腐蚀零部件",
-      "features": ["绝缘性能", "耐高温", "尺寸稳定"]
+      "description": "面向分析仪器、传感器和电子电器，提供塑料外壳及功能件定制加工。",
+      "features": ["分析仪器", "传感器", "塑料外壳"]
     },
     "engineering": {
       "title": "工程塑料",
-      "description": "耐高温、耐腐蚀、透明功能材料产品",
-      "features": ["特种材料", "定制加工", "品质保证"]
+      "description": "加工 PEEK、PEI、PPSU 等特种塑料及 PC/ABS、PA12、PC 等工程塑料。",
+      "features": ["材料选型沟通", "定制加工", "配套组装"]
     },
     "qualityTitle": "质量与资质",
-    "qualitySubtitle": "公司建立了完善的质量体系和标准化流程",
+    "qualitySubtitle": "以全员质量意识与生产过程控制，支撑产品质量的持续改进。",
     "certification": "质量认证：",
-    "certificationContent": "ISO9001、IATF16949:2016、ISO13485",
-    "qualification": "专业资质：",
-    "qualificationContent": "10万级无尘注塑车间",
+    "certificationContent": "ISO 9001:2015、IATF 16949:2016、ISO 13485:2016。",
+    "qualification": "洁净生产环境",
+    "qualificationContent": "10 万级无尘医疗配件注塑车间。",
     "moldProcess": "模具分析流程：",
     "moldProcessContent": "3D 数据确认 → 模流与结构分析 → 改进建议 → 客户确认 → 模具制造 → 产品交付",
-    "customersTitle": "客户与市场",
-    "customersSubtitle": "服务全球客户，建立长期合作关系",
-    "serviceRegion": "服务地区：",
-    "serviceRegionContent": "中国、美国、欧洲、亚洲等地区",
+    "customersTitle": "材料与服务领域",
+    "customersSubtitle": "围绕零件用途与工艺需求，提供配套的模具与塑料加工服务。",
+    "serviceRegion": "服务方式",
+    "serviceRegionContent": "从需求沟通到模具设计、注塑成型、表面处理与组装，协同推进各制造环节。",
     "serviceIndustry": "服务行业：",
     "serviceIndustryContent": "医疗健康、汽车、电子电器、智能家居、分析仪器等",
     "materialExpertise": "材料专长：",
-    "materialExpertiseContent": "PEEK、PEI、PPSU、PPS、PFA、TPE、PC/ABS、PA12、PC 等高性能特种塑料",
+    "materialExpertiseContent": "PEEK、PEI、PPSU、PPS、PFA、TPE、PC/ABS、PA12、PC 等特种塑料与工程塑料",
     "commitment": "我们的承诺",
-    "commitmentContent": "我们将继续秉持「专业、诚信、开拓、创新」的精神，不断优化技术与管理，以高质量的产品和优质的服务，与全球客户携手合作，共创双赢。",
-    "moldEquipment": "模具设备",
-    "injectionMachines": "注塑机台",
-    "cleanRoom": "无尘车间"
+    "commitmentContent": "以专业技术做好每一道工序，以诚信沟通回应每一项需求。我们坚持全员参与质量管理，持续改进技术与流程，与客户建立长期、稳健的合作关系。",
+    "moldEquipment": "成立年份",
+    "injectionMachines": "注塑设备吨位",
+    "cleanRoom": "无尘车间",
+    "profileTitle": "深耕精密模塑，连接材料与应用",
+    "profileIntro": "上海奎星电子科技有限公司成立于 2005 年 8 月，位于上海市宝山区金勺路 1688 号 19 幢。公司拥有 100 多名员工，其中技术骨干 40 多名，围绕精密模具设计制造、注塑成型及塑胶制品后处理，为客户提供配套加工服务。",
+    "profileApplications": "从分析仪器、医疗器械到汽车零部件、传感器和智能家居，我们结合零件结构、材料与使用要求，开展模具开发、注塑生产、喷漆、印刷及组装，衔接产品开发与批量制造。",
+    "founded": "成立时间",
+    "foundedValue": "2005 年 8 月",
+    "team": "员工规模",
+    "teamValue": "100 多名",
+    "technicalTeam": "技术骨干",
+    "technicalTeamValue": "40 多名",
+    "address": "公司地址",
+    "addressValue": "上海市宝山区金勺路 1688 号 19 幢"
   },
   "contact": {
     "pageTitle": "联系我们",
-    "pageSubtitle": "我们期待您的来信，随时为您解答疑问",
+    "pageSubtitle": "告诉我们零件用途、材料方向与预计批量，一起讨论模具开发、注塑成型或表面处理需求。",
     "name": "姓名",
     "namePlaceholder": "请输入您的姓名...",
     "email": "电子邮箱",
     "phone": "联系电话",
-    "message": "留言内容",
-    "messagePlaceholder": "请输入您的留言内容...",
+    "message": "项目需求说明",
+    "messagePlaceholder": "请简要说明零件用途、材料或牌号、尺寸与外观要求、预计批量及交期；如有图纸，可注明以便后续沟通。",
     "submitting": "正在提交...",
     "submitMessage": "提交留言",
     "successMessage": "我们已收到您的留言，会尽快联系您！",
@@ -295,8 +306,8 @@
     "noNews": "暂无最新资讯，请稍后再试。"
   },
   "portfolio": {
-    "ourWork": "我们的作品",
-    "companyPortfolio": "公司产品展示",
+    "ourWork": "塑料零部件与工艺展示",
+    "companyPortfolio": "了解精密模具、注塑成型、表面处理与组装的应用方向。",
     "projectName": "项目名称",
     "projectTitle": "项目标题",
     "projectDescription": "项目描述详情内容...",

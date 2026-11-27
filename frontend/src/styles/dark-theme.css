@@ -430,8 +430,8 @@
   box-shadow: var(--shadow-lg);
 }
 
-[data-bs-theme="dark"] .showcase-label {
-  color: rgba(91, 181, 166, 0.92);
+[data-bs-theme="dark"] .applications-link {
+  color: #8bd3c6;
 }
 
 [data-bs-theme="dark"] .proof-band {

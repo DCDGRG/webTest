@@ -22,8 +22,8 @@ export default function Contact() {
   usePageMeta(
     isZh ? '联系我们 | 上海奎星电子科技' : 'Contact Us | Shanghai Kuixing Electronics',
     isZh
-      ? '提交图纸、材料方向与预计批量，我们将在 24 小时内做出初步制造与可行性评估。'
-      : 'Send drawings, material direction and expected volume for an initial manufacturing review within 24 hours.'
+      ? '说明零件用途、材料方向与预计批量，与上海奎星沟通模具开发、注塑成型及表面处理需求。'
+      : 'Discuss part applications, materials and volume with Shanghai Kuixing for tooling, molding and finishing requirements.'
   )
 
   const industries = isZh
@@ -43,25 +43,25 @@ export default function Contact() {
   const projectSteps = isZh
     ? [
         { state: '进行中', title: '项目需求' },
-        { state: '准备中', title: '图纸与材料' },
+        { state: '准备中', title: '项目说明' },
         { state: '准备中', title: '联系方式' }
       ]
     : [
         { state: 'Active', title: 'Project brief' },
-        { state: 'Pending', title: 'Files and materials' },
+        { state: 'Pending', title: 'Project brief' },
         { state: 'Pending', title: 'Contact info' }
       ]
 
   const supportPromises = isZh
     ? [
-        '24 小时内初步响应',
-        '提供 DFM 与材料方向建议',
-        '支持 NDA 与项目资料保密'
+        '围绕零件用途与工艺要求沟通',
+        '模具、注塑、后处理与组装配套',
+        '专业、诚信、开拓、创新'
       ]
     : [
-        'First response within 24 hours',
-        'DFM and material direction support',
-        'NDA-ready project handling'
+        'Reviewing part applications and process needs',
+        'Integrated tooling, molding, finishing and assembly',
+        'Professionalism, integrity, initiative and innovation'
       ]
 
   const sendEmail = (e: FormEvent) => {
@@ -130,8 +130,8 @@ export default function Contact() {
             value: isZh ? '需求确认、工艺判断、后续跟进' : 'Requirement review, process evaluation, and follow-up'
           },
           {
-            label: isZh ? '联系方式' : 'Contact',
-            value: isZh ? 'support@domain.com / (021) 1234-5678' : 'support@domain.com / (021) 1234-5678'
+            label: isZh ? '公司地址' : 'Address',
+            value: isZh ? '上海市宝山区金勺路 1688 号 19 幢' : 'Building 19, No. 1688 Jinshao Road, Baoshan District, Shanghai'
           },
           {
             label: isZh ? '工厂与办公' : 'Factory and office',
@@ -169,8 +169,8 @@ export default function Contact() {
               <div className="quote-sidebar-note">
                 <div className="quote-sidebar-note-dot"></div>
                 <div>
-                  <span>{isZh ? '体系状态' : 'System status'}</span>
-                  <strong>{isZh ? 'ISO 9001 / ISO 13485 制造体系' : 'ISO 9001 / ISO 13485 manufacturing system'}</strong>
+                  <span>{isZh ? '质量方针' : 'Quality policy'}</span>
+                  <strong>{isZh ? '服务百分百，质量零缺陷' : 'Full commitment to service; striving for zero defects'}</strong>
                 </div>
               </div>
 
@@ -229,7 +229,7 @@ export default function Contact() {
                     <span>02</span>
                     <div>
                       <h3>{isZh ? '项目说明' : 'Project brief'}</h3>
-                      <p>{isZh ? '把时间节奏、公司信息和需求重点写清楚。' : 'Share timing, company context, and the core manufacturing request.'}</p>
+                      <p>{isZh ? '说明零件用途、公司信息与交期要求，便于进一步沟通。' : 'Share timing, company context, and the core manufacturing request.'}</p>
                     </div>
                   </div>
 
@@ -239,7 +239,7 @@ export default function Contact() {
                       <input className="form-control quote-input" id="company" name="company" type="text" />
                     </div>
                     <div className="col-md-6">
-                      <label className="quote-label" htmlFor="timeline">{isZh ? '项目节奏' : 'Project timeline'}</label>
+                      <label className="quote-label" htmlFor="timeline">{isZh ? '预计交期' : 'Project timeline'}</label>
                       <select className="form-select quote-input" id="timeline" name="timeline" defaultValue="">
                         <option value="">{isZh ? '请选择时间' : 'Select a timeline'}</option>
                         {timelines.map((timeline) => (
